@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_bg"
+    android:orientation="vertical"
+    tools:context="net.shopnc.b2b2c.android.ui.mine.RegisterActivity">
+
+    <include layout="@layout/activity_base" />
+
+    <LinearLayout
+        android:id="@+id/llRegister"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="@color/nc_title_bg"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rlRegisterNormal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/llNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivRegisterNormal"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/user" />
+
+                <TextView
+                    android:id="@+id/tvNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:text="普通注册"
+                    android:textSize="@dimen/tv12sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/viewNormal"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_alignLeft="@id/llNormal"
+                android:layout_alignParentBottom="true"
+                android:layout_alignRight="@id/llNormal"
+                android:background="@color/nc_red" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlRegisterPhone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/llPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivRegisterPhone"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/mobile" />
+
+                <TextView
+                    android:id="@+id/tvPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:text="手机注册"
+                    android:textSize="@dimen/tv12sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/viewPhone"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_alignLeft="@id/llPhone"
+                android:layout_alignParentBottom="true"
+                android:layout_alignRight="@id/llPhone"
+                android:background="@color/nc_red" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llRegisterNormal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nc_white"
+        android:orientation="vertical">
+
+        <TextView style="@style/NCLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:layout_width="wrap_content"
+                android:text="用  户  名：" />
+
+            <EditText
+                android:id="@+id/editUserName"
+                style="@style/NCFormEdit"
+                android:hint="请输入6-20个字符" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:layout_width="wrap_content"
+                android:text="设置密码：" />
+
+            <EditText
+                android:id="@+id/editPassword"
+                style="@style/NCFormEdit"
+                android:hint="请输入6-20位密码"
+                android:inputType="textPassword" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:layout_width="wrap_content"
+                android:text="确认密码：" />
+
+            <EditText
+                android:id="@+id/editPasswordConfirm"
+                style="@style/NCFormEdit"
+                android:hint="请再次输入密码"
+                android:inputType="textPassword" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:layout_width="wrap_content"
+                android:text="邮        箱：" />
+
+            <EditText
+                android:id="@+id/editEmail"
+                style="@style/NCFormEdit"
+                android:hint="输入常用邮箱地址" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:layout_width="wrap_content"
+                android:text="验  证  码：" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivCodeNormal"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true" />
+
+                <EditText
+                    android:id="@+id/etCodeNormal"
+                    style="@style/NCFormEdit"
+                    android:layout_toLeftOf="@id/ivCodeNormal"
+                    android:hint="输入4位验证码" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <TextView style="@style/NCLine" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llRegisterPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nc_white"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView style="@style/NCLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:layout_width="wrap_content"
+                android:text="手  机  号：" />
+
+            <EditText
+                android:id="@+id/etPhoneNumber"
+                style="@style/NCFormEdit"
+                android:hint="请输入手机号" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:layout_width="wrap_content"
+                android:text="验  证  码：" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivCodePhone"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true" />
+
+                <EditText
+                    android:id="@+id/etCodePhone"
+                    style="@style/NCFormEdit"
+                    android:layout_toLeftOf="@id/ivCodePhone"
+                    android:hint="输入4位验证码" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <TextView style="@style/NCLine" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnAgree"
+            android:layout_width="32dp"
+            android:layout_height="48dp"
+            android:background="@null"
+            android:src="@drawable/nc_check" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="同意"
+            android:textColor="#7F7F7F"
+            android:textSize="@dimen/tv12sp" />
+
+        <TextView
+            android:id="@+id/btnMemberDocument"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="用户注册协议"
+            android:textColor="@color/nc_blue"
+            android:textSize="@dimen/tv12sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnRegSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/nc_btn_corner_bg_selected"
+        android:text="注册"
+        android:textColor="@drawable/nc_btn_text_color_selected" />
+
+    <TextView
+        android:id="@+id/tvBindPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
+        android:text="一个手机只能绑定一个账号，若需修改或解除已绑定的手机，请进入用户中心进行操作。"
+        android:textColor="@color/nc_text_dark"
+        android:textSize="@dimen/tv12sp" />
+
+</LinearLayout>

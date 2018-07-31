@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/app_white"
+              android:orientation="vertical"
+              android:paddingBottom="40dp"
+              android:paddingLeft="10dp"
+              android:paddingRight="10dp"
+              android:paddingTop="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="促销"
+        android:textColor="@color/nc_text"
+        android:textSize="16sp"/>
+
+    <LinearLayout
+        android:id="@+id/llXDiscount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        android:background="@drawable/bg_one_top_line"
+        android:orientation="horizontal"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/discount_stroke_bg"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="折扣"
+            android:textColor="@color/bottom_bar_red"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tvXDiscount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:textColor="@color/nc_black"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_one_top_line"
+        android:orientation="horizontal"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/discount_stroke_bg"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="拼团"
+            android:textColor="@color/bottom_bar_red"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tvGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:textColor="@color/nc_black"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llDiscountContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_one_top_line"
+        android:orientation="horizontal"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/discount_stroke_bg"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="满优惠"
+            android:textColor="@color/bottom_bar_red"
+            android:textSize="14sp"/>
+
+        <LinearLayout
+            android:id="@+id/llDiscount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llGiftContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_one_top_line"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp8">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/discount_stroke_bg"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="赠品"
+            android:textColor="@color/bottom_bar_red"
+            android:textSize="14sp"/>
+
+        <LinearLayout
+            android:id="@+id/llGift"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

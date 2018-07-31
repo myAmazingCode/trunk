@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/nc_bg">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:src="@drawable/nc_icon_back" />
+
+        <TextView
+            style="@style/NCTitleText"
+            android:text="商品筛选" />
+
+        <TextView
+            android:id="@+id/tvCommonTitleBorder"
+            style="@style/NCLine"
+            android:layout_alignParentBottom="true" />
+
+        <Button
+            android:id="@+id/btnReset"
+            style="@style/NCTextButton"
+            android:layout_alignParentRight="true"
+            android:text="重置" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nc_white"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/NCText"
+            android:text="价格区间" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etPriceFrom"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@color/nc_bg"
+                android:gravity="center"
+                android:hint="最低价"
+                android:textColor="@color/nc_text"
+                android:textSize="14dp" />
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/nc_icon_minus" />
+
+            <EditText
+                android:id="@+id/etPriceTo"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@color/nc_bg"
+                android:gravity="center"
+                android:hint="最高价"
+                android:textColor="@color/nc_text"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <net.shopnc.b2b2c.android.custom.MyGridView
+            android:id="@+id/gvContract"
+            android:numColumns="3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </net.shopnc.b2b2c.android.custom.MyGridView>
+
+        <Button
+            android:id="@+id/btnScreenSave"
+            style="@style/NCCornerButtonMain"
+            android:layout_width="match_parent"
+            android:layout_margin="20dp"
+            android:text="筛选商品" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvBackground"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/nc_bg" />
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="36dp"
+    android:background="@color/nc_white"
+    android:orientation="horizontal">
+
+    <ImageButton
+        android:id="@+id/btnSelectSpu"
+        android:layout_width="32dp"
+        android:layout_height="36dp"
+        android:layout_marginLeft="4dp"
+        android:background="@null"
+        android:src="@drawable/nc_check" />
+
+    <TextView
+        android:id="@+id/tvGoodsSpec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/tvGoodsCount"
+        android:layout_toRightOf="@+id/btnSelectSpu"
+        android:textSize="@dimen/dp14"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/tvGoodsCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="4dp"
+        android:text="1212313"
+        android:textSize="@dimen/dp14"
+        />
+
+</RelativeLayout>

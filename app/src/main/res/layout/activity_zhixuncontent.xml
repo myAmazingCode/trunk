@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/nc_white"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/app_common_header"></include>
+
+    <ScrollView
+         android:id="@+id/scrollview"
+         android:layout_width="match_parent"
+         android:fillViewport="true"
+         android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/new_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/nc_black"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp"
+                android:text=""
+                android:lines="1"
+                android:layout_marginRight="5dp"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/new_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="12dp"
+                android:textColor="#7c7c7c"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="18dp"
+                />
+            <!--主要内容-->
+            <LinearLayout
+                android:id="@+id/ll_content_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:background="@color/nc_white" >
+
+                <!--<net.shopnc.b2b2c.android.custom.HtmlTextView
+                    android:id="@+id/new_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/nc_text"
+                    android:textSize="14dp"
+                    android:layout_margin="10dp"
+                    android:background="@color/nc_white"
+                    android:text=""/>-->
+
+
+            </LinearLayout>
+            <!--商品内容-->
+            <LinearLayout
+                android:id="@+id/goods_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:background="#eeeeee" >
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="#bfbfbf"></View>
+
+                <TextView
+                    android:id="@+id/nes_goodsnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#bfbfbf"
+                    android:textSize="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginRight="5dp"
+                    android:text="共10个商品"/>
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="#bfbfbf"></View>
+            </LinearLayout>
+             <!--商品列表-->
+
+            <net.shopnc.b2b2c.android.custom.MyGridView
+                android:id="@+id/mygridview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#eeeeee"
+                android:divider="@null"
+                android:fadingEdge="none"
+                android:horizontalSpacing="5dp"
+                android:listSelector="#00000000"
+                android:numColumns="2"
+                android:scrollbars="none"
+                android:verticalSpacing="5dp" >
+            </net.shopnc.b2b2c.android.custom.MyGridView>
+
+
+        </LinearLayout>
+
+     </ScrollView>
+
+
+</LinearLayout>

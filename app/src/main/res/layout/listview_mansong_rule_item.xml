@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="18dp"
+    android:background="@color/nc_white"
+    android:orientation="horizontal">
+
+    <TextView
+        style="@style/NCText"
+        android:text="单笔订单满"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        style="@style/NCText"
+        android:textColor="@color/nc_black"
+        android:textSize="12dp" />
+
+    <TextView
+        style="@style/NCText"
+        android:text="元，立减"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/tvDiscount"
+        style="@style/NCText"
+        android:textColor="@color/nc_black"
+        android:textSize="12dp" />
+
+    <TextView
+        style="@style/NCText"
+        android:text="元"
+        android:textSize="12dp" />
+
+    <LinearLayout
+        android:id="@+id/llGoods"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/NCText"
+            android:text="，送礼品："
+            android:textSize="12dp" />
+
+        <ImageView
+            android:id="@+id/ivGoods"
+            android:layout_width="16dp"
+            android:layout_height="16dp" />
+    </LinearLayout>
+</LinearLayout>

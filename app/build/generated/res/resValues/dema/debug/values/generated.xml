@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Automatically generated file. DO NOT MODIFY -->
+
+    <!-- Values from default config. -->
+    <string name="app_copreserved" translatable="false">天津市网城天创科技有限责任公司, All Rights Reserved</string>
+    <string name="app_copyright" translatable="false">Copyright © 2007–2016</string>
+    <string name="app_name" translatable="false">ShopNC分销商城</string>
+    <string name="more_aboutus_appname" translatable="false">ShopNC Android客户端</string>
+    <string name="more_aboutus_version" translatable="false">版本：3.0.4</string>
+
+</resources>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":app" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="android-gradle" name="Android-Gradle">
+      <configuration>
+        <option name="GRADLE_PROJECT_PATH" value=":app" />
+      </configuration>
+    </facet>
+    <facet type="android" name="Android">
+      <configuration>
+        <option name="SELECTED_BUILD_VARIANT" value="demaDebug" />
+        <option name="ASSEMBLE_TASK_NAME" value="assembleDemaDebug" />
+        <option name="COMPILE_JAVA_TASK_NAME" value="compileDemaDebugSources" />
+        <afterSyncTasks>
+          <task>generateDemaDebugSources</task>
+        </afterSyncTasks>
+        <option name="ALLOW_USER_CONFIGURATION" value="false" />
+        <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />
+        <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res" />
+        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/src/main/res" />
+        <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
+    <output url="file://$MODULE_DIR$/build/intermediates/javac/demaDebug/compileDemaDebugJavaWithJavac/classes" />
+    <output-test url="file://$MODULE_DIR$/build/intermediates/javac/demaDebugUnitTest/compileDemaDebugUnitTestJavaWithJavac/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/dema/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/not_namespaced_r_class_sources/demaDebug/processDemaDebugResources/r" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/dema/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/dema/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/dema/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/dema/debug" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/dema/debug" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/demaDebug/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/demaDebug/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/demaDebug/assets" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/demaDebug/aidl" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/demaDebug/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/demaDebug/rs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/demaDebug/shaders" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/androidTest/dema/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/not_namespaced_r_class_sources/demaDebugAndroidTest/processDemaDebugAndroidTestResources/r" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/androidTest/dema/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/androidTest/dema/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/androidTest/dema/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/androidTest/dema/debug" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/androidTest/dema/debug" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDemaDebug/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDemaDebug/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDemaDebug/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDemaDebug/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDemaDebug/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDemaDebug/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDemaDebug/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/test/dema/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDemaDebug/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDemaDebug/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDemaDebug/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDemaDebug/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDemaDebug/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDemaDebug/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDemaDebug/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/dema/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/dema/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/dema/assets" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/dema/aidl" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/dema/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/dema/rs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/dema/shaders" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDema/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDema/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDema/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDema/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDema/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDema/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDema/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDema/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDema/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDema/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDema/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDema/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDema/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDema/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/debug/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/debug/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/debug/assets" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/debug/aidl" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/debug/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/debug/rs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/debug/shaders" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/assets" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/aidl" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/rs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/shaders" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/shaders" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/apk_list" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/blame" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/check-manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/compatible_screen_manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant_run_merged_manifests" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/legacy_multidex_aapt_derived_proguard_rules" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/merged_manifests" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/prebuild" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/processed_res" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/rs" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/split_list" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/symbols" />
+      <excludeFolder url="file://$MODULE_DIR$/build/outputs" />
+    </content>
+    <orderEntry type="jdk" jdkName="Android API 28 Platform" jdkType="Android SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Gradle: com.android.support.constraint:constraint-layout-solver:1.0.2@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\easemobchat_2.2.0.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.zhy:base-rvadapter-3.0.3" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\ormlite-android-4.48.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.jakewharton:butterknife:7.0.1@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.danylovolokh:list-visibility-utils-0.2.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:support-annotations:24.1.1@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:design-23.4.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:support-vector-drawable-24.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:multidex-1.0.2" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\ormlite-core-4.48.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:recyclerview-v7-23.4.0" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\fastjson-1.2.7.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\nineoldandroids-2.4.0.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.bigkoo:convenientbanner-2.0.5" level="project" />
+    <orderEntry type="library" name="Gradle: com.squareup.okhttp:okhttp:2.4.0@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\umeng_social_sdk.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\open_sdk_r5509.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\okhttputils-2_6_2.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.android.support:multidex-instrumentation-1.0.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.greenrobot:eventbus:3.0.0@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\weiboSDKCore_3.1.2.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\baidumapapi_v3_5_0.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\httpclient-4.2.5.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\okhttputils.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\SocialSDK_QQZone_3.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\WebSocket.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:support-v4-24.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\socketio.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\android-viewbadger.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.zhy:flowlayout-lib-1.0.3" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\EventBus2.4.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\locSDK_5.2.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.squareup.okio:okio:1.5.0@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\SocialSDK_sms.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\pushservice-5.0.0.66.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\barcode_core.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: io.reactivex:rxandroid-1.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\gson-2.2.1.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\universal-image-loader-1.9.3.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\alivc-player-2.1.0.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: io.reactivex:rxjava:1.1.0@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\SocialSDK_WeiXin_1.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.commons:commons-lang3:3.4@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.orhanobut:logger-1.11" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:animated-vector-drawable-24.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support.constraint:constraint-layout-1.0.2" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.wseemann:FFmpegMediaMetadataRetriever-1.0.11" level="project" />
+    <orderEntry type="library" name="Gradle: com.jcodecraeer:xrecyclerview-1.3.2" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\httpmime-4.1.3.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\tbs_sdk_v3.1.0.1034_43100.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:cardview-v7-23.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\SocialSDK_Sina.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\mta-sdk-1.6.2.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\SocialSDK_WeiXin_2.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\httpcore-4.2.4.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:appcompat-v7-24.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\alipaySdk-20151215.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\Android\trunk\app\libs\glide-3.6.1.jar:unspecified@jar" level="project" />
+    <orderEntry type="module" module-name="ijkplayer-java" />
+    <orderEntry type="module" module-name="giraffeplayer" />
+  </component>
+</module>

@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/ImageViewImagePic01"
+        android:layout_width="match_parent"
+        android:layout_height="250px"
+        android:adjustViewBounds="true"
+        android:background="@drawable/dic_home3_item_pic_bg"
+        android:padding="8dp"
+        android:scaleType="centerCrop" />
+
+</LinearLayout>

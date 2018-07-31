@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_base_empty" />
+
+    <net.shopnc.b2b2c.android.xrefresh.XScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <net.shopnc.b2b2c.android.custom.MyListView
+                android:id="@+id/mine_pre_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:divider="@color/transparent"
+                android:dividerHeight="10dp" />
+
+            <LinearLayout
+                android:id="@+id/voucher_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:background="#cccccc" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已失效的券" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:background="#cccccc" />
+            </LinearLayout>
+
+            <net.shopnc.b2b2c.android.custom.MyListView
+                android:id="@+id/mine_pre_recycler2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:divider="@color/transparent"
+                android:dividerHeight="10dp" />
+        </LinearLayout>
+    </net.shopnc.b2b2c.android.xrefresh.XScrollView>
+
+
+</LinearLayout>

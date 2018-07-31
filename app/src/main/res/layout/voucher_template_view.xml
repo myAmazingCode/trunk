@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/coupon_left"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:padding="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/coupon_red"
+        android:gravity="center"
+        android:text="满100减去30"
+        android:textColor="@color/white"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:drawableLeft="@drawable/coupon_right"
+        android:gravity="center"/>
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/nc_white">
+
+    <ImageView
+        android:id="@+id/ivSpuImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tvSpuName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/ivSpuImage"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/nc_text_dark"
+        android:textSize="@dimen/dp14"
+        android:text="雅诗兰黛 红石榴系列套装 正装水乳洁面正装三件套组合套装"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSpuName"
+        android:layout_toRightOf="@+id/ivSpuImage"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="折扣"
+        android:visibility="gone"
+        />
+
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="4dp"-->
+        <!--android:background="@color/nc_good_bg"-->
+        <!--android:layout_below="@+id/ivSpuImage"-->
+        <!--></View>-->
+
+    <LinearLayout
+        android:id="@+id/llSkuItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivSpuImage"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        >
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

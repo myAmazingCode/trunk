@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="net.shopnc.b2b2c.android.ui.home.CartActivity">
+
+    <!--为了使顶部只有一条线显示-->
+    <LinearLayout
+        android:id="@+id/llFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:paddingTop="47dp"/>
+
+    <include layout="@layout/activity_base_empty"/>
+
+    <!--标题-->
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/nc_bg">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:padding="6dp"
+            android:src="@drawable/nc_icon_back"/>
+
+        <TextView
+            android:id="@+id/tvCommonTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="购物车"
+            android:textColor="@color/nc_text_dark"/>
+
+        <TextView
+            android:id="@+id/btnModify"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="编辑"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="@dimen/dp12"/>
+
+        <TextView
+            android:id="@+id/btnFinish"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="完成"
+            android:textColor="@color/nc_btn_bg"
+            android:textSize="@dimen/dp12"
+            android:visibility="gone"/>
+
+        <TextView
+            style="@style/NCLine"
+            android:layout_alignParentBottom="true"/>
+
+        <RelativeLayout
+            android:id="@+id/rlMore"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <ImageButton
+                android:id="@+id/btnMore"
+                android:layout_width="36dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="6dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:src="@drawable/nc_icon_more_dot"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/ivSearch"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/btnMore"
+                android:padding="@dimen/dp14"
+                android:src="@drawable/nc_icon_search"
+                android:visibility="gone"/>
+
+            <View
+                android:id="@+id/vhintMenu"
+                android:layout_width="@dimen/dp5"
+                android:layout_height="@dimen/dp5"
+                android:layout_alignRight="@id/btnMore"
+                android:layout_alignTop="@id/btnMore"
+                android:layout_marginRight="@dimen/dp5"
+                android:layout_marginTop="@dimen/dp8"
+                android:background="@drawable/nc_page_circle_on"
+                android:visibility="invisible"/>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/btnClear"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:gravity="center"
+            android:visibility="visible"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/nc_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbGoodAllEva"
+            style="@style/evaluate_style"
+            android:checked="true"
+            android:text="@string/all_goods" />
+
+        <RadioButton
+            android:id="@+id/rbGoodBetterEva"
+            style="@style/evaluate_style"
+            android:text="@string/better_goods" />
+
+        <RadioButton
+            android:id="@+id/rbGoodNormalEva"
+            style="@style/evaluate_style"
+            android:text="@string/normal_goods" />
+
+        <RadioButton
+            android:id="@+id/rbGoodBedEva"
+            style="@style/evaluate_style"
+            android:text="@string/bad_goods" />
+
+        <RadioButton
+            android:id="@+id/rbGoodImgEva"
+            style="@style/evaluate_style"
+            android:text="@string/image_goods" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.jcodecraeer.xrecyclerview.XRecyclerView
+            android:id="@+id/rvEvaluate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            >
+        </com.jcodecraeer.xrecyclerview.XRecyclerView>
+
+        <include layout="@layout/activity_base_empty" />
+    </FrameLayout>
+
+
+
+
+
+</LinearLayout>

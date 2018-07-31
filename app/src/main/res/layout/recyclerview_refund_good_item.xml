@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivGoodPic"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="left"
+        android:layout_margin="5dp" />
+
+    <TextView
+        android:id="@+id/tvGoodName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/ivGoodPic"
+        android:paddingTop="6dp"
+        android:maxLines="2"
+        android:text="天津市网城科技股份有限公司"
+        android:textColor="@color/nc_text_dark"
+        android:textSize="@dimen/dp14" />
+
+    <TextView
+        android:id="@+id/tvGoodsSPec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvGoodName"
+        android:layout_toRightOf="@+id/ivGoodPic"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="4dp"
+        android:maxLines="2"
+        android:text="guigeguige"
+        android:textColor="@color/buystep_sku_text"
+        android:textSize="@dimen/dp12" />
+
+    <View
+        style="@style/NCLine"
+        android:layout_below="@+id/ivGoodPic"></View>
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/flBack"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foreground="@color/nc_background_transport" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/nc_dialog_bg"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvText1"
+                style="@style/NCText"
+                android:layout_marginTop="10dp"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/tvText2"
+                style="@style/NCText"
+                android:textSize="16dp" />
+
+            <TextView
+                style="@style/NCLine"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    style="@style/NCCornerButtonNormal"
+                    android:layout_width="100dp"
+                    android:layout_marginRight="20dp"
+                    android:text="取消"
+                    android:textColor="@color/nc_text" />
+
+                <Button
+                    android:id="@+id/btnConfirm"
+                    style="@style/NCCornerButtonMain"
+                    android:layout_width="100dp"
+                    android:text="确定"
+                    android:textColor="@color/nc_white" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

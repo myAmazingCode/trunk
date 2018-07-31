@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/nc_bg"
+    android:paddingBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nc_white"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvStoreName"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/nc_icon_store"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text=" 天津市网城科技股份有限公司"
+                android:textColor="@color/nc_text_dark"
+                android:textSize="@dimen/dp16" />
+
+            <TextView
+                android:id="@+id/tvRefundState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="待审核"
+                android:textColor="@color/nc_red"
+                android:textSize="@dimen/dp14" />
+
+        </LinearLayout>
+
+        <View style="@style/NCLine" />
+
+        <LinearLayout
+            android:id="@+id/llGoods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp">
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2016.06.12 23:23:34"
+                android:textColor="@color/nc_text"
+                android:textSize="@dimen/dp12" />
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="退款金额：1234"
+                android:textSize="@dimen/dp14" />
+
+        </LinearLayout>
+
+        <View style="@style/NCLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvRefundDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_cancle"
+                android:text="退款详情"
+                android:textColor="@color/nc_text"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvGoodSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/btn_sure"
+                android:text="退货发货"
+                android:textColor="@color/nc_red"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvRefundDelay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/btn_cancle"
+                android:text="延迟"
+                android:textColor="@color/nc_text" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

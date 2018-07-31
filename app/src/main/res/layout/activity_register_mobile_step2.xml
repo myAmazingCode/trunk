@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_common_header" />
+
+    <TextView
+        android:id="@+id/tvPhone"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical"
+        android:text="请输入收到的短信验证码"
+        android:textColor="@color/nc_text"
+        android:textSize="12dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nc_white"
+        android:orientation="vertical">
+
+        <TextView style="@style/NCLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:layout_width="70dp"
+                android:text="验  证  码：" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/etSmsCaptcha"
+                    style="@style/NCFormEditNoBorder"
+                    android:layout_alignParentLeft="true"
+                    android:hint="请输入验证码"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/btnGetSmsCaptcha"
+                    style="@style/NCTextButtonSmall"
+                    android:layout_width="110dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:onClick="btnGetSmsCaptchaClick"
+                    android:text="重新获取验证码"
+                    android:textColor="@color/nc_blue"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView style="@style/NCLine" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnRegNext"
+        style="@style/NCCornerButton"
+        android:onClick="btnRegNextClick"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:text="下一步" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="绑定手机不收取任何费用，一个手机只能绑定一个账号，若需修改或解除已绑定的手机，请登录商城PC端进行操作。"
+        android:textSize="12dp" />
+</LinearLayout>

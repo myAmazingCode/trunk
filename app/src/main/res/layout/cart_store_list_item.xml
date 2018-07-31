@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/nc_white"
+              android:orientation="vertical">
+
+    <View style="@style/NCLine"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="@color/nc_bg">
+
+        <ImageView
+            android:id="@+id/btnSelectStore"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:padding="10dp"
+            android:src="@drawable/nc_check"/>
+
+
+        <ImageView
+            android:id="@+id/storeImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/btnSelectStore"
+            android:src="@drawable/nc_icon_store"/>
+
+        <TextView
+            android:id="@+id/tvStoreName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/storeImg"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="未来生活电器旗舰店"
+            android:textColor="@color/nc_text"/>
+
+        <!--领取店铺的代金券-->
+        <LinearLayout
+            android:id="@+id/llVoucher"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/nc_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/nc_border"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/nc_icon_mine_money_3"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="8dp"
+                android:text="优惠券"
+                android:textColor="@color/nc_red"
+                android:textSize="@dimen/tv12sp"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlDiscountShow"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/discount_stroke_bg"
+            android:padding="1dp"
+            android:text="满优惠"
+            android:textColor="@color/nc_red"
+            android:textSize="@dimen/tv12sp"/>
+
+        <TextView
+            android:id="@+id/tvDiscountShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="40dp"
+            android:layout_toRightOf="@+id/icon"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/nc_text"
+            android:textSize="@dimen/tv12sp"/>
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:padding="14dp"
+            android:src="@drawable/arrow_down_b"/>
+
+    </RelativeLayout>
+
+    <View style="@style/NCLine"/>
+
+    <!-- 商品列表spu显示 -->
+    <LinearLayout
+        android:id="@+id/llCartSpuList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp"/>
+
+    <!-- 优惠套装显示 -->
+    <LinearLayout
+        android:id="@+id/llBundlingList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tvStoreAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:padding="10dp"
+        android:textColor="@color/nc_text"
+        android:textSize="@dimen/dp12"/>
+
+    <View style="@style/NCLine"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+       />
+
+
+</LinearLayout>
+

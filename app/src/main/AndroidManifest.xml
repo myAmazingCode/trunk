@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="net.shopnc.b2b2c.android">
+
+    <uses-sdk
+        tools:overrideLibrary="com.umeng.socialize.evernote,com.umeng.socialize.pinterest" />
+
+    <!-- 访问网络权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 访问摄像头权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 挂载sd卡 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- GPS -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 其它 -->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <!-- QQ、QQ空间所需权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="ANDROID.PERMISSION.WRITE_APN_SETTINGS" />
+
+    <!-- 直播多出部分 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+
+    <application
+        android:name=".common.MyShopApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/MyTheme.Basic">
+
+        <!-- 百度地图 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="Gx5GYPabttlw6za8m6CUk8LD" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".WelcomeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="sensor">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="znn" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainFragmentManager"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.home.SubjectWebActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.home.LotteryWebActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.mine.OrderListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.mine.PayMentWebActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.type.VBuyStep1Activity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.mine.OrderDeliverDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.mine.VirtualListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.mine.IMHistoryListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.mine.RegisteredActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.mine.RegisterMemberDocumentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.mine.IMFriendsListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.mine.FeekBaskActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.mine.IMSendMsgActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.mine.HelpActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.mine.FavStoreListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.home.SearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.type.TwoTypeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.type.GoodsListFragmentManager"
+            android:screenOrientation="portrait"
+            android:theme="@style/TitleBasic"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.type.GoodsDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.type.TuWenActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.type.GoodsParamActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.type.SpecActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.mine.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.mine.FavGoodsListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.mine.SettingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.mine.AboutActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.mine.VoucherListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.mine.PasswordUnbundlingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.type.BuyStep1Activity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.type.AddressListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.type.InvoiceListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.type.AddressADDActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.store.StoreSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".bracode.ui.CaptureActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <receiver android:name=".common.AppRegister">
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".BrandActivity"
+            android:label="@string/title_activity_brand" />
+        <activity
+            android:name=".ui.mine.RegisterMobileActivity"
+            android:label="@string/title_activity_register_mobile" />
+        <activity
+            android:name=".ui.mine.RegisterMobileStep2Activity"
+            android:label="@string/title_activity_register_mobile_step2" />
+        <activity
+            android:name=".ui.mine.RegisterMobileStep3Activity"
+            android:label="@string/title_activity_register_mobile_step3" />
+        <activity
+            android:name=".ui.type.ImageSwitchActivity"
+            android:label="@string/title_activity_image_switch"
+            android:theme="@style/Theme.Transparent" />
+        <activity
+            android:name=".ui.type.GoodsBrowseActivity"
+            android:label="@string/title_activity_goods_browse" />
+        <activity
+            android:name=".ui.mine.VirtualInfoActivity"
+            android:label="@string/title_activity_virtual_detail" />
+        <activity
+            android:name=".ui.mine.MyAssetActivity"
+            android:label="@string/title_activity_my_asset" />
+        <activity
+            android:name=".ui.mine.SigninActivity"
+            android:label="@string/title_activity_signin" />
+        <activity
+            android:name=".ui.mine.PredepositActivity"
+            android:label="@string/title_activity_predeposit" />
+        <activity
+            android:name=".ui.mine.RechargeCardLogActivity"
+            android:label="@string/title_activity_recharge_card_log" />
+        <activity
+            android:name=".ui.mine.RechargeCardAddActivity"
+            android:label="@string/title_activity_recharge_card_add" />
+        <activity
+            android:name=".ui.mine.VoucherPasswordAddActivity"
+            android:label="@string/title_activity_voucher_password_add" />
+        <activity
+            android:name=".ui.mine.RedpacketListActivity"
+            android:label="@string/title_activity_redpacket_list" />
+        <activity
+            android:name=".ui.mine.RedpacketPasswordAddActivity"
+            android:label="@string/title_activity_redpacket_password_add" />
+        <activity
+            android:name=".ui.mine.PointLogActivity"
+            android:label="@string/title_activity_point_log" />
+        <activity
+            android:name=".ui.mine.BindMobileActivity"
+            android:label="@string/title_activity_bind_mobile" />
+        <activity
+            android:name=".ui.mine.UnbindMobileActivity"
+            android:label="@string/title_activity_unbind_mobile" />
+        <activity
+            android:name=".ui.mine.ModifyPasswordStep1Activity"
+            android:label="@string/title_activity_modify_password" />
+        <activity
+            android:name=".ui.mine.ModifyPasswordStep2Activity"
+            android:label="@string/title_activity_modify_password_step2" />
+        <activity
+            android:name=".ui.mine.ModifyPaypwdStep1Activity"
+            android:label="@string/title_activity_modify_paypwd_step1" />
+        <activity
+            android:name=".ui.mine.ModifyPaypwdStep2Activity"
+            android:label="@string/title_activity_modify_paypwd_step2" />
+        <activity
+            android:name=".ui.type.StoreO2oAddressActivity"
+            android:label="@string/title_activity_store_o2o_address" />
+        <activity
+            android:name=".ui.type.BaiduMapActivity"
+            android:label="@string/title_activity_baidu_map" />
+        <activity android:name=".ui.mine.IMNewListActivity" />
+        <activity android:name=".ui.fenxiao.ZhixunContentActivity" />
+
+        <!-- 新浪微博 -->
+
+        <activity
+            android:name=".WBShareActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <service
+            android:name="com.sina.weibo.sdk.net.DownloadService"
+            android:exported="false" />
+
+        <!-- 微信回调 -->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoDisplay"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- 腾通讯开放平台 -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1104747605" />
+                <!-- 100380359 100381104 222222 -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- application########注册SDK使用的Activity###################### -->
+        <!-- 分享编辑页 -->
+        <activity
+            android:name="com.umeng.socialize.editorpage.ShareActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.UMDefault" />
+        <!-- ###################添加UmengAppkey###################### -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="${UMENG_APPKEY}" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
+
+        <activity android:name=".ui.store.newStoreInFoActivity" />
+        <activity android:name=".ui.store.StoreGoodsListFragmentManager" />
+        <activity android:name=".ui.store.StoreIntroduceActivity" />
+
+        <!-- alipay sdk begin -->
+        <activity android:name="com.alipay.sdk.pay.PayDemoActivity" />
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.type.EvaluateActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.type.EvaluateAddActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.mine.OrderDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.mine.OrderWuLiuActivity"
+            android:label="@string/title_activity_order_wu_liu" />
+        <activity
+            android:name=".ui.mine.OrderExchangeActivity"
+            android:label="@string/title_activity_order_exchange" />
+        <activity
+            android:name=".ui.mine.OrderGoodsTuiMoneyActivity"
+            android:label="@string/title_activity_order_goods_tui_money" />
+        <activity
+            android:name=".ui.mine.OrderGoodsTuiGoodsActivity"
+            android:label="@string/title_activity_order_goods_tui_goods" />
+        <activity
+            android:name=".ui.mine.OrderExchangeListActivity"
+            android:label="@string/title_activity_order_exchange_list" />
+        <activity
+            android:name=".ui.mine.OrderExchangeControlDetailsActivity"
+            android:label="@string/title_activity_order_exchange_control_details" />
+        <activity
+            android:name=".ui.mine.OrderExchangeSendGoodsActivity"
+            android:label="@string/title_activity_order_exchange_send_goods" />
+        <activity android:name=".ui.fenxiao.FenXiaoAudeoListTabActivity" />
+        <activity android:name=".ui.fenxiao.DianboAudeoInfoActivity" />
+        <activity android:name=".ui.fenxiao.WebActivity" />
+        <activity android:name=".ui.fenxiao.ApplyLiveActivity" />
+        <activity android:name=".ui.fenxiao.FenxiaoGoodsActivity" />
+        <activity android:name=".ui.fenxiao.FenxiaoOrderActivity" />
+        <activity android:name=".ui.fenxiao.FenxiaoSettlementActivity" />
+        <activity android:name=".ui.fenxiao.FenxiaoAllActivity" />
+        <activity android:name=".ui.fenxiao.FenxiaoTixianActivity" />
+        <activity android:name=".ui.fenxiao.FenxiaoWithdrawalsActivity" />
+        <activity android:name=".StartActivity" />
+        <activity android:name=".ui.fenxiao.FenxiaoTixianInfoActivity" />
+        <activity android:name=".ui.fenxiao.SecondKillActivity" />
+        <!-- 百度推送 -->
+
+
+        <!-- push应用定义消息receiver声明 -->
+        <receiver android:name=".MyPushMessageReceiver">
+            <intent-filter>
+
+                <!-- 接收push消息 -->
+                <action android:name="com.baidu.android.pushservice.action.MESSAGE" />
+                <!-- 接收bind,unbind,fetch,delete等反馈消息 -->
+                <action android:name="com.baidu.android.pushservice.action.RECEIVE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.CLICK" />
+            </intent-filter>
+        </receiver>
+
+        <!-- push必须的receviver和service声明 -->
+        <receiver
+            android:name="com.baidu.android.pushservice.PushServiceReceiver"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.SHOW" />
+                <action android:name="com.baidu.android.pushservice.action.media.CLICK" />
+                <!-- 以下四项为可选的action声明，可大大提高service存活率和消息到达速度 -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.baidu.android.pushservice.RegistrationReceiver"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.METHOD" />
+                <action android:name="com.baidu.android.pushservice.action.BIND_SYNC" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.baidu.android.pushservice.PushService"
+            android:exported="true"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.baidu.android.pushservice.CommandService"
+            android:exported="true" />
+
+        <!-- 在百度开发者中心查询应用的API Key -->
+        <meta-data
+            android:name="api_key"
+            android:value="P1vKEMreHXWtuazwHDHgGgVY" />
+
+        <activity android:name=".ui.fenxiao.SecondKillBrandActivity" />
+        <activity android:name=".ui.fenxiao.FlashBuyActivity" />
+        <activity android:name=".ui.fenxiao.FlashBuyDetailActivity" />
+        <activity android:name=".ui.jifen.CreditsCenterActivity" />
+        <activity android:name=".ui.type.StoreBranchActivity" />
+        <activity android:name=".ui.jifen.CreditsMoreActivity" />
+        <activity android:name=".ui.jifen.CreditsDetailActivity" />
+        <activity android:name=".ui.jifen.CreditsRecordActivity" />
+        <activity android:name=".ui.jifen.CreditsLogActivity" />
+        <activity android:name=".ui.jifen.CreditsCartActivity"></activity>
+    </application>
+
+</manifest>

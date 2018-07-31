@@ -1,0 +1,143 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/nc_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="@drawable/nc_bg_border_top_and_bottom"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="1dp">
+
+        <ImageButton
+            android:id="@+id/btnSelectStore"
+            android:layout_width="32dp"
+            android:layout_height="36dp"
+            android:background="@null"
+            android:src="@drawable/nc_check" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/nc_icon_store" />
+
+        <TextView
+            android:id="@+id/tvStoreName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:textColor="@color/nc_text" />
+
+        <LinearLayout
+            android:id="@+id/llVoucher"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@color/nc_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/nc_border" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/nc_icon_mine_money_3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="领券"
+                android:textColor="@color/nc_text" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 免运费信息 -->
+    <LinearLayout
+        android:id="@+id/llFreight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/nc_bg_border_bottom"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/nc_red"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:text="免运费"
+            android:textColor="@color/nc_white"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/tvFreight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:textColor="@color/nc_text"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+
+    <!-- 满送信息 -->
+    <LinearLayout
+        android:id="@+id/llMansong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/nc_bg_border_bottom"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/nc_red"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:text="满即送"
+            android:textColor="@color/nc_white"
+            android:textSize="10dp" />
+
+        <LinearLayout
+            android:id="@+id/llMansongList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+
+    <!-- 商品列表 -->
+    <LinearLayout
+        android:id="@+id/llCartGoodsList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/nc_bg_border_bottom"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/nc_bg" />
+
+</LinearLayout>
+

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:background="@drawable/fcode"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/fcode_miss"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="right|top"
+        android:background="@drawable/umeng_socialize_title_back_bt_selected"/>
+
+    <EditText
+        android:id="@+id/fcode_ed_text"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:hint="请输入F码"
+        android:layout_marginTop="115dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/edit_bg"
+        android:padding="10dip"
+        android:singleLine="true"
+        android:textSize="15dp"
+        android:textColor="@color/nc_text_hint"
+        android:textColorHint="@color/nc_text"  />
+
+    <TextView
+        android:id="@+id/fcode_sure"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:background="@drawable/btn"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/app_white"
+        android:text="提交认证"/>
+
+</LinearLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/nc_bg"
+    tools:context="net.shopnc.b2b2c.android.ui.order.OrderReturnGoodSendActivity">
+
+    <include layout="@layout/activity_base"/>
+
+    <TextView
+        android:id="@+id/tvShowInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/shape_corners_black"
+        android:padding="5dp"
+        android:textColor="@color/nc_white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/nc_white"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/llShip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="物流公司"
+                android:textSize="@dimen/dp14"
+                />
+
+            <TextView
+                android:id="@+id/tvShipName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:textSize="@dimen/dp14"
+                />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/arrow_down_b"
+                android:padding="6dp"
+                />
+
+        </LinearLayout>
+
+        <View
+            style="@style/NCLine"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="物流单号"
+                android:textSize="@dimen/dp14"
+                />
+
+            <EditText
+                android:id="@+id/etBuyerMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:background="@color/nc_white"
+                android:textSize="@dimen/dp14"
+                android:textColor="@color/nc_text_dark"
+                android:textColorHint="@color/nc_text"
+                android:hint="请填写物流单号"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCommit"
+        style="@style/NCCornerButtonMain"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:text="确认发货" />
+
+</LinearLayout>

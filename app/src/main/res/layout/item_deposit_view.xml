@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/item_border"
+    android:padding="10dp">
+
+
+    <TextView
+        android:id="@+id/mine_deposit_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@id/mine_deposit_time"
+        android:lineSpacingExtra="6dp"
+        android:text="123"
+        android:textSize="@dimen/tv14sp" />
+
+    <LinearLayout
+        android:id="@+id/mine_deposit_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/mine_deposit_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="123"
+            android:textSize="@dimen/tv20sp" />
+
+        <TextView
+            android:id="@+id/mine_deposit_yuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元"
+            android:textColor="@color/nc_red"
+            android:textSize="@dimen/tv12sp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/mine_deposit_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/mine_deposit_ll"
+        android:text="123"
+        android:textSize="@dimen/tv12sp" />
+
+</RelativeLayout>

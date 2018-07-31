@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_settings">Settings</string>
+    <string name="load_error">数据加载失败</string>
+    <string name="default_search_text">搜索商城商品</string>
+
+    <!-- "关于我们"下的文本 -->
+
+    <string name="text_rmb">￥</string>
+    <string name="money_rmb">¥</string>
+
+    <string name="text_groupbuy">团购</string>
+    <string name="text_xianshi">限时</string>
+    <string name="text_spike">秒杀</string>
+    <string name="text_flash">闪购</string>
+    <string name="text_appoint">预约</string>
+    <string name="text_fcode">F码</string>
+    <string name="text_presell">预售</string>
+    <string name="text_virtual">虚拟</string>
+
+    <!-- 下拉刷新 -->
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="title_activity_brand">BrandActivity</string>
+    <string name="title_activity_register_mobile">RegisterMobileActivity</string>
+    <string name="title_activity_register_mobile_step2">RegisterMobileStep2Activity</string>
+    <string name="title_activity_register_mobile_step3">RegisterMobileStep3Activity</string>
+
+    <!-- weibo相关 -->
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_image_switch">ImageSwitchActivity</string>
+    <string name="title_activity_goods_browse">GoodsBrowseActivity</string>
+    <string name="title_activity_virtual_detail">VirtualDetailActivity</string>
+    <string name="title_activity_my_asset">MyAssetActivity</string>
+    <string name="title_activity_signin">SigninActivity</string>
+    <string name="title_activity_predeposit">PredepositActivity</string>
+    <string name="title_activity_recharge_card_log">RechargeCardLogActivity</string>
+    <string name="title_activity_recharge_card_add">RechargeCardAddActivity</string>
+    <string name="title_activity_voucher_password_add">VoucherPasswordAddActivity</string>
+    <string name="title_activity_redpacket_list">RedpacketListActivity</string>
+    <string name="title_activity_redpacket_password_add">RedpacketPasswordAddActivity</string>
+    <string name="title_activity_point_log">PointLogActivity</string>
+    <string name="title_activity_bind_mobile">BindMobileActivity</string>
+    <string name="title_activity_unbind_mobile">UnbindMobileActivity</string>
+    <string name="title_activity_modify_password">ModifyPasswordActivity</string>
+    <string name="title_activity_modify_password_step2">ModifyPasswordStep2Activity</string>
+    <string name="title_activity_modify_paypwd_step1">ModifyPaypwdStep1Activity</string>
+    <string name="title_activity_modify_paypwd_step2">ModifyPaypwdStep2Activity</string>
+    <string name="title_activity_store_o2o_address">StoreO2oAddressActivity</string>
+    <string name="title_activity_baidu_map">BaiduMapActivity</string>
+
+    <!-- 异常信息 -->
+    <string name="network_inavaible">网络连接失败，请检查网络设置</string>
+    <string name="title_activity_order_wu_liu">OrderWuLiuActivity</string>
+    <string name="title_activity_order_exchange">OrderExchangeActivity</string>
+    <string name="title_activity_order_goods_tui_money">OrderGoodsTuiMoneyActivity</string>
+    <string name="title_activity_order_goods_tui_goods">OrderGoodsTuiGoodsActivity</string>
+    <string name="title_activity_order_exchange_list">OrderExchangeListActivity</string>
+    <string name="title_activity_order_exchange_control_details">
+        OrderExchangeControlDetailsActivity
+    </string>
+    <string name="title_activity_order_exchange_send_goods">OrderExchangeSendGoodsActivity</string>
+
+    <!--刷新-->
+    <string name="xrefreshview_header_hint_normal">下拉刷新</string>
+    <string name="xrefreshview_header_hint_ready">松开刷新数据</string>
+    <string name="xrefreshview_header_hint_loading">正在加载...</string>
+    <string name="xrefreshview_header_hint_loaded">加载完成</string>
+    <string name="xrefreshview_footer_hint_normal">加载完成</string>
+    <string name="xrefreshview_footer_hint_complete">已无更多数据</string>
+    <string name="xrefreshview_footer_hint_click">点击加载更多</string>
+    <string name="xrefreshview_footer_hint_ready">松开载入更多</string>
+    <string name="xrefreshview_never_refresh">从未刷新</string>
+    <string name="xrefreshview_refresh_justnow">刚刚刷新</string>
+    <string name="xrefreshview_refresh_minutes_ago">%1s分钟之前刷新</string>
+    <string name="xrefreshview_refresh_hours_ago">%1s小时之前刷新</string>
+    <string name="xrefreshview_refresh_days_ago">%1s天之前刷新</string>
+
+    <!--palay begin-->
+
+    <string name="tips_not_wifi">您目前正在使用移动网络，视频将继续消耗流量</string>
+    <string name="tips_not_wifi_confirm">继续</string>
+    <string name="tips_not_wifi_cancel">停止播放</string>
+    <string name="no_url">视频地址不存在</string>
+
+    <!--end-->
+</resources>

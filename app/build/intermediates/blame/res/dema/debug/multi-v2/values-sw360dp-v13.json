@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\Android\\trunk\\app\\build\\intermediates\\incremental\\mergeDemaDebugResources\\merged.dir\\values-sw360dp-v13\\values-sw360dp-v13.xml",
+            "map": [
+                {
+                    "source": "D:\\Android\\trunk\\app\\src\\main\\res\\values-sw360dp\\dimens.xml",
+                    "from": {
+                        "startLines": "9,5,7,8,6,4,3",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "396,190,293,344,241,136,92",
+                        "endColumns": "47,49,49,50,50,52,42",
+                        "endOffsets": "439,235,338,390,287,184,130"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,103,153,203,254,305,358",
+                        "endColumns": "47,49,49,50,50,52,42",
+                        "endOffsets": "98,148,198,249,300,353,396"
+                    }
+                }
+            ]
+        }
+    ]
+}

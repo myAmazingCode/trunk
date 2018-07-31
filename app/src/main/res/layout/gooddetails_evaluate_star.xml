@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="14dp"
+    android:layout_height="10dp"
+    android:padding="2dp"
+    >
+
+    <ImageView
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:src="@drawable/nc_icon_full"></ImageView>
+</LinearLayout>

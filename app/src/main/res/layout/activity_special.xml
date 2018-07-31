@@ -1,0 +1,69 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_base" />
+
+    <include layout="@layout/activity_base_empty"/>
+    <net.shopnc.b2b2c.android.xrefresh.XRefreshView
+        android:id="@+id/xrefreshview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--自定义滑动的ScrollView-->
+        <net.shopnc.b2b2c.android.xrefresh.XScrollView
+            android:id="@+id/sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/nc_bg">
+
+            <!--第一模块-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--图片轮播-->
+                    <net.shopnc.b2b2c.android.circlelibrary.ImageCycleView
+                        android:id="@+id/cycleView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <!--主体-->
+                <LinearLayout
+                    android:id="@+id/homeViewID"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_below="@id/head"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/nc_bg"
+                    android:orientation="vertical" />
+            </RelativeLayout>
+        </net.shopnc.b2b2c.android.xrefresh.XScrollView>
+
+        <!--回到顶部-->
+        <Button
+            android:id="@+id/top_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="6dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/top_btn_bg"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </net.shopnc.b2b2c.android.xrefresh.XRefreshView>
+</LinearLayout>

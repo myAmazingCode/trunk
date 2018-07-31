@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/app_white"
+              android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/nc_bg_dk"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nc_bg"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp4">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/repo_goods_shop"/>
+
+        <TextView
+            android:id="@+id/tvShopName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp4"
+            android:drawablePadding="@dimen/dp4"
+            android:drawableRight="@drawable/nc_icon_arrow_right"
+            android:gravity="center"
+            android:text="XXX旗舰店"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp4">
+
+        <ImageView
+            android:id="@+id/ivGoodPic"
+            android:layout_width="80dp"
+            android:layout_height="80dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/dp4"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/dp4"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvGoodsName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="美丽的商品美丽的商品美丽的商品"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="￥100.00"
+                android:textColor="@color/nc_red"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tvPromotionNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="推广数量"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvPayRate"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="佣金比率..."/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/nc_text"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|end"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp4"
+        android:paddingRight="@dimen/dp10"
+        android:paddingTop="@dimen/dp4">
+
+
+
+
+
+        <TextView
+            android:id="@+id/tvDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp10"
+            android:background="@drawable/promotion_list_text_stroke_bg"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dp4"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingRight="@dimen/dp10"
+            android:paddingTop="@dimen/dp4"
+            android:text="删除"/>
+
+        <TextView
+            android:id="@+id/tvMove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp10"
+            android:background="@drawable/promotion_list_text_stroke_bg"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dp4"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingRight="@dimen/dp10"
+            android:paddingTop="@dimen/dp4"
+            android:text="移动"/>
+
+        <TextView
+            android:id="@+id/tvShare"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/app_white"
+            android:background="@drawable/promotion_list_text_bg"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dp4"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingRight="@dimen/dp10"
+            android:paddingTop="@dimen/dp4"
+            android:text="立即推广"/>
+    </LinearLayout>
+</LinearLayout>

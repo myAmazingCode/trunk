@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rlBG"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@color/nc_red">
+
+        <TextView
+            android:id="@+id/tvDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="删除"
+            android:textColor="@color/nc_white" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlFG"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/nc_white"
+        android:paddingTop="10dp">
+
+
+        <ImageView
+            android:id="@+id/ivSellerImg"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:id="@+id/tvSellerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tvMsgTime"
+            android:layout_toRightOf="@+id/ivSellerImg"
+            android:singleLine="true"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="@dimen/dp16" />
+
+        <TextView
+            android:id="@+id/tvMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/ivSellerImg"
+            android:paddingBottom="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:textColor="@color/nc_text"
+            android:textSize="@dimen/dp14" />
+
+        <TextView
+            android:id="@+id/tvMsgTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingRight="10dp"
+            android:textColor="@color/buystep_sku_text"
+            android:textSize="@dimen/dp12" />
+
+        <View
+            style="@style/NCLine"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

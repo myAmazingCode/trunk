@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/nc_bg"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/searchKeyWord"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:textColor="@color/nc_text"
+        android:textSize="14dp" />
+
+    <TextView style="@style/NCLine" />
+
+</LinearLayout>

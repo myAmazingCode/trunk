@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/nc_white">
+
+    <ImageView
+        android:id="@+id/iv_pict"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="37dp"
+        />
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iv_pict"
+        android:layout_marginRight="30dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="10dp"
+        android:layout_alignTop="@id/iv_pict"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="酸梅汤 山楂乌梅茶 原料浓缩 速溶茶饮料"
+        android:textColor="@color/nc_black"
+        android:textSize="@dimen/tv14sp"
+        />
+
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/nc_icon_del"
+        android:layout_alignTop="@id/tv_title"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_need_credits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="兑换积分1600"
+        android:textSize="12sp"
+        android:textColor="@color/nc_text"
+        android:layout_below="@id/tv_title"
+        android:layout_toRightOf="@id/iv_pict"
+        android:paddingLeft="10dp"
+        android:paddingTop="2dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_credits_subtotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="积分小计1600"
+        android:textSize="@dimen/tv14sp"
+        android:textColor="@color/nc_red"
+        android:layout_below="@id/tv_need_credits"
+        android:layout_toRightOf="@id/iv_pict"
+        android:paddingLeft="10dp"
+        android:paddingTop="2dp"
+        />
+
+    <include
+        layout="@layout/app_common_add_and_minus"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="17dp"
+        android:layout_marginRight="12dp" />
+
+
+</RelativeLayout>

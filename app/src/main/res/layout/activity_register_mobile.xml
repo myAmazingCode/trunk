@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_common_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/nc_white">
+
+        <Button
+            android:id="@+id/btnReg"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/nc_reg_btn_bg"
+            android:onClick="btnRegClick" />
+
+        <Button
+            android:id="@+id/btnRegMb"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/nc_reg_mb_btn_bg" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/nc_white"
+        android:orientation="vertical">
+
+        <TextView style="@style/NCLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:layout_width="70dp"
+                android:text="手  机  号：" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                style="@style/NCFormEdit"
+                android:hint="请输入手机号"
+                android:inputType="number" />
+
+            <TextView style="@style/NCLine" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:layout_width="70dp"
+                android:text="验  证  码：" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/etCode"
+                    style="@style/NCFormEdit"
+                    android:layout_alignParentLeft="true"
+                    android:hint="请输入验证码" />
+
+                <ImageView
+                    android:id="@+id/ivCode"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+
+            <TextView style="@style/NCLine" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnAgree"
+            android:layout_width="32dp"
+            android:layout_height="48dp"
+            android:background="@null"
+            android:onClick="btnAgreeClick"
+            android:src="@drawable/nc_check" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:background="@null"
+            android:onClick="btnAgreeClick"
+            android:text="同意"
+            android:textColor="#7F7F7F"
+            android:textSize="12dp" />
+
+        <Button
+            style="@style/NCTextButtonSmall"
+            android:layout_width="wrap_content"
+            android:onClick="btnMemberDocumentClick"
+            android:text="用户注册协议"
+            android:textColor="@color/nc_blue" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnRegSubmit"
+        style="@style/NCCornerButton"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:onClick="btnRegSubmitClick"
+        android:text="获取验证码" />
+</LinearLayout>

@@ -1,0 +1,683 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_bg"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/nc_bg"
+        android:orientation="vertical">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="center"
+                android:src="@drawable/nc_mine_bg" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/btnSetting"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/nc_icon_setting" />
+
+                <Button
+                    android:id="@+id/btnIm"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/nc_icon_mine_im" />
+
+                <LinearLayout
+                    android:id="@+id/llLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/nc_icon_member" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:background="@null"
+                        android:text="点击登录"
+                        android:textColor="@color/nc_white"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llMemberInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivMemberAvatar"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/nc_icon_member" />
+
+                        <TextView
+                            android:id="@+id/tv_Member_v"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="30dp"
+                            android:background="@drawable/shape_red"
+                            android:text="v0"
+                            android:textColor="@color/app_white"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvMemberName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:background="@null"
+                        android:text=" "
+                        android:textColor="@color/nc_white"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#1A000000">
+
+                    <LinearLayout
+                        android:id="@+id/llFavGoods"
+                        style="@style/NCMineButtonLinearLayout">
+
+                        <ImageView
+                            android:id="@+id/ivFavGoods"
+                            style="@style/NCMineButtonImageView"
+                            android:src="@drawable/nc_icon_fav_goods" />
+
+                        <TextView
+                            android:id="@+id/tvFavGoodsCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="@color/nc_white"
+                            android:visibility="gone" />
+
+                        <TextView
+                            style="@style/NCMineButtonTextView"
+                            android:text="商品收藏"
+                            android:textColor="@color/nc_white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llFavStore"
+                        style="@style/NCMineButtonLinearLayout">
+
+                        <ImageView
+                            android:id="@+id/ivFavStore"
+                            style="@style/NCMineButtonImageView"
+                            android:src="@drawable/nc_icon_fav_store" />
+
+                        <TextView
+                            android:id="@+id/tvFavStoreCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="@color/nc_white"
+                            android:visibility="gone" />
+
+                        <TextView
+                            style="@style/NCMineButtonTextView"
+                            android:text="店铺收藏"
+                            android:textColor="@color/nc_white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llZuji"
+                        style="@style/NCMineButtonLinearLayout">
+
+                        <ImageView
+                            style="@style/NCMineButtonImageView"
+                            android:src="@drawable/nc_icon_goods_browse" />
+
+                        <TextView
+                            style="@style/NCMineButtonTextView"
+                            android:text="我的足迹"
+                            android:textColor="@color/nc_white" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/nc_bg_border_top_and_bottom"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/nc_bg_border_bottom">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/nc_icon_my_order" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="26dp"
+                    android:text="我的订单"
+                    android:textColor="@color/nc_black"
+                    android:textSize="14dp" />
+
+                <Button
+                    android:id="@+id/btnOrderAll"
+                    style="@style/NCTextButtonSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:drawableRight="@drawable/nc_icon_arrow_right"
+                    android:text="查看全部订单"
+                    android:textColor="@color/nc_text" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/llOrderNew"
+                    style="@style/NCMineButtonLinearLayout">
+
+                    <TextView
+                        android:id="@+id/daifukuang_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:background="@drawable/bg_num_red"
+                        android:gravity="center"
+                        android:textColor="@color/nc_white"
+                        android:textSize="10dp"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        style="@style/NCMineButtonImageView"
+                        android:src="@drawable/nc_icon_mine_order_1" />
+
+                    <TextView
+                        style="@style/NCMineButtonTextView"
+                        android:text="待付款" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llOrderSend"
+                    style="@style/NCMineButtonLinearLayout">
+
+                    <TextView
+                        android:id="@+id/daishouhuo_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:background="@drawable/bg_num_red"
+                        android:gravity="center"
+                        android:textColor="@color/nc_white"
+                        android:textSize="10dp"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        style="@style/NCMineButtonImageView"
+                        android:src="@drawable/nc_icon_mine_order_2" />
+
+                    <TextView
+                        style="@style/NCMineButtonTextView"
+                        android:text="待收货" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llOrderNotakes"
+                    style="@style/NCMineButtonLinearLayout">
+
+                    <TextView
+                        android:id="@+id/daiziti_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:background="@drawable/bg_num_red"
+                        android:gravity="center"
+                        android:textColor="@color/nc_white"
+                        android:textSize="10dp"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        style="@style/NCMineButtonImageView"
+                        android:src="@drawable/nc_icon_mine_order_3" />
+
+                    <TextView
+                        style="@style/NCMineButtonTextView"
+                        android:text="待自提" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llOrderNoeval"
+                    style="@style/NCMineButtonLinearLayout">
+
+                    <TextView
+                        android:id="@+id/daipingjia_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:background="@drawable/bg_num_red"
+                        android:gravity="center"
+                        android:textColor="@color/nc_white"
+                        android:textSize="10dp"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        style="@style/NCMineButtonImageView"
+                        android:src="@drawable/nc_icon_mine_order_4" />
+
+                    <TextView
+                        style="@style/NCMineButtonTextView"
+                        android:text="待评价" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llRefund"
+                    style="@style/NCMineButtonLinearLayout">
+
+                    <TextView
+                        android:id="@+id/tuikuan_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/bg_num_red"
+                        android:gravity="center"
+                        android:textColor="@color/nc_white"
+                        android:textSize="10dp"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        style="@style/NCMineButtonImageView"
+                        android:src="@drawable/nc_icon_mine_order_5" />
+
+                    <TextView
+                        style="@style/NCMineButtonTextView"
+                        android:text="退款/退货" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/nc_bg_border_top_and_bottom"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/nc_bg_border_bottom">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/nc_icon_my_money" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="26dp"
+                    android:text="我的财产"
+                    android:textColor="@color/nc_black"
+                    android:textSize="14dp" />
+
+                <Button
+                    android:id="@+id/btnMyAsset"
+                    style="@style/NCTextButtonSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:drawableRight="@drawable/nc_icon_arrow_right"
+                    android:text="查看全部财产"
+                    android:textColor="@color/nc_text" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/llPredeposit"
+                    style="@style/NCMineButtonLinearLayout">
+
+                    <ImageView
+                        style="@style/NCMineButtonImageView"
+                        android:src="@drawable/nc_icon_mine_money_1" />
+
+                    <TextView
+                        style="@style/NCMineButtonTextView"
+                        android:text="预存款" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llRechargeCard"
+                    style="@style/NCMineButtonLinearLayout">
+
+                    <ImageView
+                        style="@style/NCMineButtonImageView"
+                        android:src="@drawable/nc_icon_mine_money_2" />
+
+                    <TextView
+                        style="@style/NCMineButtonTextView"
+                        android:text="充值卡" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llVoucherList"
+                    style="@style/NCMineButtonLinearLayout">
+
+                    <ImageView
+                        style="@style/NCMineButtonImageView"
+                        android:src="@drawable/nc_icon_mine_money_3" />
+
+                    <TextView
+                        style="@style/NCMineButtonTextView"
+                        android:text="代金券" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llRedpacketList"
+                    style="@style/NCMineButtonLinearLayout">
+
+                    <ImageView
+                        style="@style/NCMineButtonImageView"
+                        android:src="@drawable/nc_icon_mine_money_4" />
+
+                    <TextView
+                        style="@style/NCMineButtonTextView"
+                        android:text="红包" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llPointLog"
+                    style="@style/NCMineButtonLinearLayout">
+
+                    <ImageView
+                        style="@style/NCMineButtonImageView"
+                        android:src="@drawable/nc_icon_mine_money_5" />
+
+                    <TextView
+                        style="@style/NCMineButtonTextView"
+                        android:text="积分" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <!--分销begin-->
+
+        <LinearLayout
+            android:id="@+id/ll_fenxiao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/nc_bg_border_top_and_bottom"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/nc_bg_border_bottom">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/nc_icon_my_order" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="26dp"
+                    android:text="分销中心"
+                    android:textColor="@color/nc_black"
+                    android:textSize="14dp" />
+
+                <Button
+                    android:id="@+id/fenxiao_btnOrderAll"
+                    style="@style/NCTextButtonSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:drawableRight="@drawable/nc_icon_arrow_right"
+                    android:text="查看全部"
+                    android:textColor="@color/nc_text"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/fenxiao_llOrderNew"
+                    style="@style/NCMineButtonLinearLayout">
+
+                    <ImageView
+                        style="@style/NCMineButtonImageView"
+                        android:src="@drawable/fenxiao_goods" />
+
+                    <TextView
+                        style="@style/NCMineButtonTextView"
+                        android:text="分销商品" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fenxiao_llOrderSend"
+                    style="@style/NCMineButtonLinearLayout">
+
+                    <ImageView
+                        style="@style/NCMineButtonImageView"
+                        android:src="@drawable/fenxiao_order" />
+
+                    <TextView
+                        style="@style/NCMineButtonTextView"
+                        android:text="分销订单" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fenxiao_llOrderNotakes"
+                    style="@style/NCMineButtonLinearLayout">
+
+                    <ImageView
+                        style="@style/NCMineButtonImageView"
+                        android:src="@drawable/fenxiao_tiqu" />
+
+                    <TextView
+                        style="@style/NCMineButtonTextView"
+                        android:text="分销结算" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fenxiao_llOrdertixian"
+                    style="@style/NCMineButtonLinearLayout">
+
+                    <ImageView
+                        style="@style/NCMineButtonImageView"
+                        android:src="@drawable/jiesuan" />
+
+                    <TextView
+                        style="@style/NCMineButtonTextView"
+                        android:text="分销提现" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fenxiao_llOrderNoeval"
+                    style="@style/NCMineButtonLinearLayout"
+                    android:visibility="gone">
+
+                    <ImageView
+                        style="@style/NCMineButtonImageView"
+                        android:src="@drawable/fenxiao_live" />
+
+                    <TextView
+                        style="@style/NCMineButtonTextView"
+                        android:text="直播" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--end-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/nc_bg_border_top_and_bottom"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rlAddress"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/nc_bg_border_bottom">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/nc_icon_my_address" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="26dp"
+                    android:text="收货地址管理"
+                    android:textColor="@color/nc_black"
+                    android:textSize="14dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="center"
+                    android:src="@drawable/nc_icon_arrow_right" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlSetting"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="1dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/nc_icon_setting2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="26dp"
+                    android:text="用户设置"
+                    android:textColor="@color/nc_black"
+                    android:textSize="14dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="center"
+                    android:src="@drawable/nc_icon_arrow_right" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

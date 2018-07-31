@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"></FrameLayout>
+
+        <TextView style="@style/NCLine" />
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/app_tab_bg"
+            android:orientation="horizontal"
+            android:paddingTop="0.0dip">
+
+            <RadioButton
+                android:id="@+id/btnHomeID"
+                style="@style/MyTabButton"
+                android:background="@color/app_white"
+                android:checked="true"
+                android:drawableTop="@drawable/main_index_home_bg"
+                android:text="首页" />
+
+            <RadioButton
+                android:id="@+id/btnClassID"
+                style="@style/MyTabButton"
+                android:background="@color/app_white"
+                android:drawableTop="@drawable/main_index_class_bg"
+                android:text="分类" />
+
+            <RadioButton
+                android:id="@+id/btnCartID"
+                style="@style/MyTabButton"
+                android:background="@color/app_white"
+                android:drawableTop="@drawable/main_index_cart_bg"
+                android:text="购物车" />
+
+            <RadioButton
+                android:id="@+id/btnMineID"
+                style="@style/MyTabButton"
+                android:background="@color/app_white"
+                android:drawableTop="@drawable/main_index_mine_bg"
+                android:text="我" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#00000000"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:visibility="invisible" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+</RelativeLayout>

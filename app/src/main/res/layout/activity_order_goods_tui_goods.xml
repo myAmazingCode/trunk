@@ -1,0 +1,287 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="10dp"
+    android:background="@color/nc_bg"
+    android:orientation="vertical"
+    tools:context="net.shopnc.b2b2c.android.ui.mine.OrderGoodsTuiGoodsActivity">
+
+    <include layout="@layout/app_common_header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:padding="8dp"
+                android:background="@color/nc_title_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textOrderStoreName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/nc_icon_store"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/nc_icon_arrow_right"
+                    android:singleLine="true"
+                    android:text="店铺信息"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="16dp" />
+
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/cart_listview_gap" />
+
+                <LinearLayout
+                    android:id="@+id/lll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:id="@+id/addViewID"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/cart_listview_gap" />
+
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="特别提示：退款凭证选择直接拍照或从手机相册上传图片时，请注意图片尺寸控制在1M以内，超出请压缩裁剪后再选择上传！"
+                android:layout_marginTop="8dp"
+                android:padding="4dp"
+                android:background="#AAA"
+                android:textColor="#FFF"
+                android:textSize="12dp"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="6dp"
+                android:background="@color/nc_title_bg"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="退款原因"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="14dp"
+                    android:textColor="#7F7F7F"
+                    />
+
+
+                <Spinner
+                    android:id="@+id/spinner1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="30dp"
+                    android:textColor="@color/nc_text_dark"
+                    />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="6dp"
+                android:background="@color/nc_title_bg"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="退款金额"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="14dp"
+                    android:textColor="#7F7F7F"
+                    />
+
+                <EditText
+                    android:id="@+id/textNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="退款金额不超过支付金额"
+                    android:textSize="14dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="30dp"
+                    android:background="@color/nc_bg"
+                    android:textColor="@color/nc_text_dark"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="6dp"
+                android:background="@color/nc_title_bg"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="退货数量"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="14dp"
+                    android:textColor="#7F7F7F"
+                    />
+
+                <EditText
+                    android:id="@+id/textSum"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="不可超过购买数"
+                    android:textSize="14dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="30dp"
+                    android:background="@color/nc_bg"
+                    android:textColor="@color/nc_text_dark"
+                    />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="6dp"
+                android:background="@color/nc_title_bg"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="退款说明"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="14dp"
+                    android:textColor="#7F7F7F"
+                    />
+
+                <EditText
+                    android:id="@+id/editSeason"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="申请原因！"
+                    android:textSize="14dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="30dp"
+                    android:background="@color/nc_bg"
+                    android:textColor="@color/nc_text_dark"
+                    />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/nc_title_bg"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="退款凭证"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="14dp"
+                    android:textColor="#7F7F7F"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:orientation="horizontal">
+
+
+                    <net.shopnc.b2b2c.android.custom.NoScrollGridView
+                        android:id="@+id/gv_photo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:columnWidth="48dp"
+                        android:listSelector="#00000000"
+                        android:horizontalSpacing="4dp"
+                        android:numColumns="3"
+                        android:scrollbars="none"
+                        android:verticalSpacing="2dp"
+                        android:stretchMode="columnWidth"/>
+
+                </LinearLayout>
+
+                <!--
+
+                <Button
+                    android:id="@+id/btnPhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:background="@drawable/mcart_plus_normal"
+                     />
+-->
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/buttonCommit"
+                style="@style/NCCornerButtonMain"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:onClick="btnCommitExchange"
+                android:text="提交" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

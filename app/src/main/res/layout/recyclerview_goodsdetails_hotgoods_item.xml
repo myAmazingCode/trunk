@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:paddingLeft="10dp"
+              android:paddingRight="10dp">
+
+    <ImageView
+        android:id="@+id/ivPic"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/nc_border"
+        android:clickable="false"
+        android:focusable="false"
+        android:padding="1dp"/>
+
+    <TextView
+        android:id="@+id/tvGoodsCommendName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:clickable="false"
+        android:ellipsize="end"
+        android:focusable="false"
+        android:maxLines="2"
+        android:textColor="@color/nc_text"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/tvGoodsCommendPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:text="￥ 0.0"
+        android:textColor="@color/nc_text_dark"
+        android:textSize="12sp"/>
+
+</LinearLayout>

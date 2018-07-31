@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2">
+
+    <include layout="@layout/app_common_header"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/nc_white"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/NCFormText"
+            android:text="    真实姓名："
+            android:textColor="@color/nc_black"/>
+
+        <EditText
+            android:id="@+id/etUsername"
+            style="@style/NCFormEditNoBorder"
+            android:textColorHint="#bfbfbf"
+            android:hint="请输入真实姓名" />
+
+    </LinearLayout>
+    <TextView style="@style/NCLine1" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/nc_white"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/NCFormText"
+            android:text="身份证号码："
+            android:textColor="@color/nc_black"/>
+
+        <EditText
+            android:id="@+id/etcardnum"
+            style="@style/NCFormEditNoBorder"
+            android:hint="请输入身份证号码"
+            android:textColorHint="#bfbfbf" />
+
+    </LinearLayout>
+
+    <TextView style="@style/NCLine1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#f2f2f2">
+
+        <LinearLayout
+            android:id="@+id/ll_left_add_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/nc_white"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_left_add_img"
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:layout_margin="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/applay_add_file"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_2"
+                android:textSize="13dp"
+                android:layout_marginBottom="11dp"
+                android:textColor="@color/nc_black"
+                android:text="手持身份证正面照"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_right_add_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/nc_white"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_right_add_img"
+                android:layout_width="wrap_content"
+                android:layout_height="105dp"
+                android:scaleType="fitXY"
+                android:layout_margin="10dp"
+                android:src="@drawable/applay_add_file"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_2"
+                android:textSize="13dp"
+                android:layout_marginBottom="11dp"
+                android:textColor="@color/nc_black"
+                android:text="手持身份证反面照"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView style="@style/NCLine1" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:background="@color/nc_white"
+        android:layout_gravity="center_vertical">
+
+        <CheckBox
+            android:id="@+id/cb_box"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="11dp"
+            android:textColor="#808080"
+            android:text="我已经阅读并同意《主播公约》"/>
+
+    </LinearLayout>
+
+    <View style="@style/NCLine1" />
+
+    <TextView
+         android:id="@+id/tv_box_applay"
+         android:layout_width="match_parent"
+         android:layout_height="44dp"
+         android:gravity="center"
+         android:text="申请主播"
+         android:textColor="@color/nc_white"
+         android:textSize="16dp"
+         android:layout_marginTop="25dp"
+         android:layout_marginLeft="10dp"
+         android:layout_marginRight="10dp"
+         android:background="@drawable/corners_bg_applay"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:text="审核需要两个工作日"
+        android:textColor="#ff0183"
+        android:textSize="16dp"
+        android:layout_marginTop="6dp" />
+
+</LinearLayout>

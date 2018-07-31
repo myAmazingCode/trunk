@@ -1,0 +1,14 @@
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/nc_white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ImageViewHome1Imagepic01"
+        android:layout_width="640px"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true" />
+
+</com.zhy.autolayout.AutoLinearLayout>

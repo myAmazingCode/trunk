@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvNoResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="没有找到符合条件的商品"
+        android:visibility="gone" />
+
+     <net.shopnc.b2b2c.android.custom.GridViewForScrollView
+        android:id="@+id/gvGoodsGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="#FAFAFA"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:horizontalSpacing="5dp"
+        android:listSelector="#00000000"
+        android:numColumns="2"
+        android:scrollbars="none"
+        android:verticalSpacing="5dp" />
+    <TextView
+        android:id="@+id/textMore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#FAFAFA"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="加载更多"/>
+</LinearLayout>

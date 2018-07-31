@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/nc_bg"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/app_common_header"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/nc_white"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/NCFormText"
+            android:text="申请单号："
+            android:textColor="@color/nc_black"/>
+
+        <TextView
+            style="@style/NCFormText"
+            android:id="@+id/tv_danhao"
+            android:textColorHint="#bfbfbf"
+             />
+
+    </LinearLayout>
+    <TextView style="@style/NCLine1" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/nc_white"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/NCFormText"
+            android:text="提现金额："
+            android:textColor="@color/nc_black"/>
+
+        <TextView
+            style="@style/NCFormText"
+            android:id="@+id/tv_jiner"
+            android:textColorHint="#bfbfbf"
+            />
+
+    </LinearLayout>
+    <TextView style="@style/NCLine1" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/nc_white"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/NCFormText"
+            android:text="收款银行："
+            android:textColor="@color/nc_black"/>
+
+        <TextView
+            style="@style/NCFormText"
+            android:id="@+id/tv_bank"
+            android:textColorHint="#bfbfbf"
+            />
+
+    </LinearLayout>
+    <TextView style="@style/NCLine1" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/nc_white"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/NCFormText"
+            android:text="收款账号："
+            android:textColor="@color/nc_black"/>
+
+        <TextView
+            style="@style/NCFormText"
+            android:id="@+id/tv_zhanghu"
+            android:textColorHint="#bfbfbf"
+            />
+
+    </LinearLayout>
+    <TextView style="@style/NCLine1" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/nc_white"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/NCFormText"
+            android:text="    收款人："
+            android:textColor="@color/nc_black"/>
+
+        <TextView
+            style="@style/NCFormText"
+            android:id="@+id/tv_skr"
+            android:textColorHint="#bfbfbf"
+            />
+
+    </LinearLayout>
+    <TextView style="@style/NCLine1" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/nc_white"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/NCFormText"
+            android:text="申请时间："
+            android:textColor="@color/nc_black"/>
+
+        <TextView
+            style="@style/NCFormText"
+            android:id="@+id/tv_time"
+            android:textColorHint="#bfbfbf"
+            />
+
+    </LinearLayout>
+    <TextView style="@style/NCLine1" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/nc_white"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/NCFormText"
+            android:text="付款状态："
+            android:textColor="@color/nc_black"/>
+
+        <TextView
+            style="@style/NCFormText"
+            android:textColorHint="#bfbfbf"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

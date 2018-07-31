@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tvCodeState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:background="@color/nc_green"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:text="有效"
+        android:textColor="@color/nc_white"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/tvCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="313123123123123123"
+        android:textColor="@color/nc_green"
+        android:textSize="14dp" />
+
+</LinearLayout>
+

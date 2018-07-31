@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/flBack"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:foreground="@color/nc_background_transport" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="292dp"
+        android:layout_gravity="bottom"
+        android:background="@color/nc_white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/ivGoodsImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvGoodsName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lines="2"
+                    android:textColor="@color/nc_text"
+                    android:textSize="12dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvGoodsPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:singleLine="true"
+                        android:textColor="@color/nc_red"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tvGoodsStrong"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dp"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="12dp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="232dp"
+            android:background="@drawable/nc_bg_border_top_and_bottom">
+
+            <LinearLayout
+                android:id="@+id/llGoodsSpec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/nc_white"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="购买数量"
+            android:textColor="@color/nc_text"
+            android:textSize="12dp" />
+
+        <include
+            layout="@layout/app_common_add_and_minus1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/nc_bg_border_top_and_bottom"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/imID"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:drawableTop="@drawable/nc_icon_kefu"
+            android:gravity="center"
+            android:text="客服"
+            android:visibility="visible"
+            android:textColor="@color/nc_text"
+            android:textSize="14dp" />
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/nc_border" />
+
+        <TextView
+            android:id="@+id/showCartLayoutID"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:drawableTop="@drawable/nc_icon_cart"
+            android:gravity="center"
+            android:text="购物车"
+            android:visibility="visible"
+            android:textColor="@color/nc_text"
+            android:textSize="14dp" />
+
+        <Button
+            android:id="@+id/buyStepID"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@color/nc_red"
+            android:padding="10dip"
+            android:text="立即购买"
+            android:visibility="visible"
+            android:textColor="@color/nc_white"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/addCartID"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="@color/nc_orange"
+            android:text="添加购物车"
+            android:textColor="@color/nc_white"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
+

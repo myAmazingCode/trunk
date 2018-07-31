@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/nc_white"
+    >
+
+    <ImageView
+        android:id="@+id/ivStoreImg"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="10dp" />
+
+    <TextView
+        android:id="@+id/tvOwnShopFlag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/ivStoreImg"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/nc_btn_bg_on"
+        android:text="自营"
+        android:textColor="@color/nc_white"
+        android:textSize="@dimen/dp12" />
+
+    <TextView
+        android:id="@+id/tvStoreName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/tvOwnShopFlag"
+        android:singleLine="true"
+        android:text="dianpumingzi1"
+        android:textColor="@color/nc_text_dark" />
+
+    <TextView
+        android:id="@+id/tvSale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvStoreName"
+        android:layout_marginTop="6dp"
+        android:layout_toRightOf="@+id/ivStoreImg"
+        android:text="@string/search_store_sale_all"
+        android:textColor="@color/nc_text"
+        android:textSize="@dimen/dp12" />
+
+
+    <TextView
+        android:id="@+id/tvGoodsName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSale"
+        android:layout_marginTop="6dp"
+        android:layout_toRightOf="@+id/ivStoreImg"
+        android:text="主营产品："
+        android:textColor="@color/nc_text"
+        android:textSize="@dimen/dp12" />
+
+    <LinearLayout
+        android:id="@+id/llGood"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivStoreImg"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:visibility="gone"
+        >
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:background="@color/nc_bg"
+        android:layout_below="@+id/llGood"
+        />
+
+</RelativeLayout>

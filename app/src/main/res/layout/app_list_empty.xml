@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llListEmpty"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <RelativeLayout
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/nc_list_background_background">
+
+        <ImageView
+            android:id="@+id/ivListEmpty"
+            android:layout_width="40dp"
+            android:layout_centerInParent="true"
+            android:layout_height="40dp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvListEmptyTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/nc_text_dark"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/tvListEmptySubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/nc_text"
+        android:textSize="12dp" />
+
+</LinearLayout>

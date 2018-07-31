@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_vertical"
+              android:orientation="horizontal"
+              android:paddingTop="6dp">
+
+    <TextView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/discount_stroke_bg"
+        android:padding="1dp"
+        android:text="赠品"
+        android:textColor="@color/nc_red"
+        android:textSize="@dimen/tv12sp"/>
+
+    <TextView
+        android:id="@+id/tvGiftName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:padding="3dp"
+        android:textColor="@color/nc_text"
+        android:textSize="@dimen/dp12"/>
+
+    <TextView
+        android:id="@+id/tvGiftNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="10dp"
+        android:textSize="@dimen/dp12"/>
+
+</LinearLayout>

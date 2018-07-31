@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".android.ui.order.OrderComplaintDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/activity_base" />
+
+        <net.shopnc.b2b2c.android.xrefresh.XScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/nc_bg"
+                android:orientation="vertical"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:id="@+id/tvMyComplaintInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="我的投诉信息"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="@dimen/dp14" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/nc_white"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/llComplaintGoods"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="投诉商品"
+                            android:textColor="@color/nc_text_dark"
+                            android:textSize="@dimen/dp14" />
+
+                        <TextView
+                            android:id="@+id/tvComplaintGoods"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/nc_text_dark"
+                            android:textSize="@dimen/dp14" />
+
+                    </LinearLayout>
+
+                    <View style="@style/NCLine" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="投诉状态"
+                            android:textColor="@color/nc_text_dark"
+                            android:textSize="@dimen/dp14" />
+
+                        <TextView
+                            android:id="@+id/tvComplaintState"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:textColor="@color/nc_text_dark"
+                            android:textSize="@dimen/dp14" />
+
+                    </LinearLayout>
+
+                    <View style="@style/NCLine" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="投诉时间"
+                            android:textColor="@color/nc_text_dark"
+                            android:textSize="@dimen/dp14" />
+
+                        <TextView
+                            android:id="@+id/tvComplaintTime"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:textColor="@color/nc_text_dark"
+                            android:textSize="@dimen/dp14" />
+
+                    </LinearLayout>
+
+                    <View style="@style/NCLine" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="投诉主题"
+                            android:textColor="@color/nc_text_dark"
+                            android:textSize="@dimen/dp14" />
+
+                        <TextView
+                            android:id="@+id/tvComplaintTheme"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:textColor="@color/nc_text_dark"
+                            android:textSize="@dimen/dp14" />
+
+                    </LinearLayout>
+
+                    <View style="@style/NCLine"></View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="投诉内容"
+                            android:textColor="@color/nc_text_dark"
+                            android:textSize="@dimen/dp14" />
+
+                        <TextView
+                            android:id="@+id/tvComplaintContent"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:textColor="@color/nc_text_dark"
+                            android:textSize="@dimen/dp14" />
+
+                    </LinearLayout>
+
+                    <View style="@style/NCLine" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="凭证上传"
+                            android:textColor="@color/nc_text_dark"
+                            android:textSize="@dimen/dp14" />
+
+                        <TextView
+                            android:id="@+id/tvImageNone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_cancle"
+                            android:text="补充凭证"
+                            android:textColor="@color/nc_text_dark"
+                            android:textSize="@dimen/dp14"
+                            android:visibility="gone" />
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:id="@+id/fblImages"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                           />
+
+                    </LinearLayout>
+
+                    <View style="@style/NCLine" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlSupplementary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tvSupplementary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="补充凭证"
+                            android:textColor="@color/nc_text_dark"
+                            android:textSize="@dimen/dp14" />
+
+                        <TextView
+                            android:id="@+id/tvSubmmit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/btn_cancle"
+                            android:text="提交"
+                            android:textColor="@color/nc_text_dark"
+                            android:textSize="@dimen/dp14" />
+
+                        <net.shopnc.b2b2c.android.custom.MyGridView
+                            android:id="@+id/gvPhoto"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toLeftOf="@id/tvSubmmit"
+                            android:layout_toRightOf="@id/tvSupplementary"
+                            android:horizontalSpacing="4dp"
+                            android:listSelector="#00000000"
+                            android:numColumns="3"
+                            android:scrollbars="none"
+                            android:stretchMode="columnWidth"
+                            android:verticalSpacing="2dp"
+                            android:visibility="visible" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llSellerInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="商家申诉信息"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/nc_white"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="申诉时间"
+                                android:textColor="@color/nc_text_dark"
+                                android:textSize="@dimen/dp14" />
+
+                            <TextView
+                                android:id="@+id/tvAccusedTime"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:textColor="@color/nc_text_dark"
+                                android:textSize="@dimen/dp14" />
+
+                        </LinearLayout>
+
+                        <View style="@style/NCLine" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="申诉内容"
+                                android:textColor="@color/nc_text_dark"
+                                android:textSize="@dimen/dp14" />
+
+                            <TextView
+                                android:id="@+id/tvAccusedContent"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:textColor="@color/nc_text_dark"
+                                android:textSize="@dimen/dp14" />
+
+                        </LinearLayout>
+
+
+                        <View style="@style/NCLine" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="凭证上传"
+                                android:textColor="@color/nc_text_dark"
+                                android:textSize="@dimen/dp14" />
+
+                            <com.google.android.flexbox.FlexboxLayout
+                                android:id="@+id/fblImagesSeller"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                             />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llTalk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="对话详情"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/nc_white"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/tvTalk"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="暂无对话"
+                                android:textColor="@color/nc_text_dark"
+                                android:textSize="@dimen/dp14" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llTalkAdd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="发送对话"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/nc_white"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <EditText
+                                android:id="@+id/etTalkAdd"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:gravity="top"
+                                android:minHeight="50dp"
+                                android:textColor="@color/nc_text_dark"
+                                android:textSize="@dimen/dp14" />
+
+                            <TextView
+                                android:id="@+id/tvTalkAdd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:background="@drawable/btn_cancle"
+                                android:text="发送对话"
+                                android:textColor="@color/nc_text_dark"
+                                android:textSize="@dimen/dp14" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llArbitrament"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="平台仲裁"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/nc_white"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="仲裁时间"
+                                android:textColor="@color/nc_text_dark"
+                                android:textSize="@dimen/dp14" />
+
+                            <TextView
+                                android:id="@+id/tvArbitrationTime"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:textColor="@color/nc_text_dark"
+                                android:textSize="@dimen/dp14" />
+
+                        </LinearLayout>
+
+                        <View style="@style/NCLine" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="仲裁意见"
+                                android:textColor="@color/nc_text_dark"
+                                android:textSize="@dimen/dp14" />
+
+                            <TextView
+                                android:id="@+id/tvArbitrationOpinion"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:textColor="@color/nc_text_dark"
+                                android:textSize="@dimen/dp14" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnSubmitArbitration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@color/nc_red_dark"
+                    android:text="提交仲裁"
+                    android:textColor="@color/nc_white" />
+            </LinearLayout>
+        </net.shopnc.b2b2c.android.xrefresh.XScrollView>
+    </LinearLayout>
+</RelativeLayout>

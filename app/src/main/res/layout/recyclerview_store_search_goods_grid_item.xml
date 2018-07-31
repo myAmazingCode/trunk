@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/nc_white"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivGoodPic"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/tvGoodName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="10dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dp14" />
+
+        <TextView
+            android:id="@+id/tvGoodJingle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_toRightOf="@+id/tvOwnShop"
+            android:singleLine="true"
+            android:textColor="@color/nc_fg"
+            android:textSize="@dimen/dp12"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="3dp">
+
+            <TextView
+                android:id="@+id/tvGoodPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/nc_red"
+                android:textSize="@dimen/dp16" />
+
+            <TextView
+                android:id="@+id/tvDownFlag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/red_round_small"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:text="折"
+                android:textColor="@color/nc_red"
+                android:textSize="@dimen/dp10" />
+
+            <TextView
+                android:id="@+id/tvPreShowFlag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/red_round_small"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:text="预"
+                android:textColor="@color/nc_red"
+                android:textSize="@dimen/dp10" />
+
+            <TextView
+                android:id="@+id/tvGiftFlag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/red_round_small"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:text="赠"
+                android:textColor="@color/nc_red"
+                android:textSize="@dimen/dp10" />
+
+            <TextView
+                android:id="@+id/tvBitchNum"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|right"
+                android:text="3把起购"
+                android:textColor="@color/nc_fg"
+                android:textSize="@dimen/dp12" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/tvGoodSalenum"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:text="0"
+                android:textColor="@color/nc_text"
+                android:textSize="@dimen/dp12" />
+
+            <ImageView
+                android:id="@+id/ivMore"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/nc_icon_more_dot"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:padding="8dp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rlAddFav"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/nc_bg"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        >
+
+        <ImageButton
+            android:id="@+id/ibImgFav"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/circle_add_fav_selecter"
+            android:src="@drawable/circle_add_fav_img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvFav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="加收藏"
+            android:textColor="@color/nc_text_dark"
+            android:layout_below="@+id/ibImgFav"
+            android:textSize="@dimen/dp10"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="30dp"
+            />
+
+    </LinearLayout>
+</RelativeLayout>

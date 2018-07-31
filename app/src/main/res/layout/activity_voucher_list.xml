@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/nc_bg"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/app_common_header" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:background="@color/nc_white">
+
+            <Button
+                android:id="@+id/btnVoucherList"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/nc_combin_btn_left_bg"
+                android:text="我的代金券"
+                android:textColor="@drawable/nc_btn_text_color" />
+
+            <Button
+                android:id="@+id/btnVoucherPasswordAdd"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/nc_combin_btn_right_bg"
+                android:text="领取代金券"
+                android:textColor="@drawable/nc_btn_text_color" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <net.shopnc.b2b2c.android.custom.XListView
+        android:id="@+id/listViewID"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:divider="@color/nc_bg"
+        android:dividerHeight="10dp"
+        android:fadingEdge="none"
+        android:scrollbars="none" />
+
+</LinearLayout>

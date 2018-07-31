@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/nc_white"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/ivMemberImg"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@color/im_me_message_bg" />
+
+    <TextView
+        android:id="@+id/tvMemberName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@+id/ivMemberImg"
+        android:lines="1"
+        android:text="dcaisjpai"
+        android:textColor="@color/nc_text_dark"
+        android:textSize="@dimen/dp12" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvMemberName"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/ivMemberImg"
+        android:lines="1"
+        android:text="dcaisjpai"
+        android:textColor="@color/nc_text"
+        android:textSize="@dimen/dp12" />
+
+    <TextView
+        android:id="@+id/tvGoodName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivMemberImg"
+        android:layout_marginTop="6dp"
+        android:text="dcaisjpai"
+        android:textColor="@color/nc_text"
+        android:textSize="@dimen/dp12" />
+
+    <View
+        style="@style/NCLine"
+        android:layout_below="@+id/tvGoodName"
+        android:layout_marginTop="6dp" />
+
+    <TextView
+        android:id="@+id/tvSuggest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvGoodName"
+        android:layout_marginTop="16dp"
+        android:text="dcaisjpai"
+        android:textColor="@color/nc_text"
+        android:textSize="@dimen/dp12" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/flImgs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSuggest"
+        android:layout_marginTop="10dp"
+        app:alignContent="flex_start"
+        app:flexWrap="wrap" />
+
+</RelativeLayout>

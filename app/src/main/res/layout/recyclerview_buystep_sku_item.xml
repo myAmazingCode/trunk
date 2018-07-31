@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/nc_good_bg">
+
+    <RelativeLayout
+        android:id="@+id/rlNoGoods"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvSkuNum"
+        android:layout_alignParentTop="true"
+        android:background="@color/no_goods_red"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/no_goods_shape"
+            android:gravity="center"
+            android:text="无货"
+            android:textColor="@color/no_goods_red"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvSkuSpec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_toLeftOf="@+id/tvAllPrice"
+        android:layout_weight="1"
+        android:padding="6dp"
+        android:text="颜色"
+        android:textColor="@color/buystep_sku_text"
+        android:textSize="@dimen/dp12"/>
+
+    <TextView
+        android:id="@+id/tvAllPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="4dp"
+        android:padding="6dp"
+        android:text="总价"
+        android:textColor="@color/buystep_sku_text"
+        android:textSize="@dimen/dp12"/>
+
+    <TextView
+        android:id="@+id/tvSkuPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSkuSpec"
+        android:layout_marginLeft="4dp"
+        android:layout_toLeftOf="@+id/tvSkuNum"
+        android:padding="6dp"
+        android:text="单价"
+        android:textColor="@color/buystep_sku_text"
+        android:textSize="@dimen/dp12"/>
+
+    <TextView
+        android:id="@+id/tvSkuNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tvAllPrice"
+        android:layout_marginLeft="4dp"
+        android:padding="6dp"
+        android:text="数量"
+        android:textColor="@color/buystep_sku_text"
+        android:textSize="@dimen/dp12"/>
+
+    <LinearLayout
+        android:id="@+id/llTryInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSkuPrice"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="4dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="4dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="试用:"
+            android:textColor="@color/buystep_sku_text"
+            android:textSize="@dimen/dp12"/>
+
+        <TextView
+            android:id="@+id/tvTryInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:text="发货日期：2016.10.10 "
+            android:textColor="@color/nc_pink"
+            android:textSize="@dimen/dp12"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_below="@+id/llTryInfo"
+        android:background="@color/app_white"/>
+
+    <LinearLayout
+        android:id="@+id/llGiftLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llTryInfo"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/llGift"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@color/nc_good_bg"
+            android:orientation="vertical"
+            android:paddingBottom="6dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:background="@color/app_white"></View>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

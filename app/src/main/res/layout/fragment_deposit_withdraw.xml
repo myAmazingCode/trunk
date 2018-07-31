@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/activity_base_empty" />
+
+    <Button
+        android:id="@+id/btnApplyDeposit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bottom_bar_red"
+        android:gravity="center"
+        android:padding="14dp"
+        android:text="申请提现"
+        android:textColor="@color/app_white"
+        android:textSize="14sp" />
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/mine_pre_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnApplyDeposit" />
+
+</RelativeLayout>

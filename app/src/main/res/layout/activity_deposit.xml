@@ -1,0 +1,102 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/nc_bg"
+              android:orientation="vertical">
+
+    <include layout="@layout/activity_base"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/bottom_bar_red">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@android:string/yes"/>
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp20"
+            android:background="@drawable/moneybag_2x"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:gravity="end|center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/chat_text_date_style"
+                android:text="预存款余额"
+                android:textSize="12sp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:text="¥ "
+                    android:textColor="@color/nc_white"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/tvPredeposit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.0"
+                    android:textColor="@color/nc_white"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="@drawable/nc_bg_border_bottom"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <Button
+            android:id="@+id/btnPredeposit"
+            style="@style/NCTabButton"
+            android:layout_weight="1"
+            android:text="账户余额"
+            android:textSize="14dp"/>
+
+        <Button
+            android:id="@+id/btnPdrecharge"
+            style="@style/NCTabButton"
+            android:layout_weight="1"
+            android:text="充值明细"
+            android:textSize="14dp"/>
+
+        <Button
+            android:id="@+id/btnPdcash"
+            style="@style/NCTabButton"
+            android:layout_weight="1"
+            android:text="余额提现"
+            android:textSize="14dp"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/llFragmentContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"/>
+
+</LinearLayout>

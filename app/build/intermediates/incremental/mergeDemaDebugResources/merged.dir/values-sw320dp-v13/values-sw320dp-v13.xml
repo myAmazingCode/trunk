@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="main_goods_size">160dp</dimen>
+    <dimen name="main_home1_height">130dp</dimen>
+    <dimen name="main_home2_height">130dp</dimen>
+    <dimen name="main_home2_height_2">65dp</dimen>
+    <dimen name="main_home2_width_2">160dp</dimen>
+    <dimen name="main_home_adv_height">170dp</dimen>
+    <dimen name="main_width">320dp</dimen>
+</resources>

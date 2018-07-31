@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/nc_border_btn_bg"
+    android:gravity="center"
+    android:padding="1dp">
+
+    <Button
+        android:id="@+id/btnAppCommonMinus"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@color/nc_bg"
+        android:gravity="center"
+        android:text="-"
+        android:textColor="@color/nc_text"
+        android:textSize="22dp" />
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="30dp"
+        android:background="@color/nc_border" />
+
+    <EditText
+        android:id="@+id/tvAppCommonCount"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        style="@style/NcEditText"
+        android:inputType="number"
+        android:layout_gravity="center_vertical"
+        android:text="1"
+        android:textColor="@color/nc_text_dark" />
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="30dp"
+        android:background="@color/nc_border" />
+
+    <Button
+        android:id="@+id/btnAppCommonAdd"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@color/nc_bg"
+        android:gravity="center"
+        android:text="+"
+        android:textColor="@color/nc_text"
+        android:textSize="18dp" />
+</LinearLayout>

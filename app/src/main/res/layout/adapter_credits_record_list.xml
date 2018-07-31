@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    
+    <net.shopnc.b2b2c.android.custom.CircleImageView
+        android:id="@+id/iv_header"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/test"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="10dp">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="lzp***dad"
+            android:textColor="@color/nc_black"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2017-9-18 兑换了1件"
+            android:textColor="@color/nc_text"
+            android:textSize="@dimen/tv14sp"
+            android:paddingTop="2dp"
+            />
+    </LinearLayout>
+
+</LinearLayout>

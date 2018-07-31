@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:background="@color/nc_white">
+
+    <ImageView
+        android:id="@+id/ivGoodPic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="5dp"
+        android:layout_marginRight="10dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_toRightOf="@+id/ivGoodPic"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:paddingTop="3dp">
+
+        <TextView
+            android:id="@+id/tvGoodName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="2"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dp14" />
+
+        <TextView
+            android:id="@+id/tvGoodJingle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvGoodName"
+            android:singleLine="true"
+            android:textColor="@color/nc_fg"
+            android:textSize="@dimen/dp12" />
+
+        <LinearLayout
+            android:id="@+id/rlPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvGoodJingle"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvGoodPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/nc_red"
+                android:textSize="@dimen/dp16" />
+
+            <TextView
+                android:id="@+id/tvDownFlag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/red_round_small"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:text="限时折扣"
+                android:textColor="@color/nc_red"
+                android:textSize="@dimen/dp10" />
+
+            <TextView
+                android:id="@+id/tvPreShowFlag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/red_round_small"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:text="全款预售"
+                android:textColor="@color/nc_red"
+                android:textSize="@dimen/dp10" />
+
+            <TextView
+                android:id="@+id/tvGiftFlag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/red_round_small"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:text="赠品"
+                android:textColor="@color/nc_red"
+                android:textSize="@dimen/dp10" />
+
+            <TextView
+                android:id="@+id/tvBitchNum"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:text="3把起购"
+                android:textColor="@color/nc_fg"
+                android:textSize="@dimen/dp12" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivMore"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:padding="8dp"
+            android:src="@drawable/nc_icon_more_dot" />
+
+        <TextView
+            android:id="@+id/tvGoodSalenum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlPrice"
+            android:text="销量"
+            android:textColor="@color/nc_text"
+            android:textSize="@dimen/dp12" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="6dp"
+            android:background="@color/nc_border" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlAddFav"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@color/nc_bg"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/ibImgFav"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/circle_add_fav_selecter"
+            android:src="@drawable/circle_add_fav_img" />
+
+
+        <TextView
+            android:id="@+id/tvFav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ibImgFav"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:text="加收藏"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="@dimen/dp10" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_common_header" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical"
+        android:text="请设置登录密码"
+        android:textColor="@color/nc_text"
+        android:textSize="12dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nc_white"
+        android:orientation="vertical">
+
+        <TextView style="@style/NCLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:layout_width="70dp"
+                android:text="设置密码：" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                style="@style/NCFormEditNoBorder"
+                android:layout_alignParentLeft="true"
+                android:hint="请输入6-20位密码"
+                android:inputType="textPassword" />
+
+        </LinearLayout>
+
+        <TextView style="@style/NCLine" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnShowPassword"
+            android:layout_width="32dp"
+            android:layout_height="48dp"
+            android:background="@null"
+            android:onClick="btnShowPasswordClick"
+            android:src="@drawable/nc_check" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:background="@null"
+            android:onClick="btnShowPasswordClick"
+            android:text="显示密码"
+            android:textColor="#7F7F7F"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnRegSubmit"
+        style="@style/NCCornerButton"
+        android:layout_width="match_parent"
+        android:onClick="btnRegSubmitClick"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="完成" />
+</LinearLayout>

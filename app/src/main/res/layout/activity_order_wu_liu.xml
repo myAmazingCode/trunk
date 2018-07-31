@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_bg"
+    android:orientation="vertical"
+    tools:context="net.shopnc.b2b2c.android.ui.mine.OrderWuLiuActivity">
+
+
+    <include layout="@layout/app_common_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nc_title_bg"
+        android:layout_marginTop="14dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mcc_03"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="6dp"
+            >
+
+            <TextView
+                android:id="@+id/textWuLiuCompany"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/nc_text_dark"
+                android:text="物流公司："/>
+
+            <TextView
+                android:id="@+id/textWuLiuId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:text="运单号码："/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+<TextView
+    android:id="@+id/textWuLiuInfo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="14dp"
+    android:background="@color/nc_title_bg"
+    android:text="详细订单信息"
+    />
+
+
+<TextView
+    android:layout_marginTop="14dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="以上部分信息来自于第三方，仅供参考
+如需准确信息可联系卖家或物流公司"
+    android:gravity="center_horizontal"
+    android:textSize="12dp"
+    />
+
+
+</LinearLayout>

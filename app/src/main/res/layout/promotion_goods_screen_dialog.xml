@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/nc_bg"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/activity_base"/>
+
+        <TextView
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="重置"
+            android:textColor="@color/nc_red"/>
+
+    </RelativeLayout>
+
+    <net.shopnc.b2b2c.android.xrefresh.XScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/nc_white">
+
+                <TextView
+                    style="@style/NCText"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="价格区间"
+                    android:textSize="@dimen/dp14"/>
+
+                <EditText
+                    android:id="@+id/etPriceFrom"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/nc_bg"
+                    android:gravity="center"
+                    android:hint="最低价"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp14"/>
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="34dp"
+                    android:layout_toRightOf="@+id/etPriceFrom"
+                    android:text="───"/>
+
+                <EditText
+                    android:id="@+id/etPriceTo"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_toRightOf="@+id/etPriceFrom"
+                    android:background="@color/nc_bg"
+                    android:gravity="center"
+                    android:hint="最高价"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp14"/>
+
+
+            </RelativeLayout>
+
+
+            <!--若再有多个选项，套RelativeLayout即可-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/nc_white">
+
+                <TextView
+                    style="@style/NCText"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="销量"
+                    android:textSize="@dimen/dp14"/>
+
+                <EditText
+                    android:id="@+id/etNumBatch"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="35dp"
+                    android:background="@color/nc_bg"
+                    android:gravity="center"
+                    android:hint="销量"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="@color/nc_text"
+                    android:textSize="@dimen/dp14"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="35dp"
+                    android:layout_toRightOf="@+id/etNumBatch"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="笔以上"
+                    android:textSize="@dimen/dp12"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/nc_white">
+
+                <TextView
+                    style="@style/NCText"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="收入比率"
+                    android:textSize="@dimen/dp14"/>
+
+                <EditText
+                    android:id="@+id/etRateFrom"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/nc_bg"
+                    android:gravity="center"
+                    android:hint="最低"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp14"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="34dp"
+                    android:layout_toRightOf="@+id/etRateFrom"
+                    android:text="% ──"/>
+
+
+                <EditText
+                    android:id="@+id/etRateTo"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_toRightOf="@+id/etRateFrom"
+                    android:background="@color/nc_bg"
+                    android:gravity="center"
+                    android:hint="最高"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp14"/>
+
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="34dp"
+                    android:layout_toRightOf="@+id/etRateTo"
+                    android:text="%"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/nc_white">
+
+                <TextView
+                    style="@style/NCText"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="包邮"
+                    android:textSize="@dimen/dp14"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="34dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbDeliveryNo"
+                        style="@style/NCSelectButton"
+                        android:checked="true"
+                        android:text="不限"/>
+
+                    <RadioButton
+                        android:id="@+id/rbDelivery"
+                        style="@style/NCSelectButton"
+                        android:text="包邮"/>
+
+                </RadioGroup>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/nc_white">
+
+                <TextView
+                    style="@style/NCText"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="店铺优惠券"
+                    android:textSize="@dimen/dp14"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="34dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbVoucherNo"
+                        style="@style/NCSelectButton"
+                        android:checked="true"
+                        android:text="不限"/>
+
+                    <RadioButton
+                        android:id="@+id/rbVoucher"
+                        style="@style/NCSelectButton"
+                        android:text="店铺优惠券"/>
+
+                </RadioGroup>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/nc_white">
+
+                <TextView
+                    style="@style/NCText"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="促销活动"
+                    android:textSize="@dimen/dp14" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="34dp"
+                    android:orientation="horizontal">
+
+
+                    <RadioButton
+                        android:id="@+id/btnXianshi"
+                        style="@style/NCSelectButton"
+                        android:text="限时折扣" />
+
+                    <RadioButton
+                        android:id="@+id/btnPreShow"
+                        style="@style/NCSelectButton"
+                        android:text="全款预售" />
+
+                    <RadioButton
+                        android:id="@+id/btnPayPresell"
+                        style="@style/NCSelectButton"
+                        android:text="定金预售" />
+                </RadioGroup>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/nc_white">
+
+                <TextView
+                    style="@style/NCText"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="经营类型"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="34dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/btnStoreDefault"
+                        style="@style/NCSelectButton"
+                        android:checked="true"
+                        android:text="不限"/>
+
+                    <RadioButton
+                        android:id="@+id/btnOwnShop"
+                        style="@style/NCSelectButton"
+                        android:text="平台自营"/>
+
+                    <RadioButton
+                        android:id="@+id/btnOtherShop"
+                        style="@style/NCSelectButton"
+                        android:text="三方店铺"/>
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/nc_white">
+
+                <TextView
+                    style="@style/NCText"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="赠品"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="34dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/btnGiftDefault"
+                        style="@style/NCSelectButton"
+                        android:checked="true"
+                        android:text="不限"/>
+
+                    <RadioButton
+                        android:id="@+id/btnGift"
+                        style="@style/NCSelectButton"
+                        android:text="赠品"/>
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+            <LinearLayout
+                android:id="@+id/llBrand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+            <LinearLayout
+                android:id="@+id/llSort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+        </LinearLayout>
+
+
+    </net.shopnc.b2b2c.android.xrefresh.XScrollView>
+
+
+    <Button
+        android:id="@+id/btnSelectSave"
+        style="@style/NCCornerButtonMain"
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:text="筛选商品"/>
+
+</LinearLayout>

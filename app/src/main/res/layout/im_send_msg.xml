@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#F8F8F8"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/imageBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/nc_icon_back"
+            android:layout_marginLeft="8dp"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/textUserName"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:padding="5dip"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/historyButtonID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:gravity="center_vertical"
+            android:padding="10dip"
+            android:text="聊天记录"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="15dp" />
+    </RelativeLayout>
+
+    <net.shopnc.b2b2c.android.custom.XListView
+        android:id="@+id/listViewID"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:scrollbars="none" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#F8F8F8"
+        android:gravity="center_vertical"
+        android:padding="5dip" >
+
+        <Button
+            android:id="@+id/buttonSimilies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btu_expressio_bg" />
+
+        <EditText
+            android:id="@+id/chat_editmessage"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/im_send_button_bg"
+            android:gravity="left|center_vertical"
+            android:padding="5dip"
+            android:singleLine="true"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/chat_send"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/button_w_h_bg"
+            android:padding="5dip"
+            android:text="发 送"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <net.shopnc.b2b2c.android.custom.MyGridView
+        android:id="@+id/gridViewID"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:clickable="false"
+        android:focusable="false"
+        android:horizontalSpacing="5dip"
+        android:listSelector="#00000000"
+        android:numColumns="7"
+        android:visibility="gone"
+        android:verticalSpacing="5dip" />
+
+</LinearLayout>

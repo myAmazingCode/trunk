@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".android.ui.mine.FavGoodAndStoreActivity">
+
+    <include layout="@layout/activity_base" />
+
+    <include layout="@layout/tab_choose_second" />
+
+    <!--<RadioGroup-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="30dp"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="9dp"-->
+    <!--android:background="@drawable/red_border"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<RadioButton-->
+    <!--android:id="@+id/rbLeft"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="30dp"-->
+    <!--android:background="@drawable/selecter_single_selected_left_bg"-->
+    <!--android:button="@null"-->
+    <!--android:gravity="center"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingRight="10dp"-->
+    <!--android:text="商品收藏"-->
+    <!--android:textColor="@drawable/selecter_single_selected_textcolor"-->
+    <!--android:textSize="@dimen/dp12" />-->
+
+    <!--<RadioButton-->
+    <!--android:id="@+id/rbRight"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="30dp"-->
+    <!--android:background="@drawable/selecter_single_selected_right_bg"-->
+    <!--android:button="@null"-->
+    <!--android:gravity="center"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingRight="10dp"-->
+    <!--android:text="店铺收藏"-->
+    <!--android:textColor="@drawable/selecter_single_selected_textcolor"-->
+    <!--android:textSize="@dimen/dp12" />-->
+    <!--</RadioGroup>-->
+
+    <FrameLayout
+        android:id="@+id/flFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+</LinearLayout>

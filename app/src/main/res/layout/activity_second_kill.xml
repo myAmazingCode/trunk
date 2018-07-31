@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="net.shopnc.b2b2c.android.ui.fenxiao.SecondKillActivity">
+
+    <include layout="@layout/activity_base"/>
+    <net.shopnc.b2b2c.android.lib.tab.SlidingTabLayout
+        android:id="@+id/kill_strip"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/nc_white"
+        tl:tl_textAllCaps="true"
+        tl:tl_textBold="NONE"
+        tl:tl_textsize="14sp"
+        tl.mTextSelectColor="@color/nc_red"
+        tl.mIndicatorColor="@color/nc_red"
+        tl.mDividerColor="@color/nc_red"
+        tl.mTextUnselectColor="@color/nc_text"
+        tl:tl_indicator_width_equal_title="false"
+        tl:tl_tab_space_equal="true"
+        tl:tl_underline_height="2dp">
+
+    </net.shopnc.b2b2c.android.lib.tab.SlidingTabLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+</LinearLayout>

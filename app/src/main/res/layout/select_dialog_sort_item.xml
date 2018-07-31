@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:background="@color/nc_white"
+    >
+
+    <View
+        style="@style/NCLine"
+        android:background="@color/nc_bg"
+        />
+
+    <TextView
+        style="@style/NCText"
+        android:id="@+id/tvSortName"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="包含分类" />
+
+    <ImageView
+        android:id="@+id/ivMoreFlag"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/search_good_select_more"
+        android:padding="10dp"
+        android:layout_alignParentRight="true"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvSort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        >
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:id="@+id/textOneName"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@android:color/white"
+            android:textColor="#333333"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:text="一级分类名"
+            android:padding="10dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textseaAll"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_alignParentRight="true"
+            android:text="查看全部"
+            android:padding="10dp"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <net.shopnc.b2b2c.android.custom.UnableScrollGridView
+        android:id="@+id/gv_category_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_horizontal"
+        android:fadingEdge="none"
+        android:layout_gravity="center"
+        android:background="@android:color/white"
+        android:horizontalSpacing="2dip"
+        android:stretchMode="columnWidth"
+        android:numColumns="2"
+        android:verticalSpacing="2dip" />
+
+</LinearLayout>

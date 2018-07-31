@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/nc_bg"
+    android:paddingTop="6dp"
+    android:paddingLeft="3dp"
+    android:paddingRight="3dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nc_white">
+
+
+        <ImageView
+            android:id="@+id/ivGoodImg"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:scaleType="fitXY"
+            />
+
+        <TextView
+            android:id="@+id/tvGoodName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivGoodImg"
+            android:lines="2"
+            android:text="ahohaso"
+            android:padding="4dp"
+            android:textColor="@color/nc_text"
+            android:textSize="@dimen/dp12" />
+
+        <TextView
+            android:id="@+id/tvGoodLimit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvGoodName"
+            android:lines="1"
+            android:text="ahohaso"
+            android:paddingLeft="4dp"
+            android:paddingBottom="4dp"
+            android:textColor="@color/nc_text"
+            android:textSize="@dimen/dp12" />
+
+        <TextView
+            android:id="@+id/tvGoodPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tvGoodName"
+            android:lines="1"
+            android:text="ahohaso"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:textColor="@color/nc_text"
+            android:textSize="@dimen/dp12" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#AC92ED"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivMoney"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp20" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:gravity="end|center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="请输入已知平台红包卡密号码"
+                android:textColor="@color/nc_white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvPredeposit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="确认生效后可在下单时抵扣订单金额"
+                android:textColor="@color/nc_white"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nc_white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:layout_width="70dp"
+                android:gravity="end"
+                android:text="红包卡密"
+                android:textColor="#444444" />
+
+            <EditText
+                android:id="@+id/etPwdCode"
+                style="@style/NCFormEdit"
+                android:hint="请输入平台红包卡密号"
+                android:textColorHint="#ababab" />
+
+            <TextView style="@style/NCLine" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:layout_width="70dp"
+                android:gravity="end"
+                android:text="验 证 码"
+                android:textColor="#444444" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/etCode"
+                    style="@style/NCFormEdit"
+                    android:layout_alignParentLeft="true"
+                    android:hint="输入4位验证码"
+                    android:textColorHint="#ababab" />
+
+                <ImageView
+                    android:id="@+id/ivCode"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp" />
+            </RelativeLayout>
+
+            <TextView style="@style/NCLine" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/nc_btn_corner_bg_selected"
+        android:text="确认提交"
+        android:textColor="@drawable/nc_btn_text_color_selected"
+        android:textSize="16sp" />
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout   xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="104dp"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="#eeeeee">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/nc_white">
+
+        <ImageView
+            android:id="@+id/good_img"
+            android:layout_width="104dp"
+            android:layout_height="85dp"
+            android:layout_margin="5dp" />
+
+         <TextView
+             android:id="@+id/good_name"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textColor="@color/nc_black"
+             android:textSize="12sp"
+             android:lines="1"
+             android:layout_weight="1"
+             android:layout_gravity="center"
+             android:layout_marginTop="10dp"
+             android:layout_marginLeft="@dimen/dimen_1"
+             android:layout_marginRight="@dimen/dimen_1"
+             android:text="NIKE 官方旗舰店官方旗舰店ddddddddddddddddddd"/>
+
+        <TextView
+            android:id="@+id/good_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#df0f17"
+            android:textSize="11sp"
+            android:layout_marginTop="11dp"
+            android:layout_marginBottom="10dp"
+            android:text="￥222.00"/>
+
+    </LinearLayout>
+
+</LinearLayout>

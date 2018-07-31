@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/app_bg_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/nc_title_bg"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvCommonTitle"
+            style="@style/NCTitleText"
+            android:text="购物车" />
+
+        <TextView
+            android:id="@+id/tvCommonTitleBorder"
+            style="@style/NCLine"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/cartNoDataID"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/nc_bg"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/nc_list_background_background">
+
+            <ImageView
+                android:id="@+id/ivListEmpty"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/nc_icon_cart_white"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvListEmptyTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="您的购物车还是空的"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/tvListEmptySubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="去挑一些中意的商品吧"
+            android:textColor="@color/nc_text"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/goShoppingID"
+            style="@style/NCBorderButton"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:text="随便逛逛" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cartNoLogin"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dip"
+            android:text="您还没有登录"
+            android:textColor="@color/nc_text"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="50dp"
+            style="@style/NCBorderButton"
+            android:text="登录"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cartYesDataID"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <net.shopnc.b2b2c.android.custom.XListView
+            android:id="@+id/listViewID"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:listSelector="#00000000"
+            android:scrollbars="none" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@drawable/cart_listview_gap" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="horizontal"
+            android:padding="10dip">
+
+            <CheckBox
+                android:id="@+id/allCheackCartID"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/cart_checkbox_bg"
+                android:button="@null" />
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/allCheackCartID"
+                android:text="合计"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/allPriceID"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/tv1"
+                android:text="￥ 0.00"
+                android:textColor="#F20101"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/settlementID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="right"
+                android:background="@drawable/add_to_cat_button_bg"
+                android:paddingBottom="5dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingTop="5dip"
+                android:text="结算"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

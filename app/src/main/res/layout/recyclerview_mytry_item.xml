@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    android:background="@color/nc_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_white"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="试用状态"
+            android:padding="10dp"
+            android:textSize="@dimen/dp14"
+            android:textColor="@color/nc_text"
+            />
+
+        <TextView
+            android:id="@+id/tvTryState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hdhaipaip"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/nc_ming_grade_bg"
+            android:padding="10dp"
+            android:textSize="@dimen/dp14"
+            />
+
+        <View style="@style/NCLine"
+            android:layout_below="@+id/tvTryState"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+        <ImageView
+            android:id="@+id/ivGoodPic"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/tvTryState"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            />
+
+        <TextView
+            android:id="@+id/tvGoodName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="26dp"
+            android:layout_below="@+id/tvTryState"
+            android:layout_toLeftOf="@+id/tvGoodPrice"
+            android:layout_toRightOf="@+id/ivGoodPic"
+            android:maxLines="1"
+            android:paddingTop="6dp"
+            android:text="天津市网城科技股份有限公司"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="@dimen/dp14" />
+
+        <TextView
+            android:id="@+id/tvGoodsSpec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvGoodName"
+            android:layout_marginRight="26dp"
+            android:layout_toLeftOf="@+id/tvGoodPrice"
+            android:layout_toRightOf="@+id/ivGoodPic"
+            android:maxLines="1"
+            android:paddingBottom="4dp"
+            android:text="guigeguige"
+            android:textColor="@color/buystep_sku_text"
+            android:textSize="@dimen/dp12" />
+
+        <TextView
+            android:id="@+id/tvTryTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvGoodsSpec"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/ivGoodPic"
+            android:background="@drawable/nc_btn_bg_on"
+            android:paddingBottom="2dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="2dp"
+            android:text="定金预售"
+            android:textColor="@color/nc_white"
+            android:textSize="@dimen/dp10" />
+
+        <View style="@style/NCLine"
+            android:layout_below="@+id/ivGoodPic"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tvBuyTryGood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="购买试用商品"
+            android:background="@drawable/btn_cancle"
+            android:layout_below="@+id/ivGoodPic"
+            android:layout_margin="10dp"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/dp12"
+            android:textColor="@color/nc_text"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

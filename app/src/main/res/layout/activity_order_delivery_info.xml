@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_bg"
+    android:orientation="vertical"
+    tools:context="net.shopnc.b2b2c.android.ui.order.OrderDeliveryInfoActivity">
+
+    <include layout="@layout/activity_base" />
+
+    <net.shopnc.b2b2c.android.xrefresh.XScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@color/nc_title_bg"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/mcc_03" />
+
+                <TextView
+                    android:id="@+id/textShipCompany"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="5dp"
+                    android:text="物流公司"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="@dimen/dp14" />
+
+                <TextView
+                    android:id="@+id/textShipId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textShipCompany"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="6dp"
+                    android:text="运单号码"
+                    android:textSize="@dimen/dp12" />
+
+            </RelativeLayout>
+
+            <net.shopnc.b2b2c.android.custom.MyListView
+                android:id="@+id/lvShipPath"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:divider="@null"
+                android:scrollbars="none" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_horizontal"
+                android:text="以上部分信息来自于第三方，仅供参考\n如需准确信息可联系卖家或物流公司"
+                android:textSize="@dimen/dp12" />
+        </LinearLayout>
+
+
+    </net.shopnc.b2b2c.android.xrefresh.XScrollView>
+</LinearLayout>
+
+

@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_base_empty" />
+
+
+    <net.shopnc.b2b2c.android.xrefresh.XRefreshView
+        android:id="@+id/red_pack_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <net.shopnc.b2b2c.android.xrefresh.XScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <net.shopnc.b2b2c.android.custom.MyListView
+                android:id="@+id/mine_pre_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="10dp" />
+
+        </net.shopnc.b2b2c.android.xrefresh.XScrollView>
+    </net.shopnc.b2b2c.android.xrefresh.XRefreshView>
+
+
+</LinearLayout>

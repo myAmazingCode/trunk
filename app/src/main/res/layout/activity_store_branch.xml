@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="net.shopnc.b2b2c.android.ui.type.StoreBranchActivity">
+
+    <include layout="@layout/activity_base" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp">
+
+        <TextView
+            android:id="@+id/tv_branch_count"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="全部门店共11家"
+            android:textColor="@color/nc_black"
+            android:textSize="@dimen/tv14sp" />
+
+        <Button
+            android:id="@+id/btn_all_branch"
+            android:layout_width="75dp"
+            android:layout_height="21dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/button_all_store_branch"
+            android:drawableRight="@drawable/triangle_down_black"
+            android:paddingRight="4dp"
+            android:text="所有城区"
+            android:textColor="@color/nc_black"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_branch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

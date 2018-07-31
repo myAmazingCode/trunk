@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/nc_bg">
+
+    <net.shopnc.b2b2c.android.xrefresh.XRefreshView
+        android:id="@+id/xrvCart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="36dp"
+        android:background="@color/nc_bg"
+        android:focusableInTouchMode="true"
+        android:visibility="visible">
+
+        <net.shopnc.b2b2c.android.xrefresh.XScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/llCartStore"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"/>
+
+        </net.shopnc.b2b2c.android.xrefresh.XScrollView>
+
+    </net.shopnc.b2b2c.android.xrefresh.XRefreshView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/nc_white"
+        >
+
+        <View style="@style/NCLine"></View>
+
+        <!--<ImageView-->
+        <!--android:id="@+id/ivCartAll"-->
+        <!--android:layout_width="36dp"-->
+        <!--android:layout_height="36dp"-->
+        <!--android:padding="10dp"-->
+        <!--android:src="@drawable/nc_check"/>-->
+
+        <TextView
+            android:id="@+id/ivCartAll"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:drawableLeft="@drawable/nc_check"
+            android:drawablePadding="@dimen/dp4"
+            android:padding="10dp"
+            android:text="全选"
+            android:textSize="@dimen/tv12sp"/>
+
+        <TextView
+            android:id="@+id/tvDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp8"
+            android:background="@drawable/cart_edit_delete_bg"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dp4"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="@dimen/dp4"
+            android:text="删除"
+            android:textColor="@color/bottom_bar_red"/>
+
+    </RelativeLayout>
+</RelativeLayout>

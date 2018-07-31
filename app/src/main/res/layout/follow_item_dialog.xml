@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rlFlag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/ivFlag"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:src="@drawable/happy_toast" />
+
+        <View
+            android:id="@+id/vhint"
+            android:layout_width="@dimen/dp5"
+            android:layout_height="@dimen/dp5"
+            android:layout_alignTop="@id/ivFlag"
+            android:layout_marginLeft="@dimen/dp5"
+            android:layout_toRightOf="@id/ivFlag"
+            android:background="@drawable/nc_page_circle_on"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:layout_toRightOf="@+id/rlFlag"
+        android:padding="2dp"
+        android:text="恭喜您登陆成功"
+        android:textColor="@color/app_white"
+        android:textSize="14dp" />
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_below="@+id/tvText"-->
+    <!--android:background="@color/nc_text_selectname" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/btnSortView"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="48dp"-->
+    <!--android:background="@null"-->
+    <!--android:drawableRight="@drawable/nc_text_btn_check_mark"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:text="人气排序"-->
+    <!--android:textColor="@drawable/nc_text_btn_color"-->
+    <!--android:textSize="14dp" />-->
+</RelativeLayout>

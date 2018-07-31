@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/app_white"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/dp10"
+        android:text="配送至"
+        android:textColor="@color/nc_text"
+        android:textSize="@dimen/tv16sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp4"
+        android:paddingTop="@dimen/dp4">
+
+        <TextView
+            android:id="@+id/tvProvince"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp10"
+            android:background="@drawable/nc_tab_text_bg"
+            android:paddingBottom="@dimen/dp4"
+            android:paddingTop="@dimen/dp4"
+            android:text="请选择"
+            android:textColor="@drawable/rec_text_color_selector"
+            android:textSize="@dimen/tv14sp"/>
+
+        <TextView
+            android:id="@+id/tvCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp10"
+            android:background="@drawable/nc_tab_text_bg"
+            android:paddingTop="@dimen/dp4"
+            android:paddingBottom="@dimen/dp4"
+            android:text="请选择"
+            android:textColor="@drawable/rec_text_color_selector"
+            android:textSize="@dimen/tv14sp"/>
+
+        <TextView
+            android:id="@+id/tvArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp10"
+            android:background="@drawable/nc_tab_text_bg"
+            android:paddingTop="@dimen/dp4"
+            android:paddingBottom="@dimen/dp4"
+            android:text="请选择"
+            android:textColor="@drawable/rec_text_color_selector"
+            android:textSize="@dimen/tv14sp"/>
+    </LinearLayout>
+
+    <View style="@style/NCLine"/>
+    <View style="@style/NCLine"/>
+
+    <ListView
+        android:id="@+id/listView"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

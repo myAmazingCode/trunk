@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_bg"
+    android:orientation="vertical"
+    tools:context="net.shopnc.b2b2c.android.ui.order.OrderListActivity">
+
+    <include layout="@layout/activity_base" />
+
+    <LinearLayout
+        android:id="@+id/llOrderSearch"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/nc_bg_border_bottom"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/etOrderSearch"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@color/nc_bg"
+            android:hint="输入商品标题或订单号进行搜索"
+            android:padding="3dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/nc_text"
+            android:textSize="13sp" />
+
+
+        <Button
+            android:id="@+id/btnOrderSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:background="@null"
+            android:padding="10dp"
+            android:text="搜索" />
+
+        <!--<ImageView-->
+        <!--android:id="@+id/ibSearch"-->
+        <!--android:layout_width="40dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_marginLeft="6dp"-->
+        <!--android:layout_marginRight="6dp"-->
+        <!--android:padding="10dp"-->
+        <!--android:src="@drawable/nc_icon_search" />-->
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rgOrder"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="@color/nc_title_bg"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/btnOrderAll"
+            style="@style/NCTabButton"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="全部"
+            android:textSize="@dimen/dp12" />
+
+
+        <RadioButton
+            android:id="@+id/btnOrderNew"
+            style="@style/NCTabButton"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="待付款"
+            android:textSize="@dimen/dp12" />
+
+
+        <RadioButton
+            android:id="@+id/btnOrderPay"
+            style="@style/NCTabButton"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="待发货"
+            android:textSize="@dimen/dp12" />
+
+
+        <RadioButton
+            android:id="@+id/btnOrderSend"
+            style="@style/NCTabButton"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="待收货"
+            android:textSize="@dimen/dp12" />
+
+        <RadioButton
+            android:id="@+id/btnOrderNoeval"
+            style="@style/NCTabButton"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="待评价"
+            android:textSize="@dimen/dp12" />
+
+    </RadioGroup>
+
+    <View style="@style/NCLine" />
+
+    <include layout="@layout/activity_base_empty" />
+
+    <!-- list-->
+    <net.shopnc.b2b2c.android.xrefresh.XRefreshView
+        android:id="@+id/xrefreshview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <net.shopnc.b2b2c.android.xrefresh.XScrollView
+            android:id="@+id/xscrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <net.shopnc.b2b2c.android.custom.MyListView
+                android:id="@+id/lvOrderList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:scrollbars="none" />
+        </net.shopnc.b2b2c.android.xrefresh.XScrollView>
+    </net.shopnc.b2b2c.android.xrefresh.XRefreshView>
+
+
+</LinearLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:background="@drawable/voucher_decorate"/>
+
+    <RelativeLayout
+        android:layout_width="90dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/voucher_item_gradient_bg">
+
+        <TextView
+            android:id="@+id/rmb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="24dp"
+            android:text="￥"
+            android:textColor="@color/app_white"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tvNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/rmb"
+            android:layout_toEndOf="@+id/rmb"
+            android:text="5"
+            android:textColor="@color/app_white"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rmb"
+            android:layout_marginLeft="14dp"
+            android:text="满100可用"
+            android:textColor="@color/app_white"
+            android:textSize="12sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_white">
+
+        <ImageView
+            android:id="@+id/ivStatus"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="-14dp"
+            android:layout_marginTop="-14dp"
+            android:background="@drawable/voucher_received"/>
+
+        <TextView
+            android:id="@+id/tvVoucherName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/voucher_bg"
+            android:text="测试优惠券"
+            android:textColor="@color/app_white"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/tvVoucherDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/tvVoucherName"
+            android:text="可购买官方"
+            android:textColor="@color/nc_text"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/tvVoucherValidDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="8dp"
+            android:text="有效期"
+            android:textColor="@color/nc_text"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/tvGetVoucher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/get_voucher_bg"
+            android:paddingBottom="2dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="2dp"
+            android:text="点击领取"
+            android:textColor="@color/voucher_desc_blue"
+            android:textSize="12sp"/>
+    </RelativeLayout>
+
+</LinearLayout>

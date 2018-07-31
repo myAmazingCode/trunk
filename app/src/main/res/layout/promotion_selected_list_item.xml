@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/nc_white">
+
+
+    <View
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp10"
+        android:background="@color/nc_bg"/>
+
+    <ImageView
+        android:layout_below="@+id/header"
+        android:id="@+id/ivGoodPic"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_margin="6dp"
+        android:layout_marginRight="10dp"/>
+
+    <RelativeLayout
+        android:layout_below="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginRight="6dp"
+        android:layout_toRightOf="@+id/ivGoodPic">
+
+
+        <LinearLayout
+            android:id="@+id/llPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvGoodName"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="价格："
+                android:textColor="@color/nc_text"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/tvGoodPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="￥312.00"
+                android:textColor="@color/nc_red"
+                android:textSize="@dimen/dp20"/>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llPrice"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="6dp"
+            android:text="佣金比例：5%"
+            android:textColor="@color/nc_text"
+            android:textSize="18sp"/>
+
+
+        <TextView
+            android:id="@+id/tvGoodName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="这里是一个很长很长很长很长很长的商品名称"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ivGoodPic"
+        android:background="@color/nc_border"/>
+
+    <TextView
+        android:id="@+id/tvDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/line"
+        android:layout_margin="@dimen/dp10"
+        android:background="@drawable/promotion_list_text_stroke_bg"
+        android:paddingBottom="@dimen/dp4"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingRight="@dimen/dp10"
+        android:paddingTop="@dimen/dp4"
+        android:text="删除"
+        android:textSize="16sp"/>
+</RelativeLayout>
+

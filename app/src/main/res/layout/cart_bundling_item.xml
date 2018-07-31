@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/nc_white"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/btnSkuSelect"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginLeft="10dp"
+        android:padding="10dp"
+        android:src="@drawable/nc_check"/>
+
+    <!--优惠套装-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/discount_stroke_bg"
+        android:padding="1dp"
+        android:text="优惠套装"
+        android:textColor="@color/nc_red"
+        android:textSize="@dimen/tv12sp"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_weight="1"
+        android:padding="1dp"
+        android:text="优惠套装"
+        android:textColor="@color/nc_text"
+        android:textSize="@dimen/tv12sp"/>
+
+    <!--数量增减29=14+5+10-->
+    <LinearLayout
+        android:id="@+id/llEditNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="29dp"
+        android:background="@drawable/ract_border"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnAppCommonMinus"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/left_round_btn"
+            android:gravity="center"
+            android:text="—"
+            android:textColor="@color/nc_text"/>
+
+        <TextView
+            android:id="@+id/tvAppCommonCount"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/nc_text_dark"/>
+
+        <Button
+            android:id="@+id/btnAppCommonAdd"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/right_round_edittext"
+            android:text="+"
+            android:textColor="@color/nc_text"/>
+    </LinearLayout>
+
+</LinearLayout>
+
+
+

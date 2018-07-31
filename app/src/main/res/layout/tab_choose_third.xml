@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/nc_white"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/rlTabLeft"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tvTabLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/nc_red" />
+
+        <View
+            android:id="@+id/vTabLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp2"
+            android:layout_alignLeft="@id/tvTabLeft"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@id/tvTabLeft"
+            android:background="@color/nc_red" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlTabMiddle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tvTabMiddle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/nc_red" />
+
+        <View
+            android:id="@+id/vTabMiddle"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp2"
+            android:layout_alignLeft="@id/tvTabMiddle"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@id/tvTabMiddle"
+            android:background="@color/nc_red" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlTabRight"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tvTabRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/nc_red" />
+
+        <View
+            android:id="@+id/vTabRight"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp2"
+            android:layout_alignLeft="@id/tvTabRight"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@id/tvTabRight"
+            android:background="@color/nc_red" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

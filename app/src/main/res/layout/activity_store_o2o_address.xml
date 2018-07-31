@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_bg"
+    android:orientation="vertical"
+    tools:context="net.shopnc.b2b2c.android.ui.type.StoreO2oAddressActivity">
+
+    <include layout="@layout/app_common_header" />
+
+    <TextView
+        android:id="@+id/tvAllStore"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:drawableLeft="@drawable/nc_icon_location2"
+        android:drawablePadding="5dp"
+        android:drawableRight="@drawable/nc_icon_arrow_right"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="全部实体分店共家"
+        android:textColor="@color/nc_black"
+        android:textSize="16dp" />
+
+    <ListView
+        android:id="@+id/lvStoreList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/nc_white"
+        android:divider="@color/nc_border"
+        android:dividerHeight="1dp"
+        android:padding="5dp">
+
+    </ListView>
+
+</LinearLayout>

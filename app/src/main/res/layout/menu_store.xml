@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+    android:background="#A2A2A2" >
+
+    <TextView
+        android:id="@+id/textview_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/home_w"
+        android:drawablePadding="5dp"
+        android:text="首页"
+        android:layout_margin="12dp"
+        android:gravity="center_vertical"
+        android:textColor="@android:color/white"/>
+
+    <TextView style="@style/NCLine"/>
+
+    <TextView
+        android:id="@+id/textview_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/search_w_meitu_4"
+        android:text="搜索"
+        android:drawablePadding="5dp"
+        android:layout_margin="12dp"
+        android:gravity="center_vertical"
+        android:textColor="@android:color/white"/>
+
+    <TextView style="@style/NCLine"/>
+
+    <TextView
+        android:id="@+id/textview_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/cart_w_meitu_2"
+        android:text="购物车"
+        android:layout_margin="12dp"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:textColor="@android:color/white"/>
+
+    <TextView style="@style/NCLine"/>
+    <TextView
+        android:id="@+id/textview_mime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/member_w_1"
+        android:text="我的商城"
+        android:layout_margin="12dp"
+        android:gravity="center_vertical"
+        android:drawablePadding="5dp"
+        android:textColor="@android:color/white"/>
+
+    <TextView style="@style/NCLine"/>
+
+    <TextView
+        android:id="@+id/textview_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/message_w_meitu_3"
+        android:text="消息"
+        android:drawablePadding="5dp"
+        android:layout_margin="12dp"
+        android:gravity="center_vertical"
+        android:textColor="@android:color/white"/>
+
+</LinearLayout>

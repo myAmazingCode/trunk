@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:background="@color/nc_white"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/goods_item_image"
+        android:layout_width="185dp"
+        android:layout_height="185dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/detailicon"/>
+
+    <TextView
+        android:id="@+id/tv_goodsname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:textSize="12dp"
+        android:textColor="@color/nc_text"
+        android:layout_marginTop="13dp"
+        android:lines="2"
+        android:text="栋的的收到的"/>
+
+    <TextView
+        android:id="@+id/tv_goodsprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="￥199"
+        android:textSize="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#fa5526"/>
+
+
+</LinearLayout>

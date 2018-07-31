@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/activity_base" />
+
+        <TextView
+            android:id="@+id/btnRight"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:onClick="btnAddClick"
+            android:padding="6dp"
+            android:text="添加"
+            android:textColor="@color/nc_text_dark" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/activity_base_empty" />
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/llNoResult"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:orientation="vertical"-->
+    <!--android:visibility="gone">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="60dp"-->
+    <!--android:layout_height="60dp"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:src="@drawable/nc_icon_list_empty_backgrond" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:text="您还没有添加收货地址"-->
+    <!--android:textColor="@color/nc_text"-->
+    <!--android:textSize="18dp" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:text="正确填写常用收货地址方便购物"-->
+    <!--android:textColor="@color/nc_text_hint"-->
+    <!--android:textSize="12dp" />-->
+
+    <!--<Button-->
+    <!--style="@style/NCTextButtonSmall"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:onClick="btnAddClick"-->
+    <!--android:text="添加新地址"-->
+    <!--android:layout_marginTop="6dp"-->
+    <!--android:background="@drawable/border"-->
+    <!--android:textColor="@color/nc_text"-->
+    <!--android:textSize="14dp" />-->
+
+    <!--</LinearLayout>-->
+
+    <LinearLayout
+        android:id="@+id/llAddressList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/listViewID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@color/nc_bg"
+            android:dividerHeight="10dp"
+            android:fadingEdge="none"
+            android:scrollbars="none" />
+
+        <Button
+            style="@style/NCCornerButtonMain"
+            android:layout_width="match_parent"
+            android:layout_margin="20dp"
+            android:onClick="btnAddClick"
+            android:text="添加新地址" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlAddressList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btnAddAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/nc_white"
+            android:onClick="btnAddClick"
+            android:text="新增收货地址"
+            android:textColor="@color/nc_red" />
+
+        <ListView
+            android:id="@+id/listViewID1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/btnAddAddress"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@color/nc_bg"
+            android:dividerHeight="10dp"
+            android:fadingEdge="none"
+            android:scrollbars="none" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

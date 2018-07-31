@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".android.ui.order.OrderRefundAndReturnDetailsActivity">
+
+    <include layout="@layout/activity_base" />
+
+    <net.shopnc.b2b2c.android.xrefresh.XScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:background="@color/nc_bg"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tvRequestName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="我的退款申请"
+                android:textColor="@color/nc_text_dark"
+                android:textSize="@dimen/dp14" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/nc_white"
+                android:orientation="vertical"
+                android:paddingLeft="10dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tvSnName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="退款编号"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14" />
+
+                    <TextView
+                        android:id="@+id/tvRefundSn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="12498390712"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14" />
+
+                </LinearLayout>
+
+                <View style="@style/NCLine"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tvReasonName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="退款原因"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14" />
+
+                    <TextView
+                        android:id="@+id/tvReasonInfo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="12498390712"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14" />
+
+                </LinearLayout>
+
+                <View style="@style/NCLine"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="退款金额"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14" />
+
+                    <TextView
+                        android:id="@+id/tvMoney"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="12498390712"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14" />
+
+                </LinearLayout>
+
+                <View style="@style/NCLine"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tvMessageName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="退款说明"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14" />
+
+                    <TextView
+                        android:id="@+id/tvBuyerMessage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="12498390712"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14" />
+
+                </LinearLayout>
+
+                <View style="@style/NCLine"></View>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="凭证上传"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14" />
+
+                    <TextView
+                        android:id="@+id/tvImageNone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="无"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14"
+                        android:visibility="gone"
+                        />
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:id="@+id/fblImages"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:alignContent="flex_start"
+                        app:flexWrap="wrap" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="商家退款处理"
+                android:textColor="@color/nc_text_dark"
+                android:textSize="@dimen/dp14" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/nc_white"
+                android:orientation="vertical"
+                android:paddingLeft="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="审核状态"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14" />
+
+                    <TextView
+                        android:id="@+id/tvSellerState"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="12498390712"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14" />
+
+                </LinearLayout>
+
+                <View style="@style/NCLine"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="商家备注"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14" />
+
+                    <TextView
+                        android:id="@+id/tvSellerMessage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="12498390712"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="商城退款审核"
+                android:textColor="@color/nc_text_dark"
+                android:textSize="@dimen/dp14" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/nc_white"
+                android:orientation="vertical"
+                android:paddingLeft="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="平台确认"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14" />
+
+                    <TextView
+                        android:id="@+id/tvRefundState"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="12498390712"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14" />
+
+                </LinearLayout>
+
+                <View style="@style/NCLine"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="平台备注"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14" />
+
+                    <TextView
+                        android:id="@+id/tvAdminMessage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="12498390712"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvRefundDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="退款详细"
+                android:textColor="@color/nc_text_dark"
+                android:textSize="@dimen/dp14"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/llRefundDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/nc_white"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="支付方式"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14" />
+
+                    <TextView
+                        android:id="@+id/tvPaymentName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="12498390712"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14" />
+
+                </LinearLayout>
+
+                <View style="@style/NCLine"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="在线退款金额"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14" />
+
+                    <TextView
+                        android:id="@+id/tvPaymentAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="12498390712"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14" />
+
+                </LinearLayout>
+
+                <View style="@style/NCLine"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="预存款退款金额"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14" />
+
+                    <TextView
+                        android:id="@+id/tvPdAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="12498390712"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </net.shopnc.b2b2c.android.xrefresh.XScrollView>
+
+</LinearLayout>

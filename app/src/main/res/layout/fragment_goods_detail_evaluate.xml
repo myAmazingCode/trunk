@@ -1,0 +1,93 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_bg"
+    android:orientation="vertical"
+    tools:context="net.shopnc.b2b2c.android.ui.type.GoodsDetailEvaluateFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nc_bg_dark"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnEvaluateAll"
+                style="@style/NCCornerButtonSmall"
+                android:layout_width="wrap_content"
+                android:layout_margin="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="全部评价" />
+
+            <Button
+                android:id="@+id/btnEvaluateGood"
+                style="@style/NCCornerButtonSmall"
+                android:layout_width="wrap_content"
+                android:layout_margin="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="好评" />
+
+            <Button
+                android:id="@+id/btnEvaluateNormal"
+                style="@style/NCCornerButtonSmall"
+                android:layout_width="wrap_content"
+                android:layout_margin="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="中评" />
+
+            <Button
+                android:id="@+id/btnEvaluateBad"
+                style="@style/NCCornerButtonSmall"
+                android:layout_width="wrap_content"
+                android:layout_margin="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="差评" />
+
+            <Button
+                android:id="@+id/btnEvaluateImage"
+                style="@style/NCCornerButtonSmall"
+                android:layout_width="wrap_content"
+                android:layout_margin="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="订单晒图" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnEvaluateAgain"
+                style="@style/NCCornerButtonSmall"
+                android:layout_width="wrap_content"
+                android:layout_margin="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="追加评价" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/app_list_empty"/>
+
+    <ListView
+        android:id="@+id/lvEvaluateList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/nc_border"
+        android:dividerHeight="3dp"></ListView>
+
+</LinearLayout>

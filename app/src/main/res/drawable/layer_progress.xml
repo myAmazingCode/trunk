@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 定义轨道的背景 -->
+    <item
+        android:id="@android:id/background">
+        <shape>
+            <stroke android:color="@color/nc_red"
+                android:width="1px"/>
+        </shape>
+    </item>
+    <!-- 定义轨道上已完成部分的样式 -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <gradient
+                    android:startColor="@color/nc_red"
+
+                    android:centerY="0.75"
+                    android:endColor="@color/nc_red"
+                    android:angle="270"
+
+                    />
+                <stroke android:color="@color/nc_red"
+                    android:width="1px"/>
+            </shape>
+        </clip>
+    </item>
+</layer-list>

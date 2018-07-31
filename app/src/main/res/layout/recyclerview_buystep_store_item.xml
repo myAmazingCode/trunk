@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/nc_border"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nc_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/nc_icon_store"/>
+
+        <TextView
+            android:id="@+id/tvStoreName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp4"
+            android:gravity="center_vertical"
+            android:text="未来生活电器旗舰店"
+            android:textColor="@color/nc_text"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSpu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nc_white"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingRight="@dimen/dp10"
+        >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llStore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/nc_white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingRight="@dimen/dp10"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:text="满优惠活动"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="@dimen/dp14"
+            />
+
+        <TextView
+            android:id="@+id/tvConform"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="right"
+            android:padding="10dp"
+            android:text="不使用优惠"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="@dimen/dp12"
+            />
+
+
+        <ImageView
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/arrow_down"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llStoreDiscount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/nc_white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingRight="@dimen/dp10"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:text="店铺优惠券"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="@dimen/dp14"
+            />
+
+        <TextView
+            android:id="@+id/tvVoucherName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="right"
+            android:padding="10dp"
+            android:text="不使用优惠"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="@dimen/dp12"/>
+
+
+        <ImageView
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/arrow_down"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llFee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/nc_white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingRight="@dimen/dp10"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:text="运费计算"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="@dimen/dp14"/>
+
+        <TextView
+            android:id="@+id/tvFreight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="right"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="0.00"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="@dimen/dp12"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/nc_white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingRight="@dimen/dp10"
+        >
+
+        <EditText
+            android:id="@+id/etStoreMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llStoreAll"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/spec_btn_select_false"
+            android:hint="店铺订单留言："
+            android:textColor="@color/nc_text_dark"
+            android:textSize="@dimen/dp12"
+            />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvStoreAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_weight="2"
+        android:background="@color/nc_white"
+        android:gravity="right"
+        android:paddingBottom="14dp"
+        android:paddingRight="@dimen/dp10"
+        android:paddingTop="14dp"
+        android:text="0.00"
+        android:textColor="@color/nc_text_dark"
+        android:textSize="@dimen/dp12"/>
+
+    <View
+        style="@style/NCLine"/>
+
+</LinearLayout>

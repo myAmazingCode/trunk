@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_base" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/bottom_bar_red"
+        android:orientation="horizontal">
+
+
+        <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:contentDescription="@android:string/yes" />-->
+
+        <ImageView
+            android:id="@+id/ivMoneyBag"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp20" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:gravity="end|center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/chat_text_date_style"
+                android:text="预存款余额"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:text="¥ "
+                    android:textColor="@color/nc_white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/mine_deposit_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.0"
+                    android:textColor="@color/nc_white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llCashWithdrawalAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nc_white"
+        android:orientation="vertical">
+
+        <TextView style="@style/NCLine" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:text="    提现金额" />
+
+            <EditText
+                android:id="@+id/etCashWithdrawalAmount"
+                style="@style/NCFormEdit"
+                android:hint="请输入提现金额" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:text="    收款银行" />
+
+            <EditText
+                android:id="@+id/etBankName"
+                style="@style/NCFormEdit"
+                android:hint="开户行及分行名称或支付宝等虚拟方式" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:text="    收款账号" />
+
+            <EditText
+                android:id="@+id/etBankAccount"
+                style="@style/NCFormEdit"
+                android:hint="银行账号或支付宝虚拟账号" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:text="开户人姓名" />
+
+            <EditText
+                android:id="@+id/etUsername"
+                style="@style/NCFormEdit"
+                android:hint="收款账号的开户人姓名" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:text="    支付密码" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                style="@style/NCFormEdit"
+                android:hint="请再次输入密码"
+                android:password="true" />
+        </LinearLayout>
+
+        <TextView style="@style/NCLine" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/user_bg_selector"
+        android:text="确认提交"
+        android:textColor="@color/nc_white" />
+
+</LinearLayout>

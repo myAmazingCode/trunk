@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llMS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:background="@drawable/selector_activity_border"
+        android:layout_margin="5dp"
+        android:padding="1dp">
+
+        <TextView
+            android:id="@+id/textMSName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:padding="2dp"
+            android:textSize="14sp"
+            android:layout_margin="8dp"
+            android:background="#ED5564"/>
+
+        <TextView
+            android:id="@+id/textMSTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"/>
+
+        <TextView style="@style/NCLine"/>
+
+        <!--满即送的规则-->
+       <LinearLayout
+           android:id="@+id/llMSRules"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:layout_margin="8dp"
+           android:padding="2dp"
+           android:background="#D870AD"/>
+
+        <TextView
+            android:id="@+id/textMSRemark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"/>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+</LinearLayout>
+

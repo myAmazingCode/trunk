@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="net.shopnc.b2b2c.android.ui.fenxiao.SecondKillBrandActivity">
+
+    <include layout="@layout/activity_base" />
+
+    <!--<net.shopnc.b2b2c.android.xrefresh.XRefreshView-->
+        <!--android:id="@+id/kill_refresh"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="vertical"-->
+        <!--app:isHeightMatchParent="true"-->
+        <!--app:isWidthMatchParent="true">-->
+
+        <com.jcodecraeer.xrecyclerview.XRecyclerView
+            android:id="@+id/recycler_kill"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    <!--</net.shopnc.b2b2c.android.xrefresh.XRefreshView>-->
+
+
+</LinearLayout>

@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\Android\\trunk\\app\\build\\intermediates\\incremental\\mergeDemaDebugResources\\merged.dir\\values-ch\\values-ch.xml",
+            "map": [
+                {
+                    "source": "D:\\Android\\trunk\\giraffeplayer\\build\\intermediates\\packaged_res\\debug\\values-ch\\values-ch.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,106,170,220",
+                        "endColumns": "50,63,49,54",
+                        "endOffsets": "101,165,215,270"
+                    }
+                }
+            ]
+        }
+    ]
+}

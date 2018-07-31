@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="net.shopnc.b2b2c.android.ui.store.StoreIndexLinkedActivity">
+
+    <net.shopnc.b2b2c.android.xrefresh.XScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <WebView
+            android:id="@+id/wvShow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></WebView>
+
+    </net.shopnc.b2b2c.android.xrefresh.XScrollView>
+
+</RelativeLayout>

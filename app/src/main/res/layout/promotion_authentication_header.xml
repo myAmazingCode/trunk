@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/nc_border"
+              android:orientation="vertical">
+    <!--android:background="@color/promotion_blue"-->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@color/nc_border"
+            android:orientation="horizontal">
+            <!--promotion_triangle-->
+
+            <TextView
+                android:id="@+id/tvIndicatorStep1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:background="@drawable/promotion_triangle"/>
+
+            <TextView
+                android:id="@+id/tvIndicatorStep2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/promotion_triangle"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/tvIndicatorStep3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/promotion_triangle"
+                android:visibility="invisible"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/promotion_blue"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+
+            <!--android:background="@drawable/promotion_authen_text_bg"-->
+            <TextView
+                android:id="@+id/tvStep1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="个人信息"
+                android:textColor="@drawable/promotion_authen_text_selector"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tvStep2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="收款账户"
+                android:textColor="@drawable/promotion_authen_text_selector"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tvStep3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="等待审核"
+                android:textColor="@drawable/promotion_authen_text_selector"
+                android:textSize="16sp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

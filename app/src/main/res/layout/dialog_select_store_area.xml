@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--<RadioButton-->
+            <!--android:id="@+id/radio_default"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:text="所有城区"-->
+            <!--android:textColor="@color/nc_text"-->
+            <!--android:textSize="@dimen/tv16sp"-->
+            <!--android:paddingLeft="20dp"-->
+            <!--android:button="@null"-->
+            <!--android:paddingRight="20dp"-->
+            <!--android:drawableRight="@drawable/radio_button_round_selected"/>-->
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="39dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/rect_button_line_bg"
+            android:text="取消"
+            android:textColor="@color/nc_text"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_positive"
+            android:layout_width="0dp"
+            android:layout_height="39dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/rect_button_line_bg"
+            android:text="确定"
+            android:textColor="@color/nc_text"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

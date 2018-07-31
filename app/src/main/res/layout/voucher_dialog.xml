@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="300dp"
+              android:background="@color/nc_bg"
+              android:orientation="vertical"
+              android:paddingLeft="4dp"
+              android:paddingRight="4dp"
+              android:paddingTop="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="优惠券"
+        android:textColor="@color/nc_text"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tvStoreDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp4"
+        android:paddingBottom="2dp"
+        android:paddingTop="10dp"
+        android:text="可领优惠券"/>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/nc_bg"
+        android:dividerHeight="10dp"
+        android:fadingEdge="none"
+        android:padding="10dp"
+        android:scrollbars="none"/>
+
+</LinearLayout>

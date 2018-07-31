@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_bg">
+
+    <include layout="@layout/app_common_header"></include>
+    <!-- 搜索 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="@drawable/nc_bg_border_bottom"
+        android:orientation="horizontal"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:paddingLeft="20dp"
+        android:visibility="gone"
+        android:paddingRight="20dp">
+
+        <EditText
+            android:id="@+id/etOrderSearch"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@color/nc_bg"
+            android:hint="输入商品标题或订单号进行搜索"
+            android:padding="3dp"
+            android:textColor="@color/nc_text"
+            android:textSize="14dp" />
+
+        <ImageButton
+            style="@style/NCImageButton"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:onClick="btnOrderSearchClick"
+            android:src="@drawable/nc_icon_search" />
+
+    </LinearLayout>
+    <net.shopnc.b2b2c.android.lib.tab.SlidingTabLayout
+        xmlns:tl="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/viewpagertab"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/nc_white"
+        tl:tl_textAllCaps="true"
+        tl:tl_textBold="NONE"
+        tl:tl_textsize="14sp"
+        tl.mTextSelectColor="@color/nc_red"
+        tl.mIndicatorColor="@color/nc_red"
+        tl.mDividerColor="@color/nc_red"
+        tl.mTextUnselectColor="@color/nc_text"
+        tl:tl_indicator_width_equal_title="true"
+        tl:tl_tab_space_equal="true"
+        tl:tl_underline_height="2dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:background="#E7E7E7"></View>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</LinearLayout>

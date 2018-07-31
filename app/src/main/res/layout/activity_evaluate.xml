@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/nc_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_common_header" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:background="#ffffff">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/nc_white"
+            android:paddingBottom="40dp">
+            <LinearLayout
+                android:id="@+id/lltvhint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/nc_bg">
+            <TextView
+                style="@style/TextViewHint"
+                android:text="特别提示 : 评价晒图选择直接拍照或从手机相册上传图片时，请注意图片尺寸控制在1M以内，超出请压缩裁剪后再上传！"
+                android:minLines="3"
+                android:paddingLeft="10dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/llGoodsEvaluate"
+                android:layout_below="@+id/lltvhint"
+                android:background="@color/nc_bg">
+            <!--商品评价-->
+                <net.shopnc.b2b2c.android.custom.NoScrollListViewNormal
+                    android:id="@+id/lvGoodEvaluate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="#f0f0f0"
+                    android:scrollbars="none"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/divider"
+                android:background="@drawable/cart_listview_gap"
+                android:layout_below="@+id/llGoodsEvaluate"/>
+
+            <!-- 店铺评价-->
+            <LinearLayout
+                android:id="@+id/ll_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divider"
+                android:orientation="vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="#ffffff">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="描述相符："
+                        android:layout_marginRight="16dp"/>
+                    <RatingBar
+                        android:id="@+id/rb_description_score"
+                        style="@style/Widget.AppCompat.RatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:rating="5"
+                        android:stepSize="1"
+                        android:layout_gravity="center_vertical">
+                    </RatingBar>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="#ffffff">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="服务态度："
+                        android:layout_marginRight="16dp"/>
+                    <RatingBar
+                        android:id="@+id/rb_service_score"
+                        style="@style/Widget.AppCompat.RatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:rating="5"
+                        android:stepSize="1"
+                        android:layout_gravity="center_vertical">
+                    </RatingBar>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="#ffffff">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="发货速度："
+                        android:layout_marginRight="16dp"/>
+                    <RatingBar
+                        android:id="@+id/rb_goods_fast"
+                        style="@style/Widget.AppCompat.RatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:rating="5"
+                        android:stepSize="1"
+                        android:layout_gravity="center_vertical">
+                    </RatingBar>
+
+                </LinearLayout>
+            </LinearLayout>
+    <Button
+        android:id="@+id/btn_commit"
+        android:layout_width="match_parent"
+        style="@style/NCCornerButtonMain"
+        android:text="提交评价"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/ll_description"
+        android:onClick="btnCommitClick"
+        android:layout_margin="20dp" />
+
+</RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

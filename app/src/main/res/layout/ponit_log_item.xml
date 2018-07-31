@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gray_border"
+    android:padding="@dimen/dp10">
+
+
+    <TextView
+        android:id="@+id/point_tvDes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/llPoint"
+        android:textColor="@color/nc_text"
+        android:textSize="@dimen/tv12sp" />
+
+    <TextView
+        android:id="@+id/point_tvOpe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/point_tvDes"
+        android:layout_marginBottom="@dimen/dp5"
+        android:textColor="@color/nc_text_dark"
+        android:textSize="@dimen/tv14sp" />
+
+    <LinearLayout
+        android:id="@+id/llPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/point_tvPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:textSize="@dimen/tv20sp" />
+
+        <TextView
+            android:id="@+id/point_tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textSize="@dimen/tv12sp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/nc_bg"
+              android:orientation="vertical"
+              tools:context="net.shopnc.b2b2c.android.ui.buy.InvoiceActivity">
+
+    <include layout="@layout/activity_base"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发票抬头"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="@dimen/tv14sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/etInvoiceTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp10"
+            android:background="@null"
+            android:hint="请输入发票抬头"
+            android:text="个人"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="@dimen/tv14sp"/>
+    </LinearLayout>
+
+    <TextView style="@style/NCLine"/>
+
+    <LinearLayout
+        android:id="@+id/rvInvoice"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_white"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发票内容"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="@dimen/tv14sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvInvoiceContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp10"
+            android:background="@null"
+            android:text="明细"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="@dimen/tv14sp"/>
+    </LinearLayout>
+
+    <TextView style="@style/NCLine"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nc_white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <RadioButton
+            android:id="@+id/rbNo"
+            style="@style/MyTabButton"
+            android:checked="true"
+            android:text="不开发票"/>
+
+        <RadioButton
+            android:id="@+id/rbNeed"
+            style="@style/MyTabButton"
+            android:text="保存并使用发票"/>
+
+    </RadioGroup>
+
+
+</LinearLayout>

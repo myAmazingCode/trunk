@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:id="@+id/llStar"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        >
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/customerName"
+        style="@style/evaluate_text_style"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_toLeftOf="@+id/evaluateDate"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/dp10"
+        />
+
+    <TextView
+        android:id="@+id/evaluateDate"
+        style="@style/evaluate_text_style"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/dp10"
+        />
+
+    <TextView
+        android:id="@+id/evaluateText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llStar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="2dp"
+        android:textSize="@dimen/dp12"/>
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/evaluateImages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/evaluateText"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        app:alignContent="flex_start"
+        app:flexWrap="wrap"/>
+
+    <TextView
+        android:id="@+id/goodSpec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/evaluateImages"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/nc_text_selectname"
+        android:textSize="@dimen/dp10"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/goodSpec"
+        android:background="@color/nc_border"/>
+</RelativeLayout>

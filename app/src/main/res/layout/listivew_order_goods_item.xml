@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:padding="5dip" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="60dip"
+                android:layout_height="60dip" >
+
+                <ImageView
+                    android:id="@+id/imageGoodsPic"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+                    android:layout_gravity="center"
+                    android:paddingRight="0dip" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/zengpin"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingLeft="5dip" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dip" >
+
+                <TextView
+                    android:id="@+id/textGoodsName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:layout_weight="1"
+                    android:textColor="#6d6d6d"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/textGoodsSPec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textColor="#6d6d6d"
+                    android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="vertical" >
+
+
+                        <TextView
+                            android:id="@+id/textGoodsPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:singleLine="true"
+                            android:text="$ 0.00"
+                            android:textColor="#555555"
+                            android:textSize="14dp" />
+
+
+                        <TextView
+                            android:id="@+id/textGoodsNUM"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:singleLine="true"
+                            android:text="1"
+                            android:textColor="#959595"
+                            android:textSize="14dp" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="bottom"
+                        >
+
+                        <Button
+                            android:id="@+id/btnTuiMoney"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:text="退款"
+                            android:textSize="12dp"
+                            android:textColor="#CC1212"
+                            android:background="@drawable/btn_cancle"
+                            android:padding="2dp"
+                            android:visibility="gone"
+                            />
+
+                        <Button
+                            android:id="@+id/btnTuiGoods"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="退货"
+                            android:textSize="12dp"
+                            android:textColor="#CC1212"
+                            android:background="@drawable/btn_cancle"
+                            android:padding="2dp"
+                            android:visibility="gone"
+                            />
+
+
+                        </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+        <!-- 赠品列表 -->
+        <LinearLayout
+            android:id="@+id/llGift"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/nc_bg_dashed"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/imgZeng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/nc_text"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:text="赠品"
+                android:textColor="@color/nc_white"
+                android:visibility="gone"
+                android:textSize="10dp" />
+
+            <LinearLayout
+                android:id="@+id/llGiftList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:orientation="vertical" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

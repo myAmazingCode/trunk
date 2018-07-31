@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_base" />
+
+
+    <net.shopnc.b2b2c.android.xrefresh.XScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:layout_marginTop="48dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- 地址信息开始-->
+            <RelativeLayout
+                android:id="@+id/rlAddress"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/nc_white">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/tmall_order_address_bg_top" />
+
+                <ImageView
+                    android:id="@+id/ivAddress"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="14dp"
+                    android:src="@drawable/nc_icon_location" />
+
+                <TextView
+                    android:id="@+id/tvAddressMemberName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@+id/ivAddress"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="@dimen/dp14" />
+
+                <TextView
+                    android:id="@+id/tvAddressMemberPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="38dp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="@dimen/dp14" />
+
+                <TextView
+                    android:id="@+id/tvAddressMemberArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvAddressMemberName"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="38dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/ivAddress"
+                    android:lines="2"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="@dimen/dp12" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/nc_icon_arrow_right" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/tmall_order_address_bg_top" />
+
+            </RelativeLayout>
+            <!--地址信息结束-->
+
+            <!--支付方式-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/nc_white"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:src="@drawable/nc_icon_mine_order_1" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="1"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:text="支付方式"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="@dimen/dp14" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/ifshowOnpayID"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawableLeft="@drawable/buy_step1_check_bg"
+                        android:drawablePadding="5dip"
+                        android:text="在线支付"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14" />
+
+                    <RadioButton
+                        android:id="@+id/ifshowOffpayID"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/buy_step1_check_bg"
+                        android:drawablePadding="5dip"
+                        android:text="货到付款"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14"
+                        android:visibility="gone" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!--发票信息-->
+            <LinearLayout
+                android:id="@+id/llAllowVat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/nc_white"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:src="@drawable/nc_icon_mine_money_3" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="1"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:text="发票"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="@dimen/dp14" />
+
+                <TextView
+                    android:id="@+id/tvAllowVatName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2"
+                    android:gravity="right"
+                    android:text="请选择"
+                    android:textColor="@color/nc_text_dark" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/nc_icon_arrow_right" />
+
+            </LinearLayout>
+
+            <!--尾款联系电话-->
+            <LinearLayout
+                android:id="@+id/llPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/nc_white"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:text="*"
+                    android:textColor="@color/nc_ming_grade_bg"
+                    android:textSize="@dimen/dp14" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingBottom="6dp"
+                    android:paddingTop="6dp"
+                    android:text="短信提示尾款到期通知"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="@dimen/dp14" />
+
+                <EditText
+                    android:id="@+id/etPrePhone"
+                    android:layout_width="0dp"
+                    android:layout_height="24dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/spec_btn_select_false"
+                    android:gravity="end"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="@dimen/dp12" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/NCLine"
+                android:layout_height="1sp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp" />
+
+            <LinearLayout
+                android:id="@+id/llPayPre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/nc_white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:text="*"
+                    android:textColor="@color/nc_ming_grade_bg"
+                    android:textSize="@dimen/dp14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingBottom="6dp"
+                    android:paddingTop="6dp"
+                    android:text="同意支付定金（不退）"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="@dimen/dp14" />
+
+                <ImageView
+                    android:id="@+id/btnPreSelect"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center_vertical"
+                    android:padding="10dp"
+                    android:src="@drawable/nc_check" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/NCLine"
+                android:layout_height="1sp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp" />
+
+            <LinearLayout
+                android:id="@+id/llPayFinish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/nc_white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:text="支付全款"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="@dimen/dp14" />
+
+                <ImageView
+                    android:id="@+id/btnFinishSelect"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center_vertical"
+                    android:padding="10dp"
+                    android:src="@drawable/nc_check" />
+
+            </LinearLayout>
+
+            <!--商品信息-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/nc_white"
+                android:paddingBottom="4dp">
+
+                <ImageView
+                    android:id="@+id/ivSpuImage"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:id="@+id/tvSpuName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/ivSpuImage"
+                    android:text="雅诗兰黛 红石榴系列套装 正装水乳洁面正装三件套组合套装"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="@dimen/dp14" />
+
+                <RelativeLayout
+                    android:id="@+id/llSku"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivSpuImage"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="6dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/tvSkuSpec"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_toLeftOf="@+id/tvAllPrice"
+                        android:layout_weight="1"
+                        android:padding="6dp"
+                        android:text="颜色"
+                        android:textSize="@dimen/dp12" />
+
+                    <TextView
+                        android:id="@+id/tvAllPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="4dp"
+                        android:padding="6dp"
+                        android:text="总价"
+                        android:textSize="@dimen/dp12" />
+
+                    <TextView
+                        android:id="@+id/tvSkuPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvSkuSpec"
+                        android:layout_marginLeft="4dp"
+                        android:layout_toLeftOf="@+id/tvSkuNum"
+                        android:padding="6dp"
+                        android:text="单价"
+                        android:textSize="@dimen/dp12" />
+
+                    <TextView
+                        android:id="@+id/tvSkuNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/tvAllPrice"
+                        android:layout_marginLeft="4dp"
+                        android:padding="6dp"
+                        android:text="数量"
+                        android:textSize="@dimen/dp12" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:layout_below="@+id/tvSkuPrice"
+                        android:background="@color/app_white"></View>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llGift"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llSku"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="6dp"
+                    android:orientation="vertical"
+                    android:paddingBottom="6dp"
+                    android:visibility="gone"></LinearLayout>
+
+
+            </RelativeLayout>
+
+            <View
+                style="@style/NCLine"
+                android:layout_height="1sp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp" />
+
+            <!-- 阶段1-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/nc_white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:text="阶段1：定金"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="@dimen/dp14" />
+
+                <TextView
+                    android:id="@+id/tvPrePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="小计：1120"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="@dimen/dp14" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/NCLine"
+                android:layout_height="1sp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp" />
+
+            <!-- 阶段2-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/nc_white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:text="阶段2：尾款"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="@dimen/dp14" />
+
+                <TextView
+                    android:id="@+id/tvFinishPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="小计：1120"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="@dimen/dp14" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/NCLine"
+                android:layout_height="1sp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp" />
+
+            <!-- 运费-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/nc_white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:text="运费计算"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="@dimen/dp14" />
+
+                <TextView
+                    android:id="@+id/tvFee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="小计：1120"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="@dimen/dp14" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/NCLine"
+                android:layout_height="1sp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/nc_white"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etStoreMsg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llStoreAll"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/spec_btn_select_false"
+                    android:hint="店铺订单留言："
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="@dimen/dp12" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/NCLine"
+                android:layout_height="1sp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp" />
+
+            <TextView
+                android:id="@+id/tvStoreAll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="2"
+                android:background="@color/nc_white"
+                android:gravity="right"
+                android:paddingBottom="14dp"
+                android:paddingTop="14dp"
+                android:text="小计运费：1120"
+                android:textColor="@color/nc_text_dark"
+                android:textSize="@dimen/dp12" />
+
+        </LinearLayout>
+
+    </net.shopnc.b2b2c.android.xrefresh.XScrollView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/nc_white">
+
+        <View style="@style/NCLine" />
+
+        <TextView
+            android:id="@+id/tvMoneyAll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/btnCommitOrder"
+            android:gravity="right"
+            android:text="ddlfafalfa" />
+
+
+        <Button
+            android:id="@+id/btnCommitOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/nc_btn_buybookstep_bg"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="提交订单"
+            android:textColor="@color/nc_white" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

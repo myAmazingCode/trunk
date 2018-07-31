@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_bg"
+    tools:context="net.shopnc.b2b2c.android.ui.promotion.PromotionAgreementActivity">
+
+    <include layout="@layout/activity_base"/>
+
+   <TextView
+       android:id="@+id/tvAgreement"
+       android:text="这里是协议"
+       android:layout_width="wrap_content"
+       android:layout_centerInParent="true"
+       android:layout_height="wrap_content"/>
+
+</RelativeLayout>

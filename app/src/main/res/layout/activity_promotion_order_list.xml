@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_white"
+    tools:context="net.shopnc.b2b2c.android.ui.promotion.PromotionOrderListActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/activity_base"/>
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_below="@+id/header"
+        android:background="@color/nc_title_bg"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/btnOrderAll"
+            style="@style/NCTabButton"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:checked="true"
+            android:gravity="center"
+            android:text="全部"
+            android:textSize="@dimen/dp12"/>
+
+
+        <RadioButton
+            android:id="@+id/btnOrderOngoing"
+            style="@style/NCTabButton"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="进行中"
+            android:textSize="@dimen/dp12"/>
+
+
+        <RadioButton
+            android:id="@+id/btnOrderExchange"
+            style="@style/NCTabButton"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="退换货"
+            android:textSize="@dimen/dp12"/>
+
+
+        <RadioButton
+            android:id="@+id/btnOrderCanceled"
+            style="@style/NCTabButton"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="已取消"
+            android:textSize="@dimen/dp12"/>
+
+        <RadioButton
+            android:id="@+id/btnOrderPayed"
+            style="@style/NCTabButton"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="已结算"
+            android:textSize="@dimen/dp12"/>
+
+    </RadioGroup>
+
+    <net.shopnc.b2b2c.android.xrefresh.XRefreshView
+        android:id="@+id/xrefreshview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rg">
+
+        <net.shopnc.b2b2c.android.xrefresh.XScrollView
+            android:id="@+id/xscrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <net.shopnc.b2b2c.android.custom.MyListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </net.shopnc.b2b2c.android.xrefresh.XScrollView>
+    </net.shopnc.b2b2c.android.xrefresh.XRefreshView>
+
+    <TextView
+        android:id="@+id/emptyView"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawableTop="@drawable/no_order_data"
+        android:text="亲，您还没有相关订单信息哦~"
+        android:textColor="@color/nc_text"
+        android:textSize="@dimen/tv12sp"/>
+
+</RelativeLayout>

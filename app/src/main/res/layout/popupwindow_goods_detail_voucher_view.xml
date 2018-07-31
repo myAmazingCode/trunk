@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/flBack"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:foreground="@color/nc_background_transport"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_gravity="bottom"
+        android:background="@color/nc_white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/tvStoreName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/nc_icon_store"
+                android:drawablePadding="5dp"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/nc_text_dark"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="领取店铺代金券"
+                android:textColor="@color/nc_text_dark"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+        <TextView style="@style/NCLine" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="暂无代金券可以领取"/>
+
+        <ListView
+            android:id="@+id/lvStoreVoucher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/nc_border"
+            android:dividerHeight="1dp"
+            android:paddingLeft="10dp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <View style="@style/NCLine"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nc_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp10">
+
+        <!--优惠套装-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/discount_stroke_bg"
+            android:padding="1dp"
+            android:text="优惠套装"
+            android:textColor="@color/nc_red"
+            android:textSize="@dimen/tv12sp"/>
+
+        <TextView
+            android:id="@+id/tvBundlingCount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_weight="1"
+            android:padding="1dp"
+            android:text="优惠套装x1"
+            android:textColor="@color/nc_text"
+            android:textSize="@dimen/tv12sp"/>
+
+        <TextView
+            android:id="@+id/tvBundlingPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="@dimen/dp4"
+            android:padding="1dp"
+            android:text="￥0.00"
+            android:textColor="@color/nc_text"
+            android:textSize="@dimen/tv12sp"/>
+
+    </LinearLayout>
+</LinearLayout>

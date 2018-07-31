@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/app_white"
+              android:orientation="vertical"
+              android:paddingBottom="@dimen/dp10"
+              android:paddingLeft="@dimen/dp16"
+              android:paddingRight="@dimen/dp16"
+              android:paddingTop="@dimen/dp10">
+
+    <TextView
+        android:id="@+id/tvTitle1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="身份证正面照"/>
+
+    <TextView
+        android:id="@+id/tvDesc1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp4"
+        android:drawableLeft="@mipmap/attention"
+        android:drawablePadding="@dimen/dp4"
+        android:gravity="center_vertical"
+        android:text="请用手机横向拍摄以保证图片正常显示"
+        android:textColor="@color/promotion_blue"
+        android:textSize="12sp"/>
+
+    <RelativeLayout
+        android:id="@+id/llUploadImg"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="@dimen/dp4"
+        android:background="@drawable/promotion_image_bg">
+
+        <ImageView
+            android:id="@+id/ivIMG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"/>
+
+        <LinearLayout
+            android:id="@+id/llContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/promotion_add_image"/>
+
+            <TextView
+                android:id="@+id/tvTitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@drawable/promotion_text_bg"
+                android:paddingBottom="@dimen/dp4"
+                android:paddingLeft="@dimen/dp16"
+                android:paddingRight="@dimen/dp16"
+                android:paddingTop="@dimen/dp4"
+                android:text="上传正面照"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/tvDesc2"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp4"
+                android:gravity="center"
+                android:text="照片必须清晰哟！"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

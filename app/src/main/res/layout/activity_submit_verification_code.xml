@@ -1,0 +1,166 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_base" />
+
+    <TextView
+        android:id="@+id/tvGet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:text="短信已发送至158****1219需10分钟内完成验证" />
+
+    <LinearLayout
+        android:id="@+id/llSubmitCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nc_white"
+        android:orientation="vertical">
+
+        <TextView style="@style/NCLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:layout_width="wrap_content"
+                android:text="动  态  码：" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/llSMSdynamiccode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="重新获取动态码" />
+
+                    <TextView
+                        android:id="@+id/tvTimer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="（等待54秒后）" />
+
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/etSMSdynamiccode"
+                    style="@style/NCFormEdit"
+                    android:layout_toLeftOf="@id/llSMSdynamiccode"
+                    android:hint="输入6位短信动态码" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llCode"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/NCFormText"
+                android:layout_width="wrap_content"
+                android:text="验  证  码：" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvGetCodeAgain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="重新获取动态码"
+
+                    android:textSize="@dimen/tv12sp" />
+
+                <ImageView
+                    android:id="@+id/ivCode"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@id/tvGetCodeAgain" />
+
+                <EditText
+                    android:id="@+id/etCode"
+                    style="@style/NCFormEdit"
+                    android:layout_toLeftOf="@id/ivCode"
+                    android:hint="输入4位验证码" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSetPwd"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:layout_width="wrap_content"
+                android:text="设置密码：" />
+
+            <EditText
+                android:id="@+id/etSetPwd"
+                style="@style/NCFormEdit"
+                android:hint="需6~20个大小写英文字母、符号或数字"
+                android:inputType="textPassword" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSurePwd"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:layout_width="wrap_content"
+                android:text="确认密码：" />
+
+            <EditText
+                android:id="@+id/etSurePwd"
+                style="@style/NCFormEdit"
+                android:hint="再次输入密码"
+                android:inputType="textPassword" />
+        </LinearLayout>
+
+        <TextView style="@style/NCLine" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/nc_btn_corner_bg_selected"
+        android:text="下一步"
+        android:textColor="@drawable/nc_btn_text_color_selected" />
+
+
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/app_common_header" />
+
+        <Button
+            style="@style/NCTextButton"
+            android:layout_alignParentRight="true"
+            android:onClick="btnGoodsBrowseClearClick"
+            android:text="清空" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/app_list_empty" />
+
+    <ListView
+        android:id="@+id/lvGoodsBrowse"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/nc_white"
+        android:divider="@color/nc_border"
+        android:dividerHeight="1dp"
+        android:listSelector="@android:color/transparent" />
+</LinearLayout>
+

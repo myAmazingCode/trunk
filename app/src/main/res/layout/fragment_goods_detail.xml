@@ -1,0 +1,875 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_bg"
+    tools:context="net.shopnc.b2b2c.android.ui.type.GoodsDetailFragment">
+
+    <net.shopnc.b2b2c.android.custom.MyScrollView
+        android:id="@+id/svMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="@dimen/main_width"
+                android:layout_height="@dimen/main_width"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/vpImage"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        style="@style/NCLine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/viewGroup"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:visibility="gone"></LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <net.shopnc.b2b2c.android.circlelibrary.ImageCycleView
+                        android:id="@+id/bannerGoodImages"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/btnGoodsShare"
+                        style="@style/NCImageButton"
+                        android:src="@drawable/nc_icon_share"
+                        android:visibility="visible" />
+
+                    <ImageButton
+                        android:id="@+id/btnGoodsFav"
+                        style="@style/NCImageButton"
+                        android:src="@drawable/nc_btn_goods_fav" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView style="@style/NCLine" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvGoodsType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:background="@color/nc_red"
+                    android:textColor="@color/nc_white"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/goodsNameID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@color/nc_white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/goodsJingleID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@color/nc_white"
+                android:maxLines="2"
+                android:paddingLeft="5dp"
+                android:textColor="@color/nc_text"
+                android:textSize="14dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/nc_white"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp">
+
+                <LinearLayout
+                    android:id="@+id/llSingleGoodsPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/goodsPriceID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="￥"
+                        android:textColor="@color/nc_red"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/tvGoodsMarketPrice"
+                        style="@style/NCText"
+                        android:layout_marginLeft="3dp"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llSales"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/NCText"
+                        android:text="销量："
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/goodsSalenumID"
+                        style="@style/NCText"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <net.shopnc.b2b2c.android.custom.MyGridView
+                    android:id="@+id/gvBatchPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/llSales"
+                    android:numColumns="5"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llPromotion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/nc_white"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/NCText"
+                    android:text="促销"
+                    android:textSize="14dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/llManSong"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/NCText"
+                            android:layout_width="38dp"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/nc_btn_bg_on"
+                            android:gravity="center_horizontal"
+                            android:text="满即送"
+                            android:textColor="@color/nc_white"
+                            android:textSize="12dp" />
+
+                        <net.shopnc.b2b2c.android.custom.MyListView
+                            android:id="@+id/lvManSong"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:divider="@color/nc_white"></net.shopnc.b2b2c.android.custom.MyListView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llGift"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/NCText"
+                            android:layout_width="38dp"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/nc_btn_bg_on"
+                            android:gravity="center_horizontal"
+                            android:text="赠品"
+                            android:textColor="@color/nc_white"
+                            android:textSize="12dp" />
+
+                        <net.shopnc.b2b2c.android.custom.MyListView
+                            android:id="@+id/lvGift"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:divider="@color/nc_white"></net.shopnc.b2b2c.android.custom.MyListView>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 店铺代金券 -->
+            <LinearLayout
+                android:id="@+id/llStoreVoucher"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/nc_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/nc_red"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp"
+                    android:text="券"
+                    android:textColor="@color/nc_white"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="点击领取店铺代金券"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+            <!-- 配送区域 -->
+            <LinearLayout
+                android:id="@+id/llHairInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/nc_white"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    style="@style/NCText"
+                    android:text="送至"
+                    android:textSize="14dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/ll_btnHairAreaName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/btnHairAreaName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:gravity="left"
+                                android:maxWidth="180dp"
+                                android:paddingRight="20dp"
+                                android:singleLine="true"
+                                android:text="全国"
+                                android:textColor="@color/nc_text_dark" />
+
+                            <TextView
+                                android:id="@+id/tvHairIfStoreCn"
+                                style="@style/NCText"
+                                android:layout_marginLeft="10dp"
+                                android:text="有货"
+                                android:textColor="@color/nc_red" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/nc_icon_location" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvHairContent"
+                        style="@style/NCText"
+                        android:text="免运费"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- o2o店铺地址 -->
+            <LinearLayout
+                android:id="@+id/llStoreO2o"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/nc_white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:text="商家信息"
+                    android:textColor="@color/nc_text"
+                    android:textSize="14dp" />
+
+                <LinearLayout
+                    android:id="@+id/llStoreO2oItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/nc_bg_border_top_and_bottom"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvStoreO2oName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="店铺名称"
+                            android:textColor="@color/nc_black"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/tvStoreO2oAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="地址"
+                            android:textColor="@color/nc_text"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="1dp"
+                        android:layout_height="48dp"
+                        android:background="@color/nc_border" />
+
+                    <ImageButton
+                        android:id="@+id/btnStoreO2oPhone"
+                        style="@style/NCImageButton"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/nc_icon_phone" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnStoreO2oAllAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@null"
+                    android:drawableRight="@drawable/nc_icon_arrow_right"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:text="查看全部分店地址"
+                    android:textColor="@color/nc_red"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llspecNameID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/nc_bg_border_top"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    style="@style/NCText"
+                    android:text="已选"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/specNameID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:drawableRight="@drawable/nc_icon_arrow_right"
+                    android:maxLines="1"
+                    android:text="规格："
+                    android:textColor="@color/nc_text"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout_branch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/nc_bg_border_top"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/nc_text"
+                    android:text="门店信息（各个门店价格可能会不一样）"
+                    android:textSize="@dimen/tv14sp"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/nc_border"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="30dp">
+
+                    <TextView
+                        android:id="@+id/tv_store_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="红桥湘潭路分店"
+                        android:textColor="@color/nc_black"
+                        android:paddingTop="5dp"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_store_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_store_name"
+                        android:text="门店价格：¥4990.00"
+                        android:textColor="@color/nc_text"
+                        android:paddingTop="5dp"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_store_address"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_store_price"
+                        android:maxLines="2"
+                        android:paddingTop="5dp"
+                        android:text="门店地址：红桥区湘潭路12号，电话：022-25555555"
+                        android:textColor="@color/nc_text"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_cart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/cart_b"
+                        android:layout_centerVertical="true"
+                        android:padding="20dp"/>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="30dp"
+                        android:background="@color/nc_border"
+                        android:layout_toLeftOf="@id/iv_cart"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/nc_border"/>
+
+                <TextView
+                    android:id="@+id/tv_check_branch"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textColor="@color/nc_red"
+                    android:textSize="@dimen/tv16sp"
+                    android:gravity="center_vertical"
+                    android:drawableRight="@drawable/nc_icon_arrow_right"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llService"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/nc_bg_border_top"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    style="@style/NCText"
+                    android:text="服务"
+                    android:textSize="14dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvService"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:maxLines="2"
+                        android:textColor="@color/nc_text_dark" />
+
+                    <net.shopnc.b2b2c.android.custom.MyGridView
+                        android:id="@+id/gvContract"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:numColumns="4">
+
+                    </net.shopnc.b2b2c.android.custom.MyGridView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/nc_white"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/rlEvaluate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/NCText"
+                            android:text="商品评价"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/tvEvaluateGoodPercent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="好评率"
+                            android:textColor="@color/nc_red" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvEvaluateCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dp"
+                        android:drawablePadding="5dp"
+                        android:drawableRight="@drawable/nc_icon_arrow_right"
+                        android:singleLine="true"
+                        android:text="(0人)"
+                        android:textColor="@color/nc_text"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llEvaluateList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView style="@style/NCLine" />
+
+                    <net.shopnc.b2b2c.android.custom.MyListView
+                        android:id="@+id/lvEvaluateList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@color/nc_border"
+                        android:dividerHeight="1dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llStoreInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/nc_white"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/tvStoreName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/nc_icon_store"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/nc_icon_arrow_right"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="店铺信息"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="16dp" />
+
+                <TextView style="@style/NCLine" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="描述相符:"
+                            android:textColor="@color/nc_text"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/tvStoreDescPoint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="3dp"
+                            android:text="5.0"
+                            android:textColor="@color/nc_red"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/tvStoreDescText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/nc_red"
+                            android:paddingLeft="1dp"
+                            android:paddingRight="1dp"
+                            android:text="平"
+                            android:textColor="@color/nc_white"
+                            android:textSize="10dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="服务态度:"
+                            android:textColor="@color/nc_text"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/tvStoreServicePoint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="3dp"
+                            android:text="5.0"
+                            android:textColor="@color/nc_red"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/tvStoreServiceText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/nc_red"
+                            android:paddingLeft="1dp"
+                            android:paddingRight="1dp"
+                            android:text="平"
+                            android:textColor="@color/nc_white"
+                            android:textSize="10dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="发货速度:"
+                            android:textColor="@color/nc_text"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/tvStoreDeliveryPoint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="3dp"
+                            android:text="5.0"
+                            android:textColor="@color/nc_red"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/tvStoreDeliveryText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/nc_red"
+                            android:paddingLeft="1dp"
+                            android:paddingRight="1dp"
+                            android:text="平"
+                            android:textColor="@color/nc_white"
+                            android:textSize="10dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@color/nc_white"
+                android:clickable="false"
+                android:focusable="false"
+                android:orientation="vertical"
+                android:padding="5dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="店铺推荐"
+                    android:textColor="@color/nc_text"
+                    android:textSize="14dp" />
+
+                <net.shopnc.b2b2c.android.custom.MyGridView
+                    android:id="@+id/gridViewCommend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:cacheColorHint="#00000000"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:horizontalSpacing="5dp"
+                    android:listSelector="#00000000"
+                    android:numColumns="4"
+                    android:verticalSpacing="5dip" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnShowGoodsDetail"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/nc_bg"
+                android:text="继续拖动，查询详情"
+                android:textColor="@color/nc_text"
+                android:textSize="14dp" />
+        </LinearLayout>
+    </net.shopnc.b2b2c.android.custom.MyScrollView>
+
+    <!--<include layout="@layout/app_common_goods_detail_button" />-->
+</RelativeLayout>
+
+

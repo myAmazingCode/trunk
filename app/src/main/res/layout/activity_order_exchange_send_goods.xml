@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/app_bg_color"
+    tools:context="net.shopnc.b2b2c.android.ui.mine.OrderExchangeSendGoodsActivity">
+
+    <include layout="@layout/app_common_header" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发货5天后，当商家选择未收到则要进行延迟时间操作；如果超过7天不处理按弃货处理，直接由管理员确认退款"
+        android:background="#AAA"
+        android:textColor="#FFF"
+        android:textSize="12dp"
+        android:layout_margin="10dp"
+        android:padding="4dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="物流公司"
+            android:textSize="14dp"
+            android:textColor="@color/nc_text_dark"
+            android:layout_marginLeft="20dp"
+            />
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/nc_text_dark"
+            />
+
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="物流单号"
+            android:textSize="14dp"
+            android:textColor="@color/nc_text_dark"
+            />
+
+        <EditText
+            android:id="@+id/textNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请正确填写物流单号"
+            android:textSize="14dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="30dp"
+            android:background="@color/nc_bg"
+            android:textColor="@color/nc_text_dark"
+            />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSure"
+        style="@style/NCCornerButtonMain"
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="确认发货"
+        />
+
+
+
+</LinearLayout>

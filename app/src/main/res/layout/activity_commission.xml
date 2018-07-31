@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/activity_base"/>
+
+    <include layout="@layout/commission_header"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nc_white"
+        android:orientation="horizontal">
+
+
+        <RadioButton
+            android:id="@+id/deposit_btnRemain"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/nc_tab_button_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@drawable/nc_tab_button_text_color"
+            android:textSize="12sp"/>
+
+
+        <RadioButton
+            android:id="@+id/deposit_btnWithDraw"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/nc_tab_button_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@drawable/nc_tab_button_text_color"
+            android:textSize="12sp"/>
+
+        <RadioButton
+            android:id="@+id/rbSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/nc_tab_button_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="设置"
+            android:textColor="@drawable/nc_tab_button_text_color"
+            android:textSize="12sp"/>
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/flFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

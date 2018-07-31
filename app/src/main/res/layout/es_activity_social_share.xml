@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@android:color/white"
+      android:orientation="vertical"
+      android:paddingBottom="5.0dip"
+
+      android:layout_marginBottom="0dp"
+      android:paddingTop="20.0dip">
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:text="请选择支付方式"
+          android:textColor="@android:color/black"
+          android:textSize="20.0sp" />
+
+      <View
+          android:layout_width="fill_parent"
+          android:layout_height="1.0px"
+          android:layout_marginLeft="25dp"
+          android:layout_marginRight="25dp"
+          android:layout_marginTop="15.0dip"
+          android:background="@android:color/darker_gray" />
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:orientation="horizontal"
+          android:paddingLeft="25dp"
+          android:paddingRight="25dp">
+
+          <net.shopnc.b2b2c.android.custom.ShareButton
+              android:id="@+id/social_sb_wechat"
+              android:layout_width="0.0dip"
+              android:layout_height="wrap_content"
+              android:layout_weight="1.0"
+              android:gravity="center"
+              android:visibility="gone"
+              app:description="微信"
+              app:icons="@drawable/sns_weixin_icon" />
+
+          <net.shopnc.b2b2c.android.custom.ShareButton
+              android:id="@+id/social_sb_zhifubao"
+              android:layout_width="0.0dip"
+              android:layout_height="wrap_content"
+              android:layout_weight="1.0"
+              android:gravity="center"
+              app:description="支付宝"
+              android:visibility="gone"
+              app:icons="@drawable/pay" />
+
+          <net.shopnc.b2b2c.android.custom.ShareButton
+              android:id="@+id/social_sb_wzhifubao"
+              android:layout_width="0.0dip"
+              android:layout_height="wrap_content"
+              android:layout_weight="1.0"
+              android:gravity="center"
+              android:visibility="gone"
+              app:description="网页支付宝"
+              app:icons="@drawable/zhifubao_appicon" />
+
+
+      </LinearLayout>
+
+      <TextView
+          android:id="@+id/pay_miss"
+          android:layout_gravity="center"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:gravity="center"
+          android:text="取消"
+          android:layout_marginTop="20dp"
+          android:textColor="@android:color/black"
+          android:textSize="20.0sp" />
+      </LinearLayout>
+
+</RelativeLayout>

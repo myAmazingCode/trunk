@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/nc_bg"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:src="@drawable/nc_icon_back" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/nc_bg_border"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/nc_icon_search" />
+
+            <EditText
+                android:id="@+id/etSearchText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:hint="搜索商城商品"
+                android:textSize="16sp"
+                android:textColor="@color/nc_text_hint"
+                android:textColorHint="@color/nc_text_hint" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:text="搜索"
+            android:textColor="@color/nc_text" />
+
+    </LinearLayout>
+
+    <TextView style="@style/NCLine" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:background="@color/nc_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="热门搜索"
+                    android:textColor="@color/nc_text"
+                    android:textSize="16dp" />
+
+                <net.shopnc.b2b2c.android.custom.MyGridView
+                    android:id="@+id/gvSearchKeyList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:listSelector="#00000000"
+                    android:numColumns="4"
+                    android:scrollbars="none">
+
+                </net.shopnc.b2b2c.android.custom.MyGridView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/nc_white" />
+
+                <TextView style="@style/NCLine" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:background="@color/nc_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="历史记录"
+                    android:textColor="@color/nc_text"
+                    android:textSize="16dp" />
+
+                <TextView style="@style/NCLine" />
+
+                <net.shopnc.b2b2c.android.custom.MyListView
+                    android:id="@+id/searchListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/nc_bg"
+                    android:divider="@color/nc_border"
+                    android:dividerHeight="1px"
+                    android:fadingEdge="none"
+                    android:listSelector="#00000000"
+                    android:paddingLeft="10dp" />
+
+                <Button
+                    android:id="@+id/btnClearHistory"
+                    style="@style/NCCornerButtonNormal"
+                    android:layout_width="match_parent"
+                    android:layout_margin="20dp"
+                    android:text="清空历史记录" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

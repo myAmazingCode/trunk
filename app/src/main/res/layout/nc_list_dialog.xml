@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/flBack"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foreground="@color/nc_background_transport" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/nc_dialog_bg"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <net.shopnc.b2b2c.android.custom.PickerView
+                android:id="@+id/pvList"
+                android:layout_width="match_parent"
+                android:layout_height="100dp" />
+
+
+            <TextView
+                style="@style/NCLine"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    style="@style/NCCornerButtonNormal"
+                    android:layout_width="100dp"
+                    android:layout_marginRight="20dp"
+                    android:text="取消"
+                    android:textColor="@color/nc_text" />
+
+                <Button
+                    android:id="@+id/btnConfirm"
+                    style="@style/NCCornerButtonMain"
+                    android:layout_width="100dp"
+                    android:text="确定"
+                    android:textColor="@color/nc_white" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

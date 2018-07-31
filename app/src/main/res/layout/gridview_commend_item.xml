@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="70dp"
+    android:layout_height="wrap_content"
+    android:clickable="false"
+    android:focusable="false"
+    android:gravity="left"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/imageviewPIC"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/nc_border"
+        android:clickable="false"
+        android:focusable="false"
+        android:padding="1dp" />
+
+    <TextView
+        android:id="@+id/textGoodsCommendName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:maxLines="2"
+        android:textColor="@color/nc_text"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/textGoodsCommendPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false"
+        android:text="￥ 0.0"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/nc_text_dark"
+        android:textSize="12dp" />
+
+</LinearLayout>

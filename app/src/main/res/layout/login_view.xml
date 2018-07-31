@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/nc_title_bg"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/NCTextButton"
+            android:layout_alignParentLeft="true"
+            android:onClick="btnBackClick"
+            android:text="取消" />
+
+        <TextView
+            style="@style/NCTitleText"
+            android:text="登录" />
+
+        <Button
+            style="@style/NCTextButton"
+            android:layout_alignParentRight="true"
+            android:onClick="btnRegisterClick"
+            android:text="注册" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/nc_login_pic" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/nc_white"
+        android:orientation="vertical">
+
+        <TextView style="@style/NCLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:text="账号：" />
+
+            <EditText
+                android:id="@+id/etUsername"
+                style="@style/NCFormEdit"
+                android:hint="用户名/手机号/邮箱" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:text="密码：" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                style="@style/NCFormEditNoBorder"
+                android:hint="请输入密码"
+                android:password="true" />
+
+        </LinearLayout>
+
+        <TextView style="@style/NCLine" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <ImageButton
+                android:id="@+id/btnAutoLogin"
+                android:layout_width="32dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:onClick="btnAutoLoginClick"
+                android:src="@drawable/nc_check" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:onClick="btnAutoLoginClick"
+                android:text="自动登录"
+                android:textColor="#7F7F7F"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+
+        <Button
+            style="@style/NCTextButtonSmall"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:onClick="btnFindPasswordClick"
+            android:text="找回密码"
+            android:textColor="@color/nc_blue" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnLogin"
+        style="@style/NCCornerButton"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:onClick="btnLoginClick"
+        android:text="登录" />
+
+    <ImageView
+        android:id="@+id/ivThreeLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/nc_login_split" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ThreebtnLogin"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp">
+
+        <ImageButton
+            android:id="@+id/btnQQ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/nc_icon_qq" />
+
+        <ImageButton
+            android:id="@+id/btnWeiXin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/nc_icon_wx" />
+
+        <ImageButton
+            android:id="@+id/btnSina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/nc_icon_weibo" />
+    </LinearLayout>
+
+</LinearLayout>

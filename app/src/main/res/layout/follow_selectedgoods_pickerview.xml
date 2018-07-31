@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_white"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/NCLine"
+        android:layout_above="@+id/btnCancle" />
+
+    <TextView
+        android:id="@+id/btnCancle"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/spec_btn_select_true"
+        android:text="取消"
+        android:textSize="@dimen/dp12"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/spec_btn_select_true"
+        android:text="删除"
+        android:textSize="@dimen/dp12"
+        android:textColor="@color/white" />
+
+    <TextView
+        style="@style/NCLine"
+        android:layout_below="@+id/btnCancle"
+        android:layout_marginTop="6dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvSelectedGoods"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btnCancle"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="10dp"
+        android:scrollbars="none">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        style="@style/NCLine"
+        android:layout_below="@+id/rvSelectedGoods"
+        android:layout_marginTop="4dp" />
+
+</RelativeLayout>

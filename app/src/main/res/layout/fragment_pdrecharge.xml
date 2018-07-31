@@ -1,0 +1,20 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="net.shopnc.b2b2c.android.ui.mine.PredepositFragment">
+
+    <net.shopnc.b2b2c.android.custom.MyListEmpty
+        android:id="@+id/myListEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></net.shopnc.b2b2c.android.custom.MyListEmpty>
+
+    <ListView
+        android:id="@+id/lvPdrecharge"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/nc_border"
+        android:dividerHeight="1dp"></ListView>
+
+</LinearLayout>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.orhanobut:logger-1.11">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/logger-1.11.aar/7aa56b47e273d8690ee91f2d77bdc2f7/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/logger-1.11.aar/7aa56b47e273d8690ee91f2d77bdc2f7/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.orhanobut/logger/1.11/fa353f61d16ebec1cee102f48cd8869a52730fc7/logger-1.11-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

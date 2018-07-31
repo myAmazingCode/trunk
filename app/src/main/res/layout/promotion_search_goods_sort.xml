@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/nc_background_transport"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/defaultSort"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/nc_white"
+        android:drawableRight="@drawable/nc_text_btn_check_mark"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="20dp"
+        android:text="@string/sort_all"
+        android:textColor="@drawable/nc_text_btn_color"
+        android:textSize="14dp"/>
+
+    <TextView
+        android:id="@+id/tvEvaluateCount"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/nc_white"
+        android:drawableRight="@drawable/nc_text_btn_check_mark"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="20dp"
+        android:text="@string/sort_evaluate_count"
+        android:textColor="@drawable/nc_text_btn_color"
+        android:textSize="14dp"/>
+
+
+    <TextView
+        android:id="@+id/incomeRate"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/nc_white"
+        android:drawableRight="@drawable/nc_text_btn_check_mark"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="20dp"
+        android:text="收入比率"
+        android:textColor="@drawable/nc_text_btn_color"
+        android:textSize="14dp"/>
+
+    <TextView
+        android:id="@+id/promotionDesc"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/nc_white"
+        android:drawableRight="@drawable/nc_text_btn_check_mark"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="20dp"
+        android:text="推广量从高到低"
+        android:textColor="@drawable/nc_text_btn_color"
+        android:textSize="14dp"/>
+
+    <TextView
+        android:id="@+id/payDesc"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/nc_white"
+        android:drawableRight="@drawable/nc_text_btn_check_mark"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="20dp"
+        android:text="支出佣金从高到低"
+        android:textColor="@drawable/nc_text_btn_color"
+        android:textSize="14dp"/>
+
+</LinearLayout>

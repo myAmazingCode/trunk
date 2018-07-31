@@ -1,0 +1,207 @@
+apply plugin: 'com.android.application'
+
+def buildTime() {
+    def date = new Date()
+    def formattedDate = date.format('yyyyMMdd')
+    return formattedDate
+}
+
+android {
+    signingConfigs {
+        debug {
+        }
+        release {
+            storeFile file("keystore.jks")//这个文件需要放在modele所在根目录下
+            keyAlias "key"
+            keyPassword "shopnc"
+            storePassword "shopnc"
+        }
+
+    }
+    compileSdkVersion 28
+    buildToolsVersion '28.0.1'
+    defaultConfig {
+        applicationId "net.shopnc.b2b2c.android"
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 4
+        versionName "3.0.4"
+        flavorDimensions "versionCode"
+        vectorDrawables.useSupportLibrary=true
+        multiDexEnabled true
+
+        resValue "string", "app_name", "ShopNC分销商城"
+
+        manifestPlaceholders.put("UMENG_APPKEY", "566e3d5167e58e2442001aee")
+
+        buildConfigField "String", "WX_APP_ID", '"wx9c7b937339439525"'
+        buildConfigField "String", "WX_APP_SECRET", '"cc1d90902a203252146318a7b9245ec7"'
+        buildConfigField "String", "WEIBO_APP_KEY", '"2783637589"'
+        buildConfigField "String", "WEIBO_APP_SECRET", '"d9c5808797cda76b5e8966e3088a13bb"'
+        buildConfigField "String", "QQ_APP_ID", '"1104747605"'
+        buildConfigField "String", "QQ_APP_KEY", '"mRcykHdVih1pF9qi"'
+
+        resValue "string", "more_aboutus_appname", "ShopNC Android客户端"
+        resValue "string", "more_aboutus_version", "版本：3.0.4"
+        resValue "string", "app_copyright", "Copyright © 2007–2016"
+        resValue "string", "app_copreserved", "天津市网城天创科技有限责任公司, All Rights Reserved"
+
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+        }
+
+    }
+
+
+    productFlavors {
+
+        //演示站
+        dema {
+            buildConfigField "String", "PROTOCOL", '"https://"'
+            buildConfigField "String", "HOST", '"b2b2c.shopnctest.com/dema"'
+            buildConfigField "String", "WAP_URL", '"http://b2b2c.shopnctest.com/dema/wap/"'
+            buildConfigField "String", "IM_HOST", '"b2b2c.shopnctest.com:8090"'
+            buildConfigField "String", "PORT", '"80"'
+            buildConfigField "String", "APP", '"/mo_bile"'
+        }
+
+        //测试站
+        tesa {
+            buildConfigField "String", "PROTOCOL", '"https://"'
+            buildConfigField "String", "HOST", '"b2b2c.shopnctest.com/tesa"'
+            buildConfigField "String", "WAP_URL", '"http://b2b2c.shopnctest.com/tesa/wap/"'
+            buildConfigField "String", "IM_HOST", '"b2b2c.shopnctest.com:8090"'
+            buildConfigField "String", "PORT", '"80"'
+            buildConfigField "String", "APP", '"/mo_bile"'
+        }
+
+        _test20170421 {
+            buildConfigField "String", "PROTOCOL", '"http://"'
+            buildConfigField "String", "HOST", '"test.shopnctest.com"'
+            buildConfigField "String", "WAP_URL", '"http://test.shopnctest.com/wap/"'
+            buildConfigField "String", "IM_HOST", '"test.shopnctest.com:8090"'
+            buildConfigField "String", "PORT", '"80"'
+            buildConfigField "String", "APP", '"/mobile"'
+        }
+
+    }
+    productFlavors.all { flavor ->
+        manifestPlaceholders.put("UMENG_CHANNEL_VALUE", name)
+    }
+
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            zipAlignEnabled false
+            shrinkResources false  //删除无用资源
+
+//            applicationVariants.all { variant ->
+//                variant.outputs.each { output ->
+//                    if (output.outputFile != null && output.outputFile.name.endsWith('.apk')
+//                            && 'release'.equals(variant.buildType.name)) {
+//                        def apkFile = new File(
+//                                output.outputFile.getParent(),
+//                                "shopnc_${variant.flavorName}_v${variant.versionName}_${buildTime()}.apk")
+//                        output.outputFile = apkFile
+//                    }
+//                }
+//            }
+
+            android.applicationVariants.all { variant ->
+                variant.outputs.all {
+                    outputFileName = "shopnc.apk"
+                }
+            }
+        }
+        debug {
+            signingConfig signingConfigs.debug
+
+        }
+
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE.txt'
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    api files('libs/barcode_core.jar')
+    api files('libs/ormlite-android-4.48.jar')
+    api files('libs/ormlite-core-4.48.jar')
+    api files('libs/socketio.jar')
+    api files('libs/universal-image-loader-1.9.3.jar')
+   api files('libs/WebSocket.jar')
+   api files('libs/weiboSDKCore_3.1.2.jar')
+   api files('libs/open_sdk_r5509.jar')
+   api files('libs/httpmime-4.1.3.jar')
+   api files('libs/umeng_social_sdk.jar')
+   api files('libs/mta-sdk-1.6.2.jar')
+   api files('libs/SocialSDK_QQZone_3.jar')
+   api files('libs/SocialSDK_Sina.jar')
+   api files('libs/SocialSDK_sms.jar')
+   api files('libs/SocialSDK_WeiXin_1.jar')
+   api files('libs/SocialSDK_WeiXin_2.jar')
+   api files('libs/alipaySdk-20151215.jar')
+   api files('libs/glide-3.6.1.jar')
+   api files('libs/gson-2.2.1.jar')
+   api files('libs/okhttputils.jar')
+   api files('libs/android-viewbadger.jar')
+   api files('libs/fastjson-1.2.7.jar')
+   api files('libs/baidumapapi_v3_5_0.jar')
+   api files('libs/locSDK_5.2.jar')
+   api files('libs/pushservice-5.0.0.66.jar')
+   api files('libs/alivc-player-2.1.0.jar')
+   api files('libs/httpclient-4.2.5.jar')
+   api files('libs/httpcore-4.2.4.jar')
+    /*log打印*/
+    /*视频播放*/
+    api project(':giraffeplayer')
+    /*异常处理*/
+    /*广告图*/
+    /*butterknife*/
+    /*eventbus*/
+    //    /*recyclerviewheader 控件*/
+    //    compile 'com.bartoszlipinski.recyclerviewheader:library:1.2.0'
+    /*获取视频图片*/
+    /*滚动播放*/
+    /*动画*/
+    //    compile project(':AlivcBubblingAnimationViewRelease1.0.0')
+    //noinspection GradleCompatible
+    api 'com.android.support:recyclerview-v7:23.0.1'
+    //noinspection GradleCompatible
+    api 'com.android.support:support-v4:23.0.1'
+    //noinspection GradleCompatible
+    api 'com.android.support:cardview-v7:23.1.1'
+    //noinspection GradleCompatible
+    api 'com.android.support:design:23.4.0'
+    api 'com.squareup.okhttp:okhttp:2.4.0'
+    api 'com.squareup.okio:okio:1.5.0'
+    api 'org.apache.commons:commons-lang3:3.4'
+    api 'com.orhanobut:logger:1.11'
+    api 'com.android.support:multidex:1.0.2'
+    api 'com.zhy:base-rvadapter:3.0.3'
+    api 'com.bigkoo:convenientbanner:2.0.5'
+    api 'com.jakewharton:butterknife:7.0.1'
+    api 'org.greenrobot:eventbus:3.0.0'
+    api 'com.github.wseemann:FFmpegMediaMetadataRetriever:1.0.11'
+    api 'com.github.danylovolokh:list-visibility-utils:0.2.0'
+    api 'io.reactivex:rxandroid:1.1.0'
+    api 'com.zhy:flowlayout-lib:1.0.3'
+    api 'com.android.support.constraint:constraint-layout:1.0.2'
+    api 'com.jcodecraeer:xrecyclerview:1.3.2'
+}

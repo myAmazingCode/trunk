@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:background="@color/nc_white"
+        android:paddingBottom="5dp">
+
+        <ImageView
+            android:id="@+id/favgood_image"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/favgood_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/favgood_image"
+            android:lines="2"
+            android:padding="3dp"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/favgood_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/favgood_name"
+            android:gravity="left"
+            android:padding="3dp"
+            android:textColor="@color/nc_red"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/favgoods_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/nc_icon_del" />
+
+    </RelativeLayout>
+</LinearLayout>

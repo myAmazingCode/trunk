@@ -1,0 +1,12 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="main_width">360dp</dimen>
+    <dimen name="main_home_adv_height">191dp</dimen>
+    <dimen name="main_home1_height">146dp</dimen>
+    <dimen name="main_home2_width_2">180dp</dimen>
+    <dimen name="main_home2_height">146dp</dimen>
+    <dimen name="main_home2_height_2">73dp</dimen>
+    <dimen name="main_goods_size">180dp</dimen>
+
+</resources>
